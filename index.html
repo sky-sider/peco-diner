@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#28647b" />
-<title>ぺこぺこダイナー v0.45 | 食材の断面と立体感を改善</title>
+<title>ぺこぺこダイナー v0.49 | レシピ展開時の全体スクロール改善</title>
 <style>
 :root{--cream:#fff9ef;--paper:#fffdf9;--butter:#ffd789;--brown:#5e4332;--muted:#937e6b;--border:#e8d7bf;--peach:#ffb1a4;--mint:#cce9c5;--green:#43846b;--shadow:0 7px 0 #ead9bf,0 15px 28px #72552c14;--round:24px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 6% 12%,#fff6cd 0,transparent 28%),radial-gradient(circle at 92% 16%,#def1d6 0,transparent 28%),#f9f1e5;color:var(--brown);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,system-ui,sans-serif;line-height:1.5}button{font:inherit;color:inherit;cursor:pointer}button:disabled{cursor:not-allowed;opacity:.47}button:focus-visible{outline:3px solid #76b9a5;outline-offset:2px}#root{max-width:1200px;margin:0 auto;padding:14px 12px 30px}.site-head{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:16px;padding:5px 4px}.brand{display:flex;align-items:center;gap:11px}.brand-mark{width:54px;height:54px;border:3px solid #865b3e;background:#ffe4a8;border-radius:17px;display:grid;place-items:center;box-shadow:0 5px 0 #d4ba8c;transform:rotate(-4deg)}.brand-mark svg{width:44px;height:44px}.brand-small{font-size:10px;letter-spacing:2.3px;color:#a07b5b;font-weight:900}.brand-name{font-size:clamp(21px,4vw,30px);font-weight:900;line-height:1.2;letter-spacing:.4px}.meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.pill{border:2px solid #e5d0ad;background:#fff9e8;border-radius:16px;padding:7px 12px;font-size:12px;font-weight:900}.pill b{font-size:17px}.pill.no-time{background:#e3f3db;color:#437359;border-color:#bdd9ae}.navline{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.nav{border:2px solid var(--border);background:#fffaf2;padding:10px 14px;border-radius:15px;font-size:14px;font-weight:900;min-height:44px}.nav.active{background:#6d9a7e;color:white;border-color:#6d9a7e}.layout{display:grid;grid-template-columns:minmax(285px,.78fr) minmax(0,1.5fr);gap:15px;align-items:start}.left,.right{display:grid;gap:15px}.card{background:var(--paper);border:2px solid #ead8be;border-radius:var(--round);box-shadow:var(--shadow);padding:17px}.labelhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.eyebrow{font-size:11px;font-weight:900;color:#a58055;letter-spacing:2px}.card h2{font-size:19px;margin:0;line-height:1.3}.tiny{font-size:12px;color:var(--muted)}.customer{display:flex;gap:12px;align-items:center;background:#fff6e9;border:2px solid #f0dfc6;border-radius:18px;padding:12px;margin-bottom:13px}.avatar{font-size:41px;background:#deeed7;border:2px solid #bedab5;border-radius:17px;display:grid;place-items:center;min-width:68px;height:68px}.customer-name{font-weight:900;font-size:17px}.bubble{font-size:13px;color:#7c6250;line-height:1.65}.ticket{background:#fff7df;border:2px dashed #dab77e;border-radius:17px;padding:14px}.ticket-title{font-weight:900;font-size:20px;margin:1px 0 8px}.ticket-sub{font-size:12px;color:#816846;margin-bottom:9px}.target-list{display:flex;gap:5px;flex-wrap:wrap}.tag{display:inline-flex;align-items:center;gap:4px;background:#fff;border:1.5px solid #e9d4b1;border-radius:10px;padding:5px 8px;font-size:12px;font-weight:800}.tag i{font-style:normal}.order-note{background:#e9f4e8;color:#527052;padding:9px 11px;border-radius:12px;font-size:12px;margin:12px 0}.row-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.btn{padding:10px 13px;min-height:44px;border:2px solid #dcc7ae;background:#fff9f0;border-radius:13px;font-size:13px;font-weight:900}.btn.primary{background:#ffb96d;border-color:#dc974f;box-shadow:0 4px 0 #dca66f}.btn.green{background:#81b594;border-color:#659d78;color:white;box-shadow:0 4px 0 #659d78}.btn.secondary{background:#eaf3e8;border-color:#c8dec5}.btn:active:not(:disabled){transform:translateY(2px);box-shadow:none}.mode-banner{font-size:13px;color:#6b785c;background:#edf5df;border-radius:13px;padding:10px;margin-bottom:12px;font-weight:750}.kitchen{padding:15px}.kitchen-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}.stations{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(200px,.85fr);gap:12px}.station{border:2px solid #eddcc6;border-radius:20px;background:#fffaf0;padding:11px;position:relative;min-width:0}.station h3{margin:0 0 3px;font-size:15px}.plate{background:radial-gradient(ellipse at center,#f7f2e5 30%,#ece3cf 100%);border:2px dashed #dfcbb0;border-radius:17px;position:relative;display:grid;place-items:center;min-height:239px;overflow:hidden;margin:8px 0}.plate svg{width:100%;max-width:340px;height:245px;display:block}.plate.empty:after{content:"ここに食材をのせてね";position:absolute;bottom:18px;color:#a79884;font-size:12px;font-weight:800}.stack-caption{margin:8px 0 0;text-align:center;font-size:12px;color:#927f66;min-height:19px}.grill{margin-top:8px;min-height:140px;border:6px solid #d8bab1;border-radius:18px;background:repeating-linear-gradient(90deg,#5c6260 0 8px,#727673 8px 16px);display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:8px;box-shadow:inset 0 3px 10px #20231e55}.burner{background:#454b47e8;border:2px solid #9daca5;border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 3px;color:white;min-height:113px;text-align:center}.burner-emoji{font-size:38px;filter:drop-shadow(0 5px 1px #0004);line-height:1.2}.burner-name{font-size:12px;font-weight:900;margin-top:5px}.ready{color:#dcffbf;font-size:11px;font-weight:800}.grill-buttons{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px}.grill-buttons .btn{font-size:12px;padding:8px 4px}.help-tip{font-size:11px;color:#9a826e;margin:9px 2px 0}.pantry{margin-top:12px}.tabs{display:flex;gap:6px;overflow-x:auto;padding:3px 0 10px}.tab{white-space:nowrap;border:2px solid #e8d4b7;background:#fff9ec;border-radius:12px;padding:8px 11px;font-size:12px;font-weight:900;min-height:43px}.tab.active{background:#ffe0a2;border-color:#d69e5b}.ingredients{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.ingredient{min-width:0;min-height:94px;border:2px solid #ecdac0;border-bottom:5px solid #e2cca9;background:#fff9ed;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:7px 2px;user-select:none;touch-action:none}.ingredient:active{transform:translateY(2px);border-bottom-width:3px}.ingredient .emoji{font-size:31px;line-height:1.2}.ingredient .ingname{font-size:12px;font-weight:900}.ingredient .mini{font-size:10px;color:#a5896b}.ingredient.locked{filter:grayscale(1);background:#f4f0e9}.ingredient.grill-item{background:#fff2e3}.foot{text-align:center;font-size:11px;color:#ac977d;margin:30px 0 10px}.collection{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.recipe-card{border:2px solid #eddac0;background:#fffbf3;border-radius:17px;padding:13px}.recipe-title{font-size:16px;font-weight:900}.recipe-card .target-list{margin:9px 0}.progress{height:11px;border:1px solid #c9d9bd;background:#f0f3ec;border-radius:20px;overflow:hidden;margin:8px 0}.progress > div{height:100%;background:#90b99d}.record{background:#fff8e8;border-radius:15px;padding:12px;margin-top:9px;font-size:13px}.notice{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);max-width:calc(100vw - 30px);background:#514735;color:white;padding:11px 17px;border-radius:15px;box-shadow:0 10px 40px #0003;text-align:center;z-index:100;font-weight:800;font-size:13px;pointer-events:none;animation:up .2s ease}.modal-back{position:fixed;inset:0;background:#2d251d99;display:flex;align-items:center;justify-content:center;padding:16px;z-index:90}.modal{width:min(480px,100%);max-height:min(85dvh,750px);overflow-y:auto;background:#fffdf7;border:4px solid #edd5ae;border-radius:26px;padding:21px;box-shadow:0 16px 70px #24170e66}.modal h2{font-size:24px;margin:0 0 8px}.modal p{font-size:14px;line-height:1.8}.rating{font-size:43px;text-align:center;letter-spacing:6px;color:#e9a841}.modal .btn{width:100%;margin-top:8px}.drag-ghost{position:fixed;z-index:150;pointer-events:none;width:68px;height:68px;border:2px solid #deb974;background:#fff9e9e9;border-radius:19px;display:grid;place-items:center;font-size:38px;transform:translate(-50%,-50%);box-shadow:0 6px 20px #0004}.drop-highlight{outline:4px solid #8ebf9e;outline-offset:2px}.soft{color:#7c8061;font-weight:850}.emptybook{padding:24px;background:#fff6e8;border-radius:18px;color:#8b7969;font-size:14px;text-align:center}.divider{height:1px;background:#e8d8c4;margin:16px 0}.starline{display:flex;justify-content:space-between;gap:8px;align-items:center}.illustration{font-size:31px}.subtitle{font-size:12px;color:#927c65;margin:5px 0 0}.freeform{background:#f4f2e4;border:2px dashed #d8ceb7;padding:14px;border-radius:15px;font-size:13px}.mobile-brief{display:none}@keyframes up{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translate(-50%,0)}}@media(max-width:900px){.layout{grid-template-columns:1fr}.stations{grid-template-columns:1fr 1fr}.ingredients{grid-template-columns:repeat(5,minmax(0,1fr))}}@media(max-width:600px){#root{padding:10px 9px 25px}.brand-mark{height:45px;width:45px}.brand-mark svg{width:35px;height:35px}.brand-name{font-size:22px}.brand-small{font-size:9px}.site-head{margin-bottom:10px}.meta{gap:5px}.pill{font-size:11px;padding:5px 8px}.pill b{font-size:14px}.navline{margin-bottom:9px}.nav{padding:8px 11px;font-size:12px}.card{padding:12px;border-radius:20px}.layout,.left,.right{gap:12px}.customer{padding:8px;margin-bottom:10px}.avatar{min-width:55px;height:55px;font-size:34px}.ticket{padding:10px}.ticket-title{font-size:17px}.tag{font-size:11px;padding:4px 6px}.order-note{margin:8px 0}.stations{grid-template-columns:1fr}.plate{min-height:200px;margin:5px 0}.plate svg{height:223px}.grill{min-height:116px}.burner{min-height:100px}.ingredients{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.ingredient{min-height:88px}.ingredient .emoji{font-size:29px}.ingredient .ingname{font-size:11px}.collection{grid-template-columns:1fr}.kitchen-top{margin-bottom:7px}.station{padding:10px}.mobile-brief{display:inline}.desktop-brief{display:none}}
@@ -1156,7 +1156,7 @@ button:focus-visible{outline:3px solid #fff0ae;outline-offset:3px}
 /* v0.20 — visible ingredients and tactile, non-blocking finishing effects */
 .cafe-art{position:relative;isolation:isolate}
 .cafe-fx-label{position:absolute;z-index:2;top:6px;right:7px;max-width:80%;pointer-events:none;font-size:11px;font-weight:900;line-height:1.3;color:#543f2e;background:#fffdf0ed;border:2px solid #e0bd83;border-radius:10px;padding:5px 8px;box-shadow:0 2px 0 #b7885640;animation:cfFlash 1.15s ease both}.cafe-fx-label.pancake{background:#fff7d6f0;border-color:#e3b765;color:#8b5b25}
-.cf-season-fresh{animation:cfScatter .58s cubic-bezier(.2,.65,.3,1) both;transform-origin:160px 104px}
+.cf-season-fresh{animation:cfScatter .58s cubic-bezier(.2,.65,.3,1) both;transform-box:fill-box;transform-origin:center}
 .cf-sauce-fresh{animation:cfPour .55s ease-out both;stroke-dasharray:240;stroke-dashoffset:240}
 .cf-fruit-pop{animation:sdPop .36s cubic-bezier(.3,1.5,.5,1) both;transform-box:fill-box;transform-origin:center}
 .burger-layer-drop{animation:cfDrop .34s cubic-bezier(.24,1.33,.43,1) both;transform-box:fill-box;transform-origin:center}
@@ -1169,7 +1169,9 @@ button:focus-visible{outline:3px solid #fff0ae;outline-offset:3px}
 @keyframes pattyHitCrumb{0%{opacity:0;transform:translateY(-2px) scale(.55)}18%{opacity:1}100%{opacity:0;transform:translate(var(--mx,0px),var(--my,-18px)) scale(1.08)}}
 @keyframes pattyHitSteam{0%{opacity:0;transform:translateY(2px) scale(.7)}25%{opacity:.88}100%{opacity:0;transform:translateY(-16px) scale(1.06)}}
 @keyframes pattyHitShine{0%{opacity:0;transform:scale(.9)}38%{opacity:1;transform:scale(1.08)}100%{opacity:0;transform:scale(1.2)}}
-@keyframes cfScatter{0%{opacity:.05;transform:translateY(-17px) scale(.85)}66%{opacity:1;transform:translateY(2px) scale(1.06)}100%{opacity:1;transform:translateY(0) scale(1)}}
+/* Keep SVG placement (transform="translate(x y) ...") intact.
+   Animate the independent translate/scale properties instead of replacing transform. */
+@keyframes cfScatter{0%{opacity:.05;translate:0 -10px;scale:.88}66%{opacity:1;translate:0 2px;scale:1.06}100%{opacity:1;translate:0 0;scale:1}}
 @keyframes cfPour{to{stroke-dashoffset:0}}
 @keyframes cfDrop{0%{opacity:.45;translate:0 -12px;scale:.96}80%{opacity:1;translate:0 2px;scale:1.02}100%{opacity:1;translate:0 0;scale:1}}
 @keyframes cfFlash{0%{opacity:0;transform:translateY(6px) scale(.9)}15%,65%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-5px)}}
@@ -1355,6 +1357,124 @@ button:focus-visible{outline:3px solid #fff0ae;outline-offset:3px}
 @keyframes serveTwinkle{0%{opacity:0;transform:scale(.5) rotate(-25deg)}45%{opacity:1;transform:scale(1.25)}100%{opacity:1;transform:scale(1)}}
 @media(max-height:670px){.served-showcase-art{height:78px}.served-showcase-art svg{max-height:78px}.served-showcase{padding:1px 7px 3px}.served-set-showcase{padding:4px}}
 @media(prefers-reduced-motion:reduce){.served-showcase:before,.served-showcase-art,.served-flash,.served-set-showcase{animation:none!important}}
+
+/* v0.49 — open recipe = full-page reading & cooking mode.
+   The normal one-screen kitchen is deliberately unchanged when recipes are closed. */
+body:has(.play-screen.recipe-expanded){
+ height:auto!important; min-height:100dvh; overflow-x:hidden!important;overflow-y:auto!important;
+ overscroll-behavior-y:auto;
+}
+#root:has(.play-screen.recipe-expanded){
+ height:auto!important;min-height:100dvh!important;overflow:visible!important;
+ padding-bottom:max(16px,env(safe-area-inset-bottom))!important;
+}
+#root:has(.play-screen.recipe-expanded) main{
+ display:block!important;flex:0 0 auto!important;min-height:0!important;
+ height:auto!important;overflow:visible!important;
+}
+.play-screen.recipe-expanded{
+ display:flex!important;flex-direction:column!important;
+ width:100%!important;height:auto!important;min-height:0!important;
+ overflow:visible!important;gap:9px!important;
+ grid-template-columns:none!important;grid-template-rows:none!important;
+}
+.play-screen.recipe-expanded .cafe-kind-tabs{
+ flex:0 0 auto!important;height:auto!important;min-height:0;
+}
+.play-screen.recipe-expanded .order-console,
+.play-screen.recipe-expanded .cafe-order,
+.play-screen.recipe-expanded .cafe-order:has(.cafe-recipe-detail){
+ position:relative!important;flex:0 0 auto!important;
+ height:auto!important;max-height:none!important;min-height:0!important;
+ overflow:visible!important;overscroll-behavior:auto!important;
+}
+.play-screen.recipe-expanded .receipt-recipe-details,
+.play-screen.recipe-expanded .cafe-recipe-detail{
+ display:block!important;position:static!important;inset:auto!important;
+ height:auto!important;max-height:none!important;overflow:visible!important;
+ box-shadow:none!important;transform:none!important;
+}
+.play-screen.recipe-expanded .receipt-recipe-details .receipt-explain,
+.play-screen.recipe-expanded .order-summary{
+ display:block!important;
+}
+.play-screen.recipe-expanded .receipt-recipe-details .recipe-steps,
+.play-screen.recipe-expanded .receipt-recipe-details .preview-steps{
+ display:grid!important;
+ grid-template-columns:repeat(6,minmax(0,1fr))!important;
+ gap:5px!important;width:100%;overflow:visible!important;
+}
+.play-screen.recipe-expanded .recipe-step,
+.play-screen.recipe-expanded .preview-steps .recipe-step,
+.play-screen.recipe-expanded .receipt-recipe-details .recipe-step{
+ display:flex!important;flex:initial!important;width:auto!important;min-width:0!important;
+ height:auto!important;min-height:62px!important;max-height:none!important;
+ padding:5px 3px!important;gap:3px!important;
+}
+.play-screen.recipe-expanded .recipe-step .step-emoji,
+.play-screen.recipe-expanded .receipt-recipe-details .step-emoji{
+ font-size:23px!important;line-height:1.2!important;
+}
+.play-screen.recipe-expanded .recipe-step .step-name,
+.play-screen.recipe-expanded .receipt-recipe-details .step-name{
+ font-size:11px!important;line-height:1.3!important;
+ white-space:normal!important;overflow:visible!important;
+ overflow-wrap:anywhere!important;word-break:normal!important;text-overflow:clip!important;
+}
+.play-screen.recipe-expanded .play-workbench,
+.play-screen.recipe-expanded .cafe-workbench{
+ flex:0 0 auto!important;height:clamp(220px,32dvh,290px)!important;
+ min-height:220px!important;max-height:none!important;
+ display:grid!important;
+}
+.play-screen.recipe-expanded .play-pantry,
+.play-screen.recipe-expanded .cafe-pantry{
+ flex:0 0 auto!important;min-height:0!important;
+ height:auto!important;max-height:none!important;
+ overflow:visible!important;
+}
+.play-screen.recipe-expanded .ingredient-scroll{
+ flex:0 0 auto!important;min-height:0!important;
+ height:auto!important;max-height:none!important;
+ overflow:visible!important;overscroll-behavior:auto!important;
+}
+.play-screen.recipe-expanded .play-actions,
+.play-screen.recipe-expanded.cafe-screen .play-actions{
+ flex:0 0 auto!important;height:auto!important;min-height:49px!important;
+ overflow:visible!important;
+}
+@media(max-width:760px){
+ .play-screen.recipe-expanded .receipt-recipe-details .recipe-steps,
+ .play-screen.recipe-expanded .receipt-recipe-details .preview-steps{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ }
+ .play-screen.recipe-expanded .play-pantry .ingredients,
+ .play-screen.recipe-expanded .cafe-pantry .ingredients{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ }
+ .play-screen.recipe-expanded .play-workbench,
+ .play-screen.recipe-expanded .cafe-workbench{
+  height:clamp(220px,30dvh,265px)!important;min-height:220px!important;
+ }
+}
+@media(max-width:355px){
+ .play-screen.recipe-expanded .receipt-recipe-details .recipe-steps,
+ .play-screen.recipe-expanded .receipt-recipe-details .preview-steps{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ }
+ .play-screen.recipe-expanded .play-pantry .ingredients,
+ .play-screen.recipe-expanded .cafe-pantry .ingredients{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ }
+}
+/* Expanded pantry uses appropriately sized cards on wide screens. */
+@media(min-width:761px){
+ .play-screen.recipe-expanded .play-pantry .ingredients,
+ .play-screen.recipe-expanded .cafe-pantry .ingredients{
+  grid-template-columns:repeat(auto-fill,minmax(90px,1fr))!important;
+ }
+}
+
 </style>
 </head>
 <body><div id="root"></div>
@@ -1366,47 +1486,47 @@ const ING={bottom:{n:'下のパン',e:'🥯',cat:'bread',at:0},top:{n:'上のパ
  redpepper:{n:'赤パプリカ',e:'🫑',cat:'veg',at:12},spinach:{n:'ほうれん草',e:'🥬',cat:'veg',at:19},cucumber:{n:'きゅうり',e:'🥒',cat:'veg',at:14},pineapple:{n:'パイナップル',e:'🍍',cat:'veg',at:28},corn:{n:'スイートコーン',e:'🌽',cat:'veg',at:35},olive:{n:'オリーブ',e:'🫒',cat:'veg',at:38},
  sesame:{n:'ごまソース',e:'🫙',cat:'sauce',at:31},bbqsmoke:{n:'スモーキーBBQ',e:'🍯',cat:'sauce',at:27}};
 const RECIPES=[
-{id:'cheese',n:'とろけるチーズ',seq:['bottom','patty','cheese','top'],at:0,price:120,desc:'できたてパティにチーズをのせて。'},
-{id:'garden',n:'おひさまガーデン',seq:['bottom','lettuce','tomato','onion','cheese','top'],at:0,price:130,desc:'野菜たっぷり、色とりどり。'},
-{id:'classic',n:'まちの定番',seq:['bottom','lettuce','patty','tomato','top'],at:0,price:140,desc:'いつもの、ほっとする味。'},
-{id:'onioncheese',n:'たまねぎチーズ',seq:['bottom','lettuce','patty','onion','cheese','sauce','top'],at:0,price:165,desc:'シャキシャキたまねぎと、まろやかなチーズ。'},
-{id:'red',n:'あかいケチャップ',seq:['bottom','patty','ketchup','pickle','top'],at:0,price:150,desc:'ケチャップで、あかくおめかし。'},
-{id:'pickle',n:'さっぱりピクルス',seq:['bottom','patty','pickle','sauce','top'],at:1,price:155,desc:'甘酸っぱいピクルスが主役。'},
-{id:'sunny',n:'朝のたまご',seq:['bottom','lettuce','patty','egg','top'],at:3,price:180,desc:'ふっくらたまごを重ねて。'},
-{id:'bacon',n:'カリカリベーコン',seq:['bottom','patty','cheese','bacon','top'],at:6,price:190,desc:'香ばしいベーコンのごちそう。'},
-{id:'creamy',n:'まろやかマヨ',seq:['bottom','lettuce','patty','mayo','tomato','top'],at:4,price:175,desc:'やさしいマヨネーズの味。'},
-{id:'double',n:'ダブルごほうび',seq:['bottom','patty','cheese','patty','cheese','top'],at:7,price:230,desc:'パティを2枚、ていねいに。'},
-{id:'fish',n:'海辺のフィッシュ',seq:['bottom','lettuce','fish','sauce','top'],at:9,price:215,desc:'白身魚をカラッと焼き上げて。'},
-{id:'mustardbacon',n:'マスタードベーコン',seq:['bottom','patty','bacon','mustard','top'],at:8,price:215,desc:'ピリッとしたソースとベーコン。'},
-{id:'avocado',n:'みどりの休日',seq:['bottom','lettuce','patty','avocado','top'],at:12,price:240,desc:'クリーミーなアボカドがアクセント。'},
-{id:'teriyaki',n:'あまからソース',seq:['bottom','lettuce','patty','sauce','egg','top'],at:5,price:195,desc:'お店のソースと、ふっくらたまご。'},
-{id:'baconegg',n:'朝焼けベーコンエッグ',seq:['bottom','lettuce','patty','cheese','bacon','egg','top'],at:10,price:255,desc:'3種類の焼きものを重ねる、朝のごちそう。'},
-{id:'mushroom',n:'森のきのこチーズ',seq:['bottom','lettuce','patty','mushroom','cheese','top'],at:14,price:250,desc:'香ばしく焼いたきのこを、とろけるチーズと。'},
-{id:'rainbowveg',n:'野菜のパレード',seq:['bottom','lettuce','cabbage','tomato','onion','avocado','mayo','top'],at:16,price:225,desc:'パティを使わない、色とりどりの野菜バーガー。'},
-{id:'purplefish',n:'むらさきフィッシュ',seq:['bottom','cabbage','fish','pickle','mustard','top'],at:16,price:245,desc:'紫キャベツと白身魚のさわやかな組み合わせ。'},
-{id:'hash',n:'ほくほくポテト',seq:['bottom','patty','hashbrown','cheese','ketchup','top'],at:19,price:265,desc:'焼きたてハッシュポテトが主役のボリュームバーガー。'},
-{id:'potatobacon',n:'ポテトとベーコン',seq:['bottom','hashbrown','cheese','bacon','mayo','top'],at:20,price:240,desc:'お肉のパティなしでも、しっかり満足。'},
-{id:'jalapeno',n:'ピリ辛ハラペーニョ',seq:['bottom','lettuce','patty','jalapeno','cheese','mustard','top'],at:22,price:275,desc:'ピリッとしたアクセント。辛いもの好きに。'},
-{id:'bbq',n:'ごちそうBBQスタック',seq:['bottom','lettuce','patty','cheese','bacon','onion','sauce','top'],at:24,price:290,desc:'パティとベーコンに甘いソースを重ねて。'},
-{id:'fishtartar',n:'潮風タルタル',seq:['bottom','cabbage','fish','pickle','mayo','cheese','top'],at:26,price:280,desc:'ザクザク白身魚とまろやかなソース。'},
-{id:'triple',n:'トリプルごほうび',seq:['bottom','patty','cheese','patty','cheese','patty','ketchup','top'],at:30,price:340,desc:'3枚のパティをじっくり焼く、特別な一皿。'},
+{id:'cheese',n:'クラシックチーズバーガー',seq:['bottom','patty','cheese','top'],at:0,price:120,desc:'香ばしく焼いたビーフパティに、とろけるチーズを重ねた定番の一品。'},
+{id:'garden',n:'彩り野菜とチーズのバーガー',seq:['bottom','lettuce','tomato','onion','cheese','top'],at:0,price:130,desc:'レタス、トマト、玉ねぎにチーズを合わせた、野菜が主役のバーガー。'},
+{id:'classic',n:'フレッシュトマトバーガー',seq:['bottom','lettuce','patty','tomato','top'],at:0,price:140,desc:'ジューシーなビーフとみずみずしいトマトに、シャキシャキのレタス。'},
+{id:'onioncheese',n:'オニオンチーズバーガー',seq:['bottom','lettuce','patty','onion','cheese','sauce','top'],at:0,price:165,desc:'シャキシャキ玉ねぎとチーズに、特製ソースがよく合う一品。'},
+{id:'red',n:'ジューシービーフバーガー',seq:['bottom','patty','ketchup','pickle','top'],at:0,price:150,desc:'焼きたてビーフにケチャップとピクルスを合わせた、食べやすい王道の味。'},
+{id:'pickle',n:'ピクルス＆特製ソースバーガー',seq:['bottom','patty','pickle','sauce','top'],at:1,price:155,desc:'甘酸っぱいピクルスと、お店の特製ソースがビーフの旨みを引き立てます。'},
+{id:'sunny',n:'エッグビーフバーガー',seq:['bottom','lettuce','patty','egg','top'],at:3,price:180,desc:'ふっくら焼いたたまごとビーフ、レタスを重ねた満足の一品。'},
+{id:'bacon',n:'ベーコンチーズバーガー',seq:['bottom','patty','cheese','bacon','top'],at:6,price:190,desc:'香ばしいベーコンと、とろけるチーズをビーフパティに重ねて。'},
+{id:'creamy',n:'トマトマヨビーフバーガー',seq:['bottom','lettuce','patty','mayo','tomato','top'],at:4,price:175,desc:'シャキシャキレタスとトマトに、まろやかなマヨネーズ。'},
+{id:'double',n:'ダブルチーズバーガー',seq:['bottom','patty','cheese','patty','cheese','top'],at:7,price:230,desc:'ビーフパティ2枚とチーズ2枚。肉の旨みをたっぷり楽しめます。'},
+{id:'fish',n:'サクサク白身魚バーガー',seq:['bottom','lettuce','fish','sauce','top'],at:9,price:215,desc:'サクッと揚がった白身魚フライに、レタスと特製ソース。'},
+{id:'mustardbacon',n:'ベーコンマスタードバーガー',seq:['bottom','patty','bacon','mustard','top'],at:8,price:215,desc:'ベーコンの香ばしさとマスタードのほどよい刺激。'},
+{id:'avocado',n:'アボカドビーフバーガー',seq:['bottom','lettuce','patty','avocado','top'],at:12,price:240,desc:'クリーミーなアボカドとビーフの旨みが相性抜群。'},
+{id:'teriyaki',n:'特製ソースのエッグバーガー',seq:['bottom','lettuce','patty','sauce','egg','top'],at:5,price:195,desc:'特製ソースで味わうビーフに、ふっくら焼いたたまごをプラス。'},
+{id:'baconegg',n:'ベーコンエッグチーズバーガー',seq:['bottom','lettuce','patty','cheese','bacon','egg','top'],at:10,price:255,desc:'たまご、ベーコン、チーズを重ねた食べごたえ満点のバーガー。'},
+{id:'mushroom',n:'きのこチーズバーガー',seq:['bottom','lettuce','patty','mushroom','cheese','top'],at:14,price:250,desc:'香ばしい焼ききのこと、とろけるチーズのコクを楽しむ一品。'},
+{id:'rainbowveg',n:'アボカド彩り野菜バーガー',seq:['bottom','lettuce','cabbage','tomato','onion','avocado','mayo','top'],at:16,price:225,desc:'アボカド、紫キャベツ、トマトなどをマヨネーズでまとめた野菜バーガー。'},
+{id:'purplefish',n:'紫キャベツのフィッシュバーガー',seq:['bottom','cabbage','fish','pickle','mustard','top'],at:16,price:245,desc:'サクサク白身魚に、紫キャベツとピクルスのさわやかな風味。'},
+{id:'hash',n:'ハッシュポテトチーズバーガー',seq:['bottom','patty','hashbrown','cheese','ketchup','top'],at:19,price:265,desc:'ビーフにほくほくのハッシュポテトとチーズを重ねたボリューム派。'},
+{id:'potatobacon',n:'ベーコンポテトチーズバーガー',seq:['bottom','hashbrown','cheese','bacon','mayo','top'],at:20,price:240,desc:'香ばしいベーコンとハッシュポテトに、チーズとマヨネーズ。'},
+{id:'jalapeno',n:'ハラペーニョチーズバーガー',seq:['bottom','lettuce','patty','jalapeno','cheese','mustard','top'],at:22,price:275,desc:'ハラペーニョとマスタードが効いた、ピリ辛チーズバーガー。'},
+{id:'bbq',n:'ベーコンオニオンチーズバーガー',seq:['bottom','lettuce','patty','cheese','bacon','onion','sauce','top'],at:24,price:290,desc:'ビーフ、ベーコン、玉ねぎ、チーズに特製ソースを合わせました。'},
+{id:'fishtartar',n:'ピクルスマヨフィッシュバーガー',seq:['bottom','cabbage','fish','pickle','mayo','cheese','top'],at:26,price:280,desc:'サクサク白身魚にピクルスとマヨネーズ、チーズを合わせて。'},
+{id:'triple',n:'トリプルビーフチーズバーガー',seq:['bottom','patty','cheese','patty','cheese','patty','ketchup','top'],at:30,price:340,desc:'ビーフパティ3枚を豪快に重ねた、チーズ入りの満腹バーガー。'},
 
-{id:'herbchicken',n:'香草チキン',seq:['bottom','lettuce','chicken','mayo','top'],at:6,price:215,desc:'チキンをじゅわっと焼いて、葉野菜と。'},
-{id:'peppercheese',n:'赤パプリカチーズ',seq:['bottom','patty','redpepper','cheese','ketchup','top'],at:12,price:225,desc:'甘い赤パプリカが彩る定番。'},
-{id:'shrimplemon',n:'海風えびカツ',seq:['bottom','cabbage','shrimp','mayo','pickle','top'],at:16,price:255,desc:'ぷりっとしたえびカツに爽やかなピクルス。'},
-{id:'cucumberchicken',n:'きゅうりチキン',seq:['bottom','cucumber','lettuce','chicken','sesame','top'],at:31,price:255,desc:'シャキシャキきゅうりと香ばしいごまソース。'},
-{id:'spinachbacon',n:'ほうれん草ベーコン',seq:['bottom','spinach','patty','bacon','mayo','top'],at:19,price:270,desc:'ほうれん草とベーコンを重ねた一皿。'},
-{id:'redsalami',n:'サラミと赤い野菜',seq:['bottom','lettuce','salami','redpepper','tomato','ketchup','top'],at:22,price:255,desc:'赤い素材が集まったバーガー。'},
-{id:'eggplantgrill',n:'焼きなすガーデン',seq:['bottom','lettuce','eggplant','mushroom','cheese','top'],at:25,price:265,desc:'香ばしく焼いたなすときのこを重ねて。'},
-{id:'tropicbbq',n:'南風パインBBQ',seq:['bottom','patty','cheese','pineapple','bbqsmoke','top'],at:28,price:285,desc:'甘いパイナップルとスモーキーなソース。'},
-{id:'cornsun',n:'おひさまコーン',seq:['bottom','lettuce','patty','corn','mayo','top'],at:35,price:275,desc:'コーンがころころ、甘い風味。'},
-{id:'olivefish',n:'オリーブフィッシュ',seq:['bottom','cucumber','fish','olive','mayo','top'],at:38,price:285,desc:'お魚にオリーブの香りを添えて。'},
-{id:'doublechicken',n:'よくばりWチキン',seq:['bottom','chicken','cheese','chicken','redpepper','mayo','top'],at:40,price:350,desc:'チキンを2枚焼いて重ねる贅沢。'},
-{id:'seaduo',n:'海のなかよし',seq:['bottom','lettuce','fish','cheese','shrimp','mayo','top'],at:43,price:365,desc:'白身魚とえびカツの二重奏。'},
-{id:'mushroomolive',n:'森とオリーブ',seq:['bottom','spinach','eggplant','mushroom','olive','sesame','top'],at:46,price:315,desc:'野菜たっぷりの香ばしいバーガー。'},
-{id:'flamefiesta',n:'ピリ辛フィエスタ',seq:['bottom','patty','jalapeno','redpepper','salami','bbqsmoke','top'],at:49,price:360,desc:'ハラペーニョとサラミの刺激的な組み合わせ。'},
-{id:'cornshrimp',n:'コーンとえびの休日',seq:['bottom','lettuce','shrimp','corn','cheese','mayo','top'],at:52,price:335,desc:'甘いコーンとえびの相性がぴったり。'},
-{id:'grandharvest',n:'こもれび大収穫',seq:['bottom','spinach','patty','cheese','eggplant','chicken','tomato','corn','bbqsmoke','top'],at:56,price:430,desc:'畑とキッチンのごちそうを一度に。'}
+{id:'herbchicken',n:'レタスマヨチキンバーガー',seq:['bottom','lettuce','chicken','mayo','top'],at:6,price:215,desc:'香ばしく焼いたチキンに、シャキシャキレタスとマヨネーズ。'},
+{id:'peppercheese',n:'赤パプリカのチーズバーガー',seq:['bottom','patty','redpepper','cheese','ketchup','top'],at:12,price:225,desc:'甘みのある赤パプリカと、とろけるチーズをビーフに重ねて。'},
+{id:'shrimplemon',n:'えびカツピクルスマヨバーガー',seq:['bottom','cabbage','shrimp','mayo','pickle','top'],at:16,price:255,desc:'ぷりっとしたえびカツに、ピクルスとマヨネーズのさわやかな味わい。'},
+{id:'cucumberchicken',n:'ごま香るチキン＆きゅうりバーガー',seq:['bottom','cucumber','lettuce','chicken','sesame','top'],at:31,price:255,desc:'焼きチキンときゅうりを、香ばしいごまソースでさっぱりと。'},
+{id:'spinachbacon',n:'ほうれん草とベーコンのビーフバーガー',seq:['bottom','spinach','patty','bacon','mayo','top'],at:19,price:270,desc:'ほうれん草の彩りとベーコンの旨みをビーフに合わせました。'},
+{id:'redsalami',n:'サラミ＆赤パプリカバーガー',seq:['bottom','lettuce','salami','redpepper','tomato','ketchup','top'],at:22,price:255,desc:'サラミ、赤パプリカ、トマトを重ねた彩り豊かなバーガー。'},
+{id:'eggplantgrill',n:'焼きなすときのこのチーズバーガー',seq:['bottom','lettuce','eggplant','mushroom','cheese','top'],at:25,price:265,desc:'焼きなすときのこの香ばしさを、とろけるチーズと一緒に。'},
+{id:'tropicbbq',n:'パイン＆スモーキーBBQバーガー',seq:['bottom','patty','cheese','pineapple','bbqsmoke','top'],at:28,price:285,desc:'甘酸っぱいパイナップルと、香ばしいBBQソースがビーフにぴったり。'},
+{id:'cornsun',n:'スイートコーンマヨバーガー',seq:['bottom','lettuce','patty','corn','mayo','top'],at:35,price:275,desc:'スイートコーンの甘みとマヨネーズをビーフに合わせた一品。'},
+{id:'olivefish',n:'オリーブ香るフィッシュバーガー',seq:['bottom','cucumber','fish','olive','mayo','top'],at:38,price:285,desc:'白身魚フライにきゅうりとオリーブ、マヨネーズを添えて。'},
+{id:'doublechicken',n:'ダブルチキンチーズバーガー',seq:['bottom','chicken','cheese','chicken','redpepper','mayo','top'],at:40,price:350,desc:'チキンパティ2枚にチーズと赤パプリカを重ねた満足バーガー。'},
+{id:'seaduo',n:'フィッシュ＆えびカツバーガー',seq:['bottom','lettuce','fish','cheese','shrimp','mayo','top'],at:43,price:365,desc:'白身魚フライとえびカツを一度に楽しめる贅沢な一品。'},
+{id:'mushroomolive',n:'焼きなすとオリーブの野菜バーガー',seq:['bottom','spinach','eggplant','mushroom','olive','sesame','top'],at:46,price:315,desc:'ほうれん草、焼きなす、きのこ、オリーブをごまソースで。'},
+{id:'flamefiesta',n:'ハラペーニョサラミBBQバーガー',seq:['bottom','patty','jalapeno','redpepper','salami','bbqsmoke','top'],at:49,price:360,desc:'ハラペーニョとサラミの刺激に、スモーキーBBQの香り。'},
+{id:'cornshrimp',n:'コーンチーズえびカツバーガー',seq:['bottom','lettuce','shrimp','corn','cheese','mayo','top'],at:52,price:335,desc:'えびカツに甘いコーンとチーズ、まろやかなマヨネーズ。'},
+{id:'grandharvest',n:'ごちそうミックスグリルバーガー',seq:['bottom','spinach','patty','cheese','eggplant','chicken','tomato','corn','bbqsmoke','top'],at:56,price:430,desc:'ビーフとチキンに、焼きなすや野菜を重ねた豪華な一品。'}
 ];
 const PEOPLE=[['🐰','うさぎのモコ','おなかがすいたな。ゆっくりでいいから、お願いね。'],['🐻','くまのタロ','いい匂いがするね。今日も楽しみにしてるよ。'],['🦊','きつねのリリ','きれいに重なったバーガーが好きなの。'],['🐼','パンダのポン','おいしいごはんには、急ぐ理由なんてないよね。'],['🐿️','りすのクルミ','ひとつずつ、ていねいに作ってくれたらうれしいな。'],['🐸','かえるのソラ','おひるごはんに、何を食べようかな。']];
 
@@ -1507,35 +1627,35 @@ const SUNDAE_CORE=['glass',...SUNDAE_SOFT];
 const CAFE_CORE=['fries','cup','pancake',...SUNDAE_CORE];
 const CAFE_RECIPES={
  fries:[
- {id:'f-salt',name:'ほくほく塩ポテト',seq:['fries','salt'],at:0,price:90,desc:'揚げたてをお塩でシンプルに。'},
- {id:'f-sea',name:'のり塩ポテト',seq:['fries','salt','seaweed'],at:2,price:110,desc:'青のりの香りがふわり。'},
- {id:'f-cheese',name:'とろ〜りチーズポテト',seq:['fries','cheesedip'],at:5,price:130,desc:'温かいチーズソースをたっぷり。'},
- {id:'f-hot',name:'ちょい辛ポテト',seq:['fries','salt','chili','pepper'],at:9,price:140,desc:'ちょっぴり刺激的な味。'},
- {id:'f-garlic',name:'ガーリックポテト',seq:['fries','salt','garlic'],at:12,price:155,desc:'にんにくの香りで食欲そそる一皿。'},
- {id:'f-paprika',name:'パプリカチーズポテト',seq:['fries','cheesedip','paprika'],at:17,price:175,desc:'濃厚チーズに赤いパプリカを。'},
- {id:'f-truffle',name:'香りのトリュフポテト',seq:['fries','truffle','pepper'],at:22,price:195,desc:'黒こしょうとトリュフ塩の上品な香り。'}],
+ {id:'f-salt',name:'フレンチフライポテト',seq:['fries','salt'],at:0,price:90,desc:'外はカリッと、中はほくほく。お塩で楽しむ定番ポテト。'},
+ {id:'f-sea',name:'のり塩フライドポテト',seq:['fries','salt','seaweed'],at:2,price:110,desc:'揚げたてのポテトに青のりの香りとほどよい塩味。'},
+ {id:'f-cheese',name:'濃厚チーズソースポテト',seq:['fries','cheesedip'],at:5,price:130,desc:'あつあつポテトに濃厚なチーズソースをとろり。'},
+ {id:'f-hot',name:'スパイシーチリポテト',seq:['fries','salt','chili','pepper'],at:9,price:140,desc:'チリスパイスと黒こしょうが効いた、ピリ辛ポテト。'},
+ {id:'f-garlic',name:'ガーリックソルトポテト',seq:['fries','salt','garlic'],at:12,price:155,desc:'香ばしいガーリックの風味が食欲をそそるポテト。'},
+ {id:'f-paprika',name:'パプリカチーズポテト',seq:['fries','cheesedip','paprika'],at:17,price:175,desc:'チーズソースのコクとパプリカの香りを楽しんで。'},
+ {id:'f-truffle',name:'トリュフ香るブラックペッパーポテト',seq:['fries','truffle','pepper'],at:22,price:195,desc:'トリュフ塩と黒こしょうで仕上げた、香り豊かなポテト。'}],
  drink:[
- {id:'d-milk',name:'ひんやりミルク',seq:['cup','milk','ice'],at:0,price:90,desc:'カップに注いで、氷をころん。'},
- {id:'d-tea',name:'やさしいミルクティー',seq:['cup','tea','milk','ice'],at:2,price:130,desc:'紅茶とミルクのやさしい組み合わせ。'},
- {id:'d-orange',name:'オレンジソーダ',seq:['cup','orange','soda','ice','lemon'],at:5,price:145,desc:'シュワシュワ、柑橘の香り。'},
- {id:'d-berry',name:'いちごミルク',seq:['cup','milk','berry','whip'],at:9,price:165,desc:'甘い香りとホイップ。'},
- {id:'d-cocoa',name:'ふわふわココア',seq:['cup','milk','cocoa','whip'],at:12,price:175,desc:'ココアにふんわりホイップ。'},
- {id:'d-mango',name:'マンゴーソーダ',seq:['cup','mango','soda','ice'],at:16,price:195,desc:'南国の果実にシュワシュワの泡。'},
- {id:'d-matcha',name:'キャラメル抹茶ラテ',seq:['cup','milk','matcha','caramel','ice'],at:22,price:215,desc:'ほろ苦い抹茶にキャラメルの甘み。'}],
+ {id:'d-milk',name:'アイスミルク',seq:['cup','milk','ice'],at:0,price:90,desc:'すっきり冷たいミルク。氷を浮かべてどうぞ。'},
+ {id:'d-tea',name:'アイスミルクティー',seq:['cup','tea','milk','ice'],at:2,price:130,desc:'紅茶の香りとミルクのまろやかさが広がる一杯。'},
+ {id:'d-orange',name:'オレンジレモンソーダ',seq:['cup','orange','soda','ice','lemon'],at:5,price:145,desc:'オレンジの甘酸っぱさに、レモンが香る爽快ソーダ。'},
+ {id:'d-berry',name:'ホイップいちごミルク',seq:['cup','milk','berry','whip'],at:9,price:165,desc:'いちごの甘酸っぱさに、ふんわりホイップを添えて。'},
+ {id:'d-cocoa',name:'ホイップココアラテ',seq:['cup','milk','cocoa','whip'],at:12,price:175,desc:'ミルクとココアのやさしい甘さに、ホイップをたっぷり。'},
+ {id:'d-mango',name:'マンゴーソーダ',seq:['cup','mango','soda','ice'],at:16,price:195,desc:'マンゴーの豊かな風味とシュワッとした炭酸。'},
+ {id:'d-matcha',name:'アイスキャラメル抹茶ラテ',seq:['cup','milk','matcha','caramel','ice'],at:22,price:215,desc:'ほろ苦い抹茶ラテに、キャラメルの甘さをプラス。'}],
  pancake:[
- {id:'p-butter',name:'バターパンケーキ',seq:['pancake','butter','maplesyrup'],at:0,price:150,desc:'ふんわり焼いて、バターとシロップ。'},
- {id:'p-berry',name:'いちごクリーム',seq:['pancake','cream','strawberry'],at:2,price:185,desc:'真っ赤ないちごと白いクリーム。'},
- {id:'p-banana',name:'はちみつバナナ',seq:['pancake','banana','honey'],at:5,price:195,desc:'輪切りバナナをのせて。'},
- {id:'p-double',name:'ふたつ重ね',seq:['pancake','pancake','butter','maplesyrup','cream'],at:9,price:230,desc:'2枚を焼いて、ふんわり重ねる。'},
- {id:'p-blueberry',name:'森のブルーベリー',seq:['pancake','cream','blueberry','honey'],at:13,price:235,desc:'甘酸っぱいブルーベリーをたっぷり。'},
- {id:'p-nut',name:'ナッツショコラ',seq:['pancake','pancake','choco','nuts','cream'],at:19,price:285,desc:'チョコとナッツの香ばしさ。'}],
+ {id:'p-butter',name:'メープルバターパンケーキ',seq:['pancake','butter','maplesyrup'],at:0,price:150,desc:'ふんわり焼いたパンケーキに、バターとメープルをとろり。'},
+ {id:'p-berry',name:'いちごホイップパンケーキ',seq:['pancake','cream','strawberry'],at:2,price:185,desc:'甘酸っぱいいちごと、ふんわりホイップの王道コンビ。'},
+ {id:'p-banana',name:'はちみつバナナパンケーキ',seq:['pancake','banana','honey'],at:5,price:195,desc:'輪切りバナナとはちみつのやさしい甘さ。'},
+ {id:'p-double',name:'ダブルメープルパンケーキ',seq:['pancake','pancake','butter','maplesyrup','cream'],at:9,price:230,desc:'ふっくら2枚重ね。バター、メープル、ホイップで贅沢に。'},
+ {id:'p-blueberry',name:'ブルーベリーハニーパンケーキ',seq:['pancake','cream','blueberry','honey'],at:13,price:235,desc:'ブルーベリーの酸味を、はちみつとホイップでまろやかに。'},
+ {id:'p-nut',name:'ダブルショコラナッツパンケーキ',seq:['pancake','pancake','choco','nuts','cream'],at:19,price:285,desc:'2枚重ねのパンケーキにチョコソースと香ばしいナッツ。'}],
  sundae:[
- {id:'s-vanilla',name:'にじいろバニラサンデー',seq:['glass','softvanilla','chocodrip','rainbowbits'],at:0,price:175,desc:'バニラに色とりどりのスプレー。'},
- {id:'s-choco',name:'チョコバナナサンデー',seq:['glass','softchoco','chocodrip','bananafruit','cookiecrumb','chocobits'],at:3,price:225,desc:'ほろ苦いチョコと甘いバナナ。'},
- {id:'s-straw',name:'いちごみるくサンデー',seq:['glass','softstraw','berrydrip','berryfruit','sundaecream'],at:5,price:235,desc:'いちご色に染まるふんわりソフト。'},
- {id:'s-fruit',name:'くだものパフェ',seq:['glass','softvanilla','cereal','kiwifruit','orangefruit','berryfruit','cherryfruit'],at:8,price:275,desc:'グラスにフルーツをたっぷり。'},
- {id:'s-matcha',name:'抹茶と木の実のパフェ',seq:['glass','softmatcha','carameldrip','sundaealmond','sundaecream'],at:12,price:295,desc:'抹茶の香りとナッツの食感。'},
- {id:'s-mix',name:'夢色ミックスパフェ',seq:['glass','softmix','chocodrip','blueberryfruit','rainbowbits','wafer','cherryfruit'],at:16,price:345,desc:'ふた色のソフトと、きらきらの飾り。'}]
+ {id:'s-vanilla',name:'カラフルチョコバニラサンデー',seq:['glass','softvanilla','chocodrip','rainbowbits'],at:0,price:175,desc:'バニラソフトにチョコソースとカラースプレー。'},
+ {id:'s-choco',name:'クランチチョコバナナサンデー',seq:['glass','softchoco','chocodrip','bananafruit','cookiecrumb','chocobits'],at:3,price:225,desc:'チョコソフトにバナナ、クッキー、チョコスプレーをたっぷり。'},
+ {id:'s-straw',name:'いちごホイップサンデー',seq:['glass','softstraw','berrydrip','berryfruit','sundaecream'],at:5,price:235,desc:'いちごソフトに果実といちごソース、ホイップを添えて。'},
+ {id:'s-fruit',name:'彩りフルーツパフェ',seq:['glass','softvanilla','cereal','kiwifruit','orangefruit','berryfruit','cherryfruit'],at:8,price:275,desc:'バニラソフトにキウイ、オレンジ、いちご、さくらんぼ。'},
+ {id:'s-matcha',name:'抹茶キャラメルナッツパフェ',seq:['glass','softmatcha','carameldrip','sundaealmond','sundaecream'],at:12,price:295,desc:'抹茶ソフトにキャラメルソースとナッツの香ばしさ。'},
+ {id:'s-mix',name:'ミックスソフトのチョコパフェ',seq:['glass','softmix','chocodrip','blueberryfruit','rainbowbits','wafer','cherryfruit'],at:16,price:345,desc:'ミックスソフトにチョコソース、ブルーベリーとさくらんぼ。'}]
 
 };
 const CAFE_IDS=['fries','drink','pancake','sundae'];
@@ -1795,6 +1915,10 @@ function noteBurgerPlacement(id,index){
  if(id==='patty')burgerPattyFx={index,at:Date.now()};
 }
 function burgerPattyCurrentFx(){return burgerPattyFx&&Date.now()-burgerPattyFx.at<860?burgerPattyFx:null;}
+function clearFoodTransientFx(){
+ cafeFx=null;sundaeFx=null;drinkFx=null;burgerPattyFx=null;
+ ui.sauceFlash=-1;ui.burgerFlash=-1;
+}
 function playSprinkle(){
  const ctx=audio();if(!ctx)return;
  try{const t=ctx.currentTime;for(let i=0;i<5;i++){
@@ -1852,7 +1976,7 @@ function cafeAdvance(){
  if(changed){save();if((ui.page==='cafe'||(ui.page==='set'&&s.setMeal?.active!=='burger'))&&!drag?.started&&!cafeDrag?.moved)render();}
 }
 function cafeNext(k=cafeKind()){
- drinkFx=null;
+ clearFoodTransientFx();
  const c=s.cafe,old=c.orders[k].recipe;
  c.orders[k]=cafeRandomOrder(k,c.counts[k],old,s.travel.current);c.drafts[k]={seq:[],tool:null};
  ui.showCafeRecipe=false;save();render();
@@ -2089,8 +2213,8 @@ function burgerGlaze(id,y){
  return `<g class="sauce-streak glaze-surface" aria-hidden="true"><path d="M88 ${y+5}Q84 ${y-4} 104 ${y+1}Q126 ${y-8} 147 ${y+1}Q170 ${y-7} 191 ${y+2}Q215 ${y-5} 238 ${y+3}Q256 ${y-3} 261 ${y+5}L258 ${y+15}Q252 ${y+20} 244 ${y+14}Q239 ${y+24} 233 ${y+21}L228 ${y+13}Q212 ${y+20} 196 ${y+14}Q182 ${y+27} 172 ${y+17}Q154 ${y+24} 141 ${y+16}Q120 ${y+23} 109 ${y+14}Q93 ${y+19} 88 ${y+5}Z" fill="${c.base}" fill-opacity="${m.alpha}" stroke="${c.edge}" stroke-width="1.7"/><path d="M107 ${y+6}Q160 ${y-2} 238 ${y+7}" fill="none" stroke="${c.shine}" stroke-width="${(3.8*m.thickness).toFixed(1)}" stroke-linecap="round" opacity="${m.shine}"/><path d="M97 ${y+14}Q145 ${y+26} 227 ${y+14}" fill="none" stroke="${c.edge}" stroke-width="2" stroke-linecap="round" opacity=".14"/><ellipse cx="154" cy="${y+13}" rx="29" ry="3.4" fill="${c.shine}" opacity=".23"/></g>`;
 }
 
-function sundaeFruitArt(id,x,y,i=0){
- const anim=sundaeCurrentFx()?.type==='topping'&&sundaeCurrentFx()?.id===id?'cf-fruit-pop':'';
+function sundaeFruitArt(id,x,y,i=0,animate=false){
+ const anim=animate?'cf-fruit-pop':'';
  const rot=((i*37)%36)-18;
  let shape='';
  if(id==='berryfruit')shape=`<path d="M-14 -15Q-22 -6 -18 8Q-14 21 1 22Q15 21 18 7Q21 -8 11 -15Q3 -19 -14 -15Z" fill="url(#sd26-strawberry)" stroke="#a93d4f" stroke-width="2.5"/><path d="M-10 -10Q-5 -1 -4 12Q6 13 12 6Q14 -8 6 -13Q0 -15 -10 -10Z" fill="#ffd2da" opacity=".62"/><path d="M-9 -17L0 -24L9 -16" fill="#66a65e" stroke="#477e48" stroke-width="2.8"/><path d="M-12 -4Q-4 -10 6 -8" fill="none" stroke="#ffafba" stroke-width="2.5" stroke-linecap="round"/>`+[[ -10,-2 ],[-4,3],[3,-1],[8,7],[-1,11]].map(([sx,sy])=>`<ellipse cx="${sx}" cy="${sy}" rx="1.7" ry="2.5" fill="#ffe6a5" transform="rotate(${sx*3} ${sx} ${sy})"/>`).join('');
@@ -2156,6 +2280,16 @@ function sundaeFruitLayout(fruits,creamCount=0,waferCount=0){
  return occupied;
 }
 
+let foodSvgRenderSerial=0;
+function scopeFoodSvg(markup){
+ const prefix='peko-food-'+(++foodSvgRenderSerial)+'-';
+ const definitions=new Map();
+ for(const match of markup.matchAll(/\sid="([^"]+)"/g))definitions.set(match[1],prefix+match[1]);
+ if(!definitions.size)return markup;
+ return markup.replace(/(\s)id="([^"]+)"/g,(full,space,id)=>`${space}id="${definitions.get(id)||id}"`)
+  .replace(/url\(#([^)]+)\)/g,(full,id)=>definitions.has(id)?`url(#${definitions.get(id)})`:full)
+  .replace(/(\s)href="#([^"]+)"/g,(full,space,id)=>definitions.has(id)?`${space}href="#${definitions.get(id)}"`:full);
+}
 function sundaeFoodArt(seq){
  const count=id=>seq.filter(x=>x===id).length;
  const soft=seq.find(id=>SUNDAE_SOFT.includes(id));
@@ -2209,7 +2343,7 @@ function sundaeFoodArt(seq){
  const sundaeCreamN=Math.min(3,count('sundaecream'));
  if(sundaeCreamN){
   const positions=sundaeCreamN===1?[[160,79,1]]:sundaeCreamN===2?[[141,81,.78],[181,82,.78]]:[[133,82,.68],[160,77,.68],[189,83,.68]];
-  art+=positions.map(([cx,cy,sc])=>creamRosetteArt(cx,cy,sc,fx?.type==='topping'&&fx.id==='sundaecream'?'sd-topping-pop':'')).join('');
+  art+=positions.map(([cx,cy,sc],i)=>creamRosetteArt(cx,cy,sc,fx?.type==='topping'&&fx.id==='sundaecream'&&i===positions.length-1?'sd-topping-pop':'')).join('');
  }
  for(const [id,palette] of [['rainbowbits',['#e55973','#e9c045','#6baad1','#79b86a','#cc79c1']],['chocobits',['#6f4432','#a76a45','#553625']]]){
   const doses=Math.min(3,count(id));if(!doses)continue;
@@ -2229,11 +2363,12 @@ function sundaeFoodArt(seq){
  const waferN=Math.min(3,count('wafer'));
  if(waferN){
   const positions=[[197,93,12],[169,88,-16],[218,92,25]];
-  art+=positions.slice(0,waferN).map(([cx,cy,rot])=>`<g class="${fx?.type==='topping'&&fx.id==='wafer'?'sd-topping-pop':''}" transform="translate(${cx} ${cy}) rotate(${rot})"><rect x="-9.5" y="-46" width="19" height="94" rx="5" fill="#dfb77b" stroke="#a67347" stroke-width="2.6"/><path d="M-7 -26L7 -16M-7 -7L7 4M-7 12L7 23" stroke="#b48b5c" stroke-width="2.6"/><path d="M-4 -36L2 -28M-4 -17L2 -9" stroke="#f5ddac" stroke-width="2" opacity=".65"/></g>`).join('');
+  art+=positions.slice(0,waferN).map(([cx,cy,rot],i)=>`<g class="${fx?.type==='topping'&&fx.id==='wafer'&&i===waferN-1?'sd-topping-pop':''}" transform="translate(${cx} ${cy}) rotate(${rot})"><rect x="-9.5" y="-46" width="19" height="94" rx="5" fill="#dfb77b" stroke="#a67347" stroke-width="2.6"/><path d="M-7 -26L7 -16M-7 -7L7 4M-7 12L7 23" stroke="#b48b5c" stroke-width="2.6"/><path d="M-4 -36L2 -28M-4 -17L2 -9" stroke="#f5ddac" stroke-width="2" opacity=".65"/></g>`).join('');
  }
  // Fruit positions adapt to available room, nearby fruit sizes, cream and wafer sticks.
  const laidOut=sundaeFruitLayout(fruits,count('sundaecream'),count('wafer'));
- art+=laidOut.map((p,i)=>`<g data-fruit="${p.id}" data-slot="${p.slot}" transform="translate(${p.x} ${p.y}) scale(${p.scale}) translate(${-p.x} ${-p.y})"><ellipse cx="${p.x+1}" cy="${p.y+10}" rx="${p.id==='blueberryfruit'?12:19}" ry="${p.id==='cherryfruit'?5:6}" fill="${cc[2]}" opacity=".16"/>${sundaeFruitArt(p.id,p.x,p.y,i)}</g>`).join('');
+ const newestFruit=fx?.type==='topping'?laidOut.map(p=>p.id).lastIndexOf(fx.id):-1;
+ art+=laidOut.map((p,i)=>`<g data-fruit="${p.id}" data-slot="${p.slot}" transform="translate(${p.x} ${p.y}) scale(${p.scale}) translate(${-p.x} ${-p.y})"><ellipse cx="${p.x+1}" cy="${p.y+10}" rx="${p.id==='blueberryfruit'?12:19}" ry="${p.id==='cherryfruit'?5:6}" fill="${cc[2]}" opacity=".16"/>${sundaeFruitArt(p.id,p.x,p.y,i,i===newestFruit)}</g>`).join('');
  art+=`</g>
  <path d="M87 42L113 167Q160 189 207 167L233 42" fill="url(#sd-clear-glass)" fill-opacity=".27" stroke="#7eb2bc" stroke-width="2.8" stroke-linejoin="round"/>
  <path d="M97 59L119 155Q129 174 147 176" fill="none" stroke="#ffffff" stroke-width="4.4" stroke-linecap="round" opacity=".6"/>
@@ -2246,7 +2381,7 @@ function sundaeFoodArt(seq){
  <path d="M139 178L137 190M181 178L183 190" stroke="#70a8b5" stroke-width="4" stroke-linecap="round"/>
  <ellipse cx="160" cy="192" rx="49" ry="7" fill="#dff5f7" stroke="#6ba1b0" stroke-width="3.5"/>
  </svg>`;
- return `<svg class="sundae-svg" viewBox="0 0 320 210" role="img" aria-label="グラスの中に盛り付けたサンデーパフェ">${art}`;
+ return scopeFoodSvg(`<svg class="sundae-svg" viewBox="0 0 320 210" role="img" aria-label="グラスの中に盛り付けたサンデーパフェ">${art}`);
 }
 
 // Stable, spacing-aware pancake garnish layout. Rendering positions are cosmetic;
@@ -2502,7 +2637,7 @@ function cafeFoodArt(k,seq){
   const lemonN=Math.min(3,count('lemon'));
   if(lemonN){
    const wheels=[[212,66,19],[109,65,16],[217,40,12]];
-   art+=wheels.slice(0,lemonN).map(([cx,cy,r],i)=>`<g class="${fclass('lemon')}" transform="translate(${cx} ${cy}) rotate(${i===0?0:i===1?-17:18}) scale(${r/20})"><circle r="20" fill="url(#cf21-lemon)" stroke="#dcae45" stroke-width="4"/><circle r="15.5" fill="#fff5c6" stroke="#f6c75e" stroke-width="2"/><path d="M0 -15V16M-15 0H15M-11 -11L11 11M11 -11L-11 11" stroke="#f0c65c" stroke-width="1.8"/></g>`).join('');
+   art+=wheels.slice(0,lemonN).map(([cx,cy,r],i)=>`<g class="${fresh('lemon')&&i===lemonN-1?'cf-season-fresh':''}" transform="translate(${cx} ${cy}) rotate(${i===0?0:i===1?-17:18}) scale(${r/20})"><circle r="20" fill="url(#cf21-lemon)" stroke="#dcae45" stroke-width="4"/><circle r="15.5" fill="#fff5c6" stroke="#f6c75e" stroke-width="2"/><path d="M0 -15V16M-15 0H15M-11 -11L11 11M11 -11L-11 11" stroke="#f0c65c" stroke-width="1.8"/></g>`).join('');
   }
  }else if(k==='pancake'&&count('pancake')){
   const n=Math.min(3,count('pancake'));
@@ -2537,24 +2672,31 @@ function cafeFoodArt(k,seq){
    art+=`<g class="${fclass('nuts')}">`+garnish.nuts.map((p,i)=>`<g transform="translate(${p.x.toFixed(1)} ${p.y.toFixed(1)}) rotate(${p.angle})"><ellipse cx="0" cy="0" rx="4.3" ry="2.5" fill="${i%2?'#bc9261':'#d3ad73'}" stroke="#866341" stroke-width="1.2"/><path d="M-2 -1Q0 -2 2 -1" stroke="#f5d4a3" stroke-width="1" opacity=".7" fill="none"/></g>`).join('')+'</g>';
   }
   // Fruit pieces occupy non-colliding spaces while staying on the pancake.
+  const garnishSeen={};
   art+=garnish.fruits.map(({id,x,y,angle,scale})=>{
+   const pieceIndex=garnishSeen[id]=(garnishSeen[id]||0)+1;
+   const pieceCount=id==='banana'?2:id==='blueberry'?3:1;
+   const isLatestPiece=fresh(id)&&pieceIndex>(count(id)-1)*pieceCount;
    const fruit=id==='strawberry'
     ?`<path d="M0 -13Q-13 -9 -11 2Q-6 13 0 16Q11 12 12 1Q13 -9 0 -13Z" fill="#e65c6d" stroke="#a9434d" stroke-width="2"/><path d="M-8 -12L0 -17L8 -12" fill="#72aa63"/><path d="M-4 -4v2M4 1v2" stroke="#ffe5ab" stroke-width="2"/><path d="M-6 -8Q-1 -11 5 -7" stroke="#ffb3b5" stroke-width="2" fill="none"/>`
     :id==='banana'
     ?`<ellipse rx="11" ry="7.6" fill="#f5df98" stroke="#b99050" stroke-width="2"/><ellipse rx="8" ry="5.2" fill="#fff6c8"/><circle cx="-2" cy="-1" r="1.1" fill="#9e7951"/><circle cx="3" cy="2" r="1" fill="#9e7951"/>`
     :`<circle r="7" fill="#667bb9" stroke="#43558a" stroke-width="1.7"/><path d="M-3 -2L-1 -5L2 -3L4 -4L3 1L0 2Z" fill="#aabce0"/><circle cx="-2" cy="-3" r="1.5" fill="#d9ddf1" opacity=".7"/>`;
-   return `<g class="${fclass(id)}" transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})"><ellipse cx="0" cy="5" rx="${id==='blueberry'?7:11}" ry="3.5" fill="#785335" opacity=".14"/>${fruit}</g>`;
+   return `<g class="${isLatestPiece?'cf-season-fresh':''}" transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})"><ellipse cx="0" cy="5" rx="${id==='blueberry'?7:11}" ry="3.5" fill="#785335" opacity=".14"/>${fruit}</g>`;
   }).join('');
   // Butter and cream are the highest garnish, with dedicated slots if both
   // were requested. This prevents cream from hiding the butter entirely.
+  const garnishCoreSeen={};
   for(const o of garnish.core){
-   if(o.id==='butter')art+=`<g class="${fclass('butter')}" transform="translate(${o.x} ${o.y}) scale(${o.scale})"><path d="M-17 -10h34v17q-17 6-34 0Z" fill="#f8df89" stroke="#d1a94d" stroke-width="2.5"/><path d="M-13 -6h26" stroke="#fff6cc" stroke-width="4"/><path d="M-15 3q15 6 30 0" stroke="#c9933c" stroke-width="2" opacity=".32" fill="none"/></g>`;
-   else art+=creamRosetteArt(o.x,o.y,o.scale,fclass('cream'));
+   const coreIndex=garnishCoreSeen[o.id]=(garnishCoreSeen[o.id]||0)+1;
+   const coreFresh=fresh(o.id)&&coreIndex===Math.min(3,count(o.id))?'cf-season-fresh':'';
+   if(o.id==='butter')art+=`<g class="${coreFresh}" transform="translate(${o.x} ${o.y}) scale(${o.scale})"><path d="M-17 -10h34v17q-17 6-34 0Z" fill="#f8df89" stroke="#d1a94d" stroke-width="2.5"/><path d="M-13 -6h26" stroke="#fff6cc" stroke-width="4"/><path d="M-15 3q15 6 30 0" stroke="#c9933c" stroke-width="2" opacity=".32" fill="none"/></g>`;
+   else art+=creamRosetteArt(o.x,o.y,o.scale,coreFresh);
   }
   if(fresh('pancake'))art+=pancakeReadyFxSvg(top);
  }
  if(!art)art=`<text x="160" y="135" font-size="50" text-anchor="middle">${k==='fries'?'🍟':k==='drink'?'🥤':'🥞'}</text><text x="160" y="160" font-size="13" text-anchor="middle" fill="#8d7563">ここに置いてね</text>`;
- return `<svg viewBox="0 0 320 210" role="img" aria-label="作っている${CAFE_KINDS[k].name}">${plate}${art}${k==='drink'?drinkPourFxSvg(seq):''}</svg>`;
+ return scopeFoodSvg(`<svg viewBox="0 0 320 210" role="img" aria-label="作っている${CAFE_KINDS[k].name}">${plate}${art}${k==='drink'?drinkPourFxSvg(seq):''}</svg>`);
 }
 function cafePage(setMode=false){
  const k=cafeKind(),cfg=CAFE_KINDS[k],d=cafeDraft(k),o=cafeOrder(k),r=cafeRecipe(k),p=PEOPLE[o.person];
@@ -2564,7 +2706,7 @@ function cafePage(setMode=false){
  const cafeAllowed=allCafeIngredients(k,s.travel.current);
  const items=Object.entries(CAFE_ING).filter(([id,x])=>x.kind===k&&(id!==cfg.cooked||k==='drink')&&(cafeAllowed.has(id)||related.has(id))).sort((a,b)=>Number(related.has(b[0]))-Number(related.has(a[0])));
  const recipeList=`<div class="cafe-recipe-icons">${cafeBase(k).map(id=>inlineIng(id,'cafe','recipe-inline')).join('<span class="recipe-arrow" aria-hidden="true">›</span>')}</div>`;
- return `<div class="play-screen cafe-screen">${setMode?'':`<section class="cafe-kind-tabs" aria-label="料理の種類">${CAFE_IDS.map(id=>`<button class="cafe-kind ${k===id?'active':''}" data-cafe-kind="${id}" aria-pressed="${k===id}">${CAFE_KINDS[id].emoji} ${CAFE_KINDS[id].name}</button>`).join('')}</section><section class="order-console cafe-order"><div class="order-top"><div class="order-person">${p[0]}</div><div class="order-info"><div class="order-serial">${p[1]} · ${cfg.name}の注文 ${s.cafe.counts[k]+1}皿目</div><div class="cafe-order-name">${r.name}</div></div><button class="small-action" data-action="cafeReroll" title="別の注文にする" aria-label="別の注文にする">↻</button></div><div class="cafe-mods">${mods}</div><div class="cafe-recipe-row"><button data-action="cafeRecipe" aria-expanded="${ui.showCafeRecipe}" class="receipt-book">📖 ${ui.showCafeRecipe?'閉じる':'基本レシピを見る'}</button><span>💚 時間制限なし</span></div>${ui.showCafeRecipe?`<div class="cafe-recipe-detail">${recipeList}<div class="tiny">${k==='sundae'?'グラスとソフトを先に。ソースや果物は好きな順番で飾ろう。':'追加食材は基本の並びを守れば、好きなところにのせてOK。'}</div></div>`:''}</section>`}<section class="cafe-workbench"><div class="plate-console cafe-plate" id="cafePlateDrop" ${setMode?`data-set-food-source="${k}"`: ''}><div class="station-heading">🍽️ ${k==='drink'?'ドリンクを作る':k==='sundae'?'グラスに盛る':'盛り付ける'} <span class="station-indicator">${d.seq.length}個</span></div><div class="cafe-art ${k==='sundae'?'sundae-stage':''}">${cafeFoodArt(k,d.seq)}${k!=='sundae'&&cafeCurrentFx(k)&&CAFE_ING[cafeCurrentFx(k).id]?`<span class="cafe-fx-label ${k==='pancake'&&cafeCurrentFx(k).id==='pancake'?'pancake':''}" aria-hidden="true">${k==='pancake'&&cafeCurrentFx(k).id==='pancake'?'🥞 ふっくら焼けた！':`✓ ${CAFE_ING[cafeCurrentFx(k).id].name}${d.seq.filter(x=>x===cafeCurrentFx(k).id).length>1?` ×${d.seq.filter(x=>x===cafeCurrentFx(k).id).length}`:''}`}</span>`:''}${k==='sundae'&&sundaeCurrentFx()?`<span class="sundae-fx-caption ${sundaeCurrentFx().type}" aria-hidden="true">${({swirl:'くるくる… 🍦',sprinkles:'ぱらぱら ✨',drizzle:'とろ〜り ♡',topping:'ぽんっ ♪'})[sundaeCurrentFx().type]}</span>`:''}</div></div><div class="grill-console cafe-cooker" id="cafeCookDrop"><div class="station-heading">${k==='fries'?'🍟':k==='drink'?'🥤':k==='sundae'?'🍦':'🔥'} ${cfg.device}</div>${cafeStationHtml()}</div></section><section class="play-pantry cafe-pantry"><div class="pantry-heading">🧺 ${cfg.name}の材料 <span>注文の材料を先に表示・${tips}</span></div><div class="ingredient-scroll" id="ingredientScroll"><div class="ingredients">${items.map(([id,x])=>`<button class="ingredient cafe-ingredient ${related.has(id)?'order-needed':''}" data-cafe-ingredient="${id}" aria-label="${x.name}を${x.tool?cfg.device:'盛り付け台'}に運ぶ"><span class="emoji">${cafeIngredientIcon(id)}</span><span class="ingname">${x.name}</span></button>`).join('')}</div></div></section><div class="play-actions"><button class="btn secondary" data-action="cafeUndo" ${d.seq.length?'':'disabled'}>↶ 戻す</button><button class="btn" data-action="cafeClear" ${d.seq.length||d.tool?'':'disabled'}>全部外す</button><button class="btn green" data-action="${setMode?'setTrayPut':'cafeServe'}">${setMode?'🍽️ トレーに置く':`${cfg.emoji} 完成！ お客さんに渡す`}</button></div></div>`;
+ return `<div class="play-screen cafe-screen ${!setMode&&ui.showCafeRecipe?'recipe-expanded':''}">${setMode?'':`<section class="cafe-kind-tabs" aria-label="料理の種類">${CAFE_IDS.map(id=>`<button class="cafe-kind ${k===id?'active':''}" data-cafe-kind="${id}" aria-pressed="${k===id}">${CAFE_KINDS[id].emoji} ${CAFE_KINDS[id].name}</button>`).join('')}</section><section class="order-console cafe-order"><div class="order-top"><div class="order-person">${p[0]}</div><div class="order-info"><div class="order-serial">${p[1]} · ${cfg.name}の注文 ${s.cafe.counts[k]+1}皿目</div><div class="cafe-order-name">${r.name}</div></div><button class="small-action" data-action="cafeReroll" title="別の注文にする" aria-label="別の注文にする">↻</button></div><div class="cafe-mods">${mods}</div><div class="cafe-recipe-row"><button data-action="cafeRecipe" aria-expanded="${ui.showCafeRecipe}" class="receipt-book">📖 ${ui.showCafeRecipe?'閉じる':'基本レシピを見る'}</button><span>💚 時間制限なし</span></div>${ui.showCafeRecipe?`<div class="cafe-recipe-detail">${recipeList}<div class="tiny">${k==='sundae'?'グラスとソフトを先に。ソースや果物は好きな順番で飾ろう。':'追加食材は基本の並びを守れば、好きなところにのせてOK。'}</div></div>`:''}</section>`}<section class="cafe-workbench"><div class="plate-console cafe-plate" id="cafePlateDrop" ${setMode?`data-set-food-source="${k}"`: ''}><div class="station-heading">🍽️ ${k==='drink'?'ドリンクを作る':k==='sundae'?'グラスに盛る':'盛り付ける'} <span class="station-indicator">${d.seq.length}個</span></div><div class="cafe-art ${k==='sundae'?'sundae-stage':''}">${cafeFoodArt(k,d.seq)}${k!=='sundae'&&cafeCurrentFx(k)&&CAFE_ING[cafeCurrentFx(k).id]?`<span class="cafe-fx-label ${k==='pancake'&&cafeCurrentFx(k).id==='pancake'?'pancake':''}" aria-hidden="true">${k==='pancake'&&cafeCurrentFx(k).id==='pancake'?'🥞 ふっくら焼けた！':`✓ ${CAFE_ING[cafeCurrentFx(k).id].name}${d.seq.filter(x=>x===cafeCurrentFx(k).id).length>1?` ×${d.seq.filter(x=>x===cafeCurrentFx(k).id).length}`:''}`}</span>`:''}${k==='sundae'&&sundaeCurrentFx()?`<span class="sundae-fx-caption ${sundaeCurrentFx().type}" aria-hidden="true">${({swirl:'くるくる… 🍦',sprinkles:'ぱらぱら ✨',drizzle:'とろ〜り ♡',topping:'ぽんっ ♪'})[sundaeCurrentFx().type]}</span>`:''}</div></div><div class="grill-console cafe-cooker" id="cafeCookDrop"><div class="station-heading">${k==='fries'?'🍟':k==='drink'?'🥤':k==='sundae'?'🍦':'🔥'} ${cfg.device}</div>${cafeStationHtml()}</div></section><section class="play-pantry cafe-pantry"><div class="pantry-heading">🧺 ${cfg.name}の材料 <span>注文の材料を先に表示・${tips}</span></div><div class="ingredient-scroll" id="ingredientScroll"><div class="ingredients">${items.map(([id,x])=>`<button class="ingredient cafe-ingredient ${related.has(id)?'order-needed':''}" data-cafe-ingredient="${id}" aria-label="${x.name}を${x.tool?cfg.device:'盛り付け台'}に運ぶ"><span class="emoji">${cafeIngredientIcon(id)}</span><span class="ingname">${x.name}</span></button>`).join('')}</div></div></section><div class="play-actions"><button class="btn secondary" data-action="cafeUndo" ${d.seq.length?'':'disabled'}>↶ 戻す</button><button class="btn" data-action="cafeClear" ${d.seq.length||d.tool?'':'disabled'}>全部外す</button><button class="btn green" data-action="${setMode?'setTrayPut':'cafeServe'}">${setMode?'🍽️ トレーに置く':`${cfg.emoji} 完成！ お客さんに渡す`}</button></div></div>`;
 }
 function cafeAction(a){const k=cafeKind(),d=cafeDraft(k);
  if(a==='cafeRecipe'){ui.showCafeRecipe=!ui.showCafeRecipe;render();return}
@@ -3024,6 +3166,7 @@ function captureSetWork(){
  set.work={seq:cloneData(s.seq),grill:cloneData(s.grill),order:cloneData(s.order),cafe:cloneData(s.cafe),mode:'order',pendingNext:false,lastRecipe:'',serial:s.serial};
 }
 function setLoadLine(slot){
+ clearFoodTransientFx();
  const set=s.setMeal,item=set.items[slot],kind=item.kind;
  const line=set.lineWork[slot]||blankSetLine(kind);
  set.active=slot;
@@ -3049,7 +3192,7 @@ function enterSet(){
 }
 function leaveSet(){
  if(!isSetActive())return;
- captureSetWork();const one=s.singleSession;
+ captureSetWork();clearFoodTransientFx();const one=s.singleSession;
  if(!one)return;
  s.seq=one.seq;s.grill=one.grill;s.order=one.order;s.cafe=normalizeCafe(one.cafe,s.travel.current);s.mode=one.mode;s.pendingNext=one.pendingNext;s.lastRecipe=one.lastRecipe;s.serial=one.serial;
  s.singleSession=null;s.setMeal.viewActive=false;save();
@@ -3188,7 +3331,8 @@ function art(seq){
  const pattyFx=burgerPattyCurrentFx();
  // A tall stack keeps the height of each drawn ingredient: only the gaps compress.
  // Offsets follow ingredient order, never Math.random(), so rerenders do not shuffle food.
- const step=Math.min(20,145/Math.max(1,solids-1));
+ // A tighter contact distance keeps sparse burgers from looking like floating layers.
+ const step=Math.min(15.5,145/Math.max(1,solids-1));
  let y=199, solidIndex=0, lastOffset=0;
  const layers=seq.map((id,i)=>{
   const sauce=isSauce(id),layerY=sauce?y+7:y;
@@ -3205,7 +3349,7 @@ function art(seq){
   return `<g class="${classes}" transform="translate(${offset} 0)">${impactBack}${contact}${drawing}${impactFront}</g>`;
  }).join('');
  const tr='translate(0 0)';
- return `<svg viewBox="0 0 340 260" aria-label="作成中のバーガー" role="img"><defs><radialGradient id="kb21-plate" cx=".45" cy=".32" r=".84"><stop stop-color="#fffefb"/><stop offset=".54" stop-color="#f6ecd9"/><stop offset="1" stop-color="#dcc7af"/></radialGradient><linearGradient id="kb21-bun-bottom" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f4bb75"/><stop offset=".55" stop-color="#df9850"/><stop offset="1" stop-color="#b96d35"/></linearGradient><linearGradient id="kb21-bun-top" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffdb95"/><stop offset=".54" stop-color="#f3ad58"/><stop offset="1" stop-color="#c97836"/></linearGradient><linearGradient id="kb21-patty" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a06a50"/><stop offset=".5" stop-color="#774635"/><stop offset="1" stop-color="#542f25"/></linearGradient><linearGradient id="kb21-cheese" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffec99"/><stop offset=".56" stop-color="#f8cb4e"/><stop offset="1" stop-color="#dfa12f"/></linearGradient><linearGradient id="kb21-lettuce" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8fdb79"/><stop offset=".58" stop-color="#63b764"/><stop offset="1" stop-color="#3e8f53"/></linearGradient><linearGradient id="kb21-tomato" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff7b62"/><stop offset=".5" stop-color="#dc5147"/><stop offset="1" stop-color="#b7373a"/></linearGradient><linearGradient id="kb21-onion" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff1ff"/><stop offset=".58" stop-color="#efd7f0"/><stop offset="1" stop-color="#d3b0d7"/></linearGradient><linearGradient id="kb22-cabbage" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#efc1ee"/><stop offset=".58" stop-color="#bf86c2"/><stop offset="1" stop-color="#91559b"/></linearGradient><linearGradient id="kb22-jalapeno" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5cca75"/><stop offset=".55" stop-color="#33975a"/><stop offset="1" stop-color="#216941"/></linearGradient><linearGradient id="kb22-mushroom" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d7b18e"/><stop offset=".55" stop-color="#b68562"/><stop offset="1" stop-color="#8d6043"/></linearGradient><linearGradient id="kb22-hashbrown" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0c06a"/><stop offset=".5" stop-color="#d09a47"/><stop offset="1" stop-color="#ad702f"/></linearGradient><linearGradient id="kb22-pickle" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#bfdc7a"/><stop offset=".55" stop-color="#8cad52"/><stop offset="1" stop-color="#658340"/></linearGradient><linearGradient id="kb22-sauce" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0a062"/><stop offset=".5" stop-color="#d37b46"/><stop offset="1" stop-color="#b45d33"/></linearGradient><linearGradient id="kb22-eggwhite" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffef4"/><stop offset=".7" stop-color="#f7efcf"/><stop offset="1" stop-color="#ebddb0"/></linearGradient><radialGradient id="kb22-yolk" cx=".42" cy=".35" r=".78"><stop stop-color="#ffd55d"/><stop offset=".65" stop-color="#f6b33a"/><stop offset="1" stop-color="#dd8e17"/></radialGradient><linearGradient id="kb22-bacon" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#df8a76"/><stop offset=".5" stop-color="#be6558"/><stop offset="1" stop-color="#924648"/></linearGradient><linearGradient id="kb22-fish" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f7cd84"/><stop offset=".55" stop-color="#e2af5e"/><stop offset="1" stop-color="#bc8442"/></linearGradient><linearGradient id="kb22-avocado" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d5ef9d"/><stop offset=".55" stop-color="#abd173"/><stop offset="1" stop-color="#779c53"/></linearGradient><linearGradient id="kb26-redpepper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffa38b"/><stop offset=".56" stop-color="#e95447"/><stop offset="1" stop-color="#a53633"/></linearGradient><linearGradient id="kb26-spinach" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b2e597"/><stop offset=".56" stop-color="#59a964"/><stop offset="1" stop-color="#2c7544"/></linearGradient><linearGradient id="kb26-cucumber" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d1efb1"/><stop offset=".56" stop-color="#97c76b"/><stop offset="1" stop-color="#588f52"/></linearGradient><linearGradient id="kb26-pineapple" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe79b"/><stop offset=".56" stop-color="#f3c94d"/><stop offset="1" stop-color="#ca9238"/></linearGradient><linearGradient id="kb26-corn" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffec9d"/><stop offset=".56" stop-color="#efbf46"/><stop offset="1" stop-color="#cf9336"/></linearGradient><linearGradient id="kb26-olive" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#789c79"/><stop offset=".56" stop-color="#516e52"/><stop offset="1" stop-color="#304839"/></linearGradient><linearGradient id="kb26-chicken" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f8d6a5"/><stop offset=".56" stop-color="#dda261"/><stop offset="1" stop-color="#a16e3e"/></linearGradient><linearGradient id="kb26-shrimp" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe0c0"/><stop offset=".56" stop-color="#f2a67a"/><stop offset="1" stop-color="#bd6851"/></linearGradient><linearGradient id="kb26-salami" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#eaa29a"/><stop offset=".56" stop-color="#bc6260"/><stop offset="1" stop-color="#874242"/></linearGradient><linearGradient id="kb26-eggplant" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c6a5d7"/><stop offset=".56" stop-color="#9172b1"/><stop offset="1" stop-color="#583e7a"/></linearGradient></defs><ellipse cx="171" cy="236" rx="143" ry="19" fill="#866849" opacity=".18"/><ellipse cx="171" cy="228" rx="143" ry="24" fill="url(#kb21-plate)" stroke="#d2bea2" stroke-width="5.1"/><ellipse cx="171" cy="214" rx="94" ry="10" fill="#fffdf8" opacity=".58"/><ellipse cx="171" cy="221" rx="118" ry="13" fill="none" stroke="#fff" stroke-width="4.1" opacity=".86"/><ellipse cx="171" cy="232" rx="100" ry="10" fill="#fff" opacity=".47"/><g transform="${tr}">${layers}</g></svg>`;
+ return scopeFoodSvg(`<svg viewBox="0 0 340 260" aria-label="作成中のバーガー" role="img"><defs><radialGradient id="kb21-plate" cx=".45" cy=".32" r=".84"><stop stop-color="#fffefb"/><stop offset=".54" stop-color="#f6ecd9"/><stop offset="1" stop-color="#dcc7af"/></radialGradient><linearGradient id="kb21-bun-bottom" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f4bb75"/><stop offset=".55" stop-color="#df9850"/><stop offset="1" stop-color="#b96d35"/></linearGradient><linearGradient id="kb21-bun-top" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffdb95"/><stop offset=".54" stop-color="#f3ad58"/><stop offset="1" stop-color="#c97836"/></linearGradient><linearGradient id="kb21-patty" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a06a50"/><stop offset=".5" stop-color="#774635"/><stop offset="1" stop-color="#542f25"/></linearGradient><linearGradient id="kb21-cheese" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffec99"/><stop offset=".56" stop-color="#f8cb4e"/><stop offset="1" stop-color="#dfa12f"/></linearGradient><linearGradient id="kb21-lettuce" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8fdb79"/><stop offset=".58" stop-color="#63b764"/><stop offset="1" stop-color="#3e8f53"/></linearGradient><linearGradient id="kb21-tomato" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff7b62"/><stop offset=".5" stop-color="#dc5147"/><stop offset="1" stop-color="#b7373a"/></linearGradient><linearGradient id="kb21-onion" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff1ff"/><stop offset=".58" stop-color="#efd7f0"/><stop offset="1" stop-color="#d3b0d7"/></linearGradient><linearGradient id="kb22-cabbage" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#efc1ee"/><stop offset=".58" stop-color="#bf86c2"/><stop offset="1" stop-color="#91559b"/></linearGradient><linearGradient id="kb22-jalapeno" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5cca75"/><stop offset=".55" stop-color="#33975a"/><stop offset="1" stop-color="#216941"/></linearGradient><linearGradient id="kb22-mushroom" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d7b18e"/><stop offset=".55" stop-color="#b68562"/><stop offset="1" stop-color="#8d6043"/></linearGradient><linearGradient id="kb22-hashbrown" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0c06a"/><stop offset=".5" stop-color="#d09a47"/><stop offset="1" stop-color="#ad702f"/></linearGradient><linearGradient id="kb22-pickle" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#bfdc7a"/><stop offset=".55" stop-color="#8cad52"/><stop offset="1" stop-color="#658340"/></linearGradient><linearGradient id="kb22-sauce" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0a062"/><stop offset=".5" stop-color="#d37b46"/><stop offset="1" stop-color="#b45d33"/></linearGradient><linearGradient id="kb22-eggwhite" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffef4"/><stop offset=".7" stop-color="#f7efcf"/><stop offset="1" stop-color="#ebddb0"/></linearGradient><radialGradient id="kb22-yolk" cx=".42" cy=".35" r=".78"><stop stop-color="#ffd55d"/><stop offset=".65" stop-color="#f6b33a"/><stop offset="1" stop-color="#dd8e17"/></radialGradient><linearGradient id="kb22-bacon" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#df8a76"/><stop offset=".5" stop-color="#be6558"/><stop offset="1" stop-color="#924648"/></linearGradient><linearGradient id="kb22-fish" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f7cd84"/><stop offset=".55" stop-color="#e2af5e"/><stop offset="1" stop-color="#bc8442"/></linearGradient><linearGradient id="kb22-avocado" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d5ef9d"/><stop offset=".55" stop-color="#abd173"/><stop offset="1" stop-color="#779c53"/></linearGradient><linearGradient id="kb26-redpepper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffa38b"/><stop offset=".56" stop-color="#e95447"/><stop offset="1" stop-color="#a53633"/></linearGradient><linearGradient id="kb26-spinach" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b2e597"/><stop offset=".56" stop-color="#59a964"/><stop offset="1" stop-color="#2c7544"/></linearGradient><linearGradient id="kb26-cucumber" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d1efb1"/><stop offset=".56" stop-color="#97c76b"/><stop offset="1" stop-color="#588f52"/></linearGradient><linearGradient id="kb26-pineapple" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe79b"/><stop offset=".56" stop-color="#f3c94d"/><stop offset="1" stop-color="#ca9238"/></linearGradient><linearGradient id="kb26-corn" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffec9d"/><stop offset=".56" stop-color="#efbf46"/><stop offset="1" stop-color="#cf9336"/></linearGradient><linearGradient id="kb26-olive" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#789c79"/><stop offset=".56" stop-color="#516e52"/><stop offset="1" stop-color="#304839"/></linearGradient><linearGradient id="kb26-chicken" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f8d6a5"/><stop offset=".56" stop-color="#dda261"/><stop offset="1" stop-color="#a16e3e"/></linearGradient><linearGradient id="kb26-shrimp" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe0c0"/><stop offset=".56" stop-color="#f2a67a"/><stop offset="1" stop-color="#bd6851"/></linearGradient><linearGradient id="kb26-salami" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#eaa29a"/><stop offset=".56" stop-color="#bc6260"/><stop offset="1" stop-color="#874242"/></linearGradient><linearGradient id="kb26-eggplant" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c6a5d7"/><stop offset=".56" stop-color="#9172b1"/><stop offset="1" stop-color="#583e7a"/></linearGradient></defs><ellipse cx="171" cy="236" rx="143" ry="19" fill="#866849" opacity=".18"/><ellipse cx="171" cy="228" rx="143" ry="24" fill="url(#kb21-plate)" stroke="#d2bea2" stroke-width="5.1"/><ellipse cx="171" cy="214" rx="94" ry="10" fill="#fffdf8" opacity=".58"/><ellipse cx="171" cy="221" rx="118" ry="13" fill="none" stroke="#fff" stroke-width="4.1" opacity=".86"/><ellipse cx="171" cy="232" rx="100" ry="10" fill="#fff" opacity=".47"/><g transform="${tr}">${layers}</g></svg>`);
 }
 function statusHtml(){const a=areaById(s.travel.current);return `<div class="meta"><span class="pill">🪙 <b>${s.coins.toLocaleString('ja-JP')}</b> G</span><span class="pill">${a.emoji} ${a.name}</span><span class="pill no-time">☘ 時間制限なし</span></div>`}
 function orderHtml(){if(s.mode==='free')return `<section class="card"><div class="labelhead"><div><div class="eyebrow">FREE COOKING</div><h2>気ままに料理</h2></div><span class="illustration">🌿</span></div><div class="mode-banner">注文も採点もありません。好きな材料を好きなだけ重ねて遊べます。</div><div class="freeform">できた料理は「作品を記録」で保存。売上には影響しません。気楽に試作してみましょう。</div><div class="row-actions"><button class="btn" data-action="orderMode">注文のおしごとに戻る</button></div></section>`;
@@ -3258,7 +3402,7 @@ function compactPantryHtml(){
  // This is a convenience shelf, NOT the computed answer to the order puzzle.
  const items=Object.entries(ING).filter(([id,x])=>ui.tab==='order'?related.has(id):(x.cat===ui.tab&&(isCookAllowed(id)||related.has(id))));
  return `<section class="play-pantry" aria-label="食材棚"><div class="pantry-heading">🧺 食材をえらぶ <span>${ui.tab==='order'?'抜き指定の材料も棚にあります':ui.tab==='sauce'?'ボトルをお皿に運ぼう':'つまんでドラッグ'}</span></div><div class="pantry-tabs" role="tablist">${tabs.map(([id,n])=>`<button role="tab" aria-selected="${ui.tab===id}" class="tab ${ui.tab===id?'active':''}" data-tab="${id}">${n}</button>`).join('')}</div><div class="ingredient-scroll" id="ingredientScroll"><div class="ingredients">${items.map(([id,x])=>{const locked=!isCookAllowed(id);return `<button class="ingredient ${locked?'locked':''} ${x.cat==='hot'?'grill-item':''} ${x.cat==='sauce'?'sauce-item':''}" data-ingredient="${id}" ${locked?'disabled':''} aria-label="${x.n}${x.cat==='hot'?'を焼き台に置く':x.cat==='sauce'?'をお皿に塗る':'を盛りつける'}"><span class="emoji">${locked?'🔒':ingredientIcon(id)}</span><span class="ingname">${x.n}</span><span class="mini">${locked?`${areaForRecipe({at:x.at}).name}で解放`:x.cat==='hot'?'焼き台へ':'お皿へ'}</span></button>`}).join('')}</div></div></section>`}
-function kitchenPage(setMode=false){return `<div class="play-screen">${setMode?'':compactOrderHtml()}<section class="play-workbench" aria-label="調理スペース"><div class="plate-console" id="plateDrop" ${setMode?'data-set-food-source="burger"':''}><div class="station-heading"><span>🍽️ 盛り付け台 <small class="drop-nudge">ここにのせる</small></span><span class="station-indicator">${s.seq.length}個のせた</span></div><div class="plate compact-plate ${s.seq.length?'':'empty'}">${art(s.seq)}</div></div><div class="grill-console" id="grillDrop"><div class="station-heading"><span>🔥 焼き台 <small class="drop-nudge">焼きものはここ</small></span></div><div class="burner-stack">${compactGrillHtml()}</div></div></section>${compactPantryHtml()}<div class="play-actions"><button class="btn secondary" data-action="undo" ${s.seq.length?'':'disabled'}>↶ 戻す</button><button class="btn" data-action="clear" ${s.seq.length?'':'disabled'}>全部外す</button><button class="btn green" data-action="${setMode?'setTrayPut':'serve'}">${setMode?'🍽️ トレーに置く':s.mode==='free'?'🌼 作品を記録':'🍔 完成！ お客さんに渡す'}</button></div></div>`}
+function kitchenPage(setMode=false){return `<div class="play-screen ${!setMode&&ui.showRecipe?'recipe-expanded':''}">${setMode?'':compactOrderHtml()}<section class="play-workbench" aria-label="調理スペース"><div class="plate-console" id="plateDrop" ${setMode?'data-set-food-source="burger"':''}><div class="station-heading"><span>🍽️ 盛り付け台 <small class="drop-nudge">ここにのせる</small></span><span class="station-indicator">${s.seq.length}個のせた</span></div><div class="plate compact-plate ${s.seq.length?'':'empty'}">${art(s.seq)}</div></div><div class="grill-console" id="grillDrop"><div class="station-heading"><span>🔥 焼き台 <small class="drop-nudge">焼きものはここ</small></span></div><div class="burner-stack">${compactGrillHtml()}</div></div></section>${compactPantryHtml()}<div class="play-actions"><button class="btn secondary" data-action="undo" ${s.seq.length?'':'disabled'}>↶ 戻す</button><button class="btn" data-action="clear" ${s.seq.length?'':'disabled'}>全部外す</button><button class="btn green" data-action="${setMode?'setTrayPut':'serve'}">${setMode?'🍽️ トレーに置く':s.mode==='free'?'🌼 作品を記録':'🍔 完成！ お客さんに渡す'}</button></div></div>`}
 function bookPage(){
  const area=areaById(s.travel.current),got=availableBurger(area.id).length,cafeCount=CAFE_IDS.reduce((n,k)=>n+availableCafe(k,area.id).length,0);
  const kind=['burger',...CAFE_IDS].includes(ui.bookKind)?ui.bookKind:'burger';
@@ -3284,9 +3428,10 @@ function regularCard(i){
  const relationship=visits>=7?'すっかり顔なじみ':visits>=3?'なかよしの常連':visits?'また来てくれた':'まだ会ったばかり';
  return `<div class="regular-card"><div class="regular-head"><div class="regular-avatar">${person[0]}</div><div><strong>${person[1]}</strong><div class="tiny">来店 ${visits} 回</div></div></div><div class="regular-fav">${visits?`♥ 好きなメニュー：${fav[0]?.n||'いろいろ'}`:'好みは仲良くなると分かります'}</div><div class="regular-line">${visits>=3?profile.note:visits?relationship+'。'+profile.again[visits%profile.again.length]:profile.intro[0]}</div>${visits>=3?'<div style="margin-top:7px"><span class="regular-badge">🌼 常連さん</span></div>':''}</div>`;
 }
+const LEGACY_MENU_NAMES={"とろけるチーズ":"クラシックチーズバーガー","おひさまガーデン":"彩り野菜とチーズのバーガー","まちの定番":"フレッシュトマトバーガー","たまねぎチーズ":"オニオンチーズバーガー","あかいケチャップ":"ジューシービーフバーガー","さっぱりピクルス":"ピクルス＆特製ソースバーガー","朝のたまご":"エッグビーフバーガー","カリカリベーコン":"ベーコンチーズバーガー","まろやかマヨ":"トマトマヨビーフバーガー","ダブルごほうび":"ダブルチーズバーガー","海辺のフィッシュ":"サクサク白身魚バーガー","マスタードベーコン":"ベーコンマスタードバーガー","みどりの休日":"アボカドビーフバーガー","あまからソース":"特製ソースのエッグバーガー","朝焼けベーコンエッグ":"ベーコンエッグチーズバーガー","森のきのこチーズ":"きのこチーズバーガー","野菜のパレード":"アボカド彩り野菜バーガー","むらさきフィッシュ":"紫キャベツのフィッシュバーガー","ほくほくポテト":"ハッシュポテトチーズバーガー","ポテトとベーコン":"ベーコンポテトチーズバーガー","ピリ辛ハラペーニョ":"ハラペーニョチーズバーガー","ごちそうBBQスタック":"ベーコンオニオンチーズバーガー","潮風タルタル":"ピクルスマヨフィッシュバーガー","トリプルごほうび":"トリプルビーフチーズバーガー","香草チキン":"レタスマヨチキンバーガー","赤パプリカチーズ":"赤パプリカのチーズバーガー","海風えびカツ":"えびカツピクルスマヨバーガー","きゅうりチキン":"ごま香るチキン＆きゅうりバーガー","ほうれん草ベーコン":"ほうれん草とベーコンのビーフバーガー","サラミと赤い野菜":"サラミ＆赤パプリカバーガー","焼きなすガーデン":"焼きなすときのこのチーズバーガー","南風パインBBQ":"パイン＆スモーキーBBQバーガー","おひさまコーン":"スイートコーンマヨバーガー","オリーブフィッシュ":"オリーブ香るフィッシュバーガー","よくばりWチキン":"ダブルチキンチーズバーガー","海のなかよし":"フィッシュ＆えびカツバーガー","森とオリーブ":"焼きなすとオリーブの野菜バーガー","ピリ辛フィエスタ":"ハラペーニョサラミBBQバーガー","コーンとえびの休日":"コーンチーズえびカツバーガー","こもれび大収穫":"ごちそうミックスグリルバーガー","ほくほく塩ポテト":"フレンチフライポテト","のり塩ポテト":"のり塩フライドポテト","とろ〜りチーズポテト":"濃厚チーズソースポテト","ちょい辛ポテト":"スパイシーチリポテト","ガーリックポテト":"ガーリックソルトポテト","パプリカチーズポテト":"パプリカチーズポテト","香りのトリュフポテト":"トリュフ香るブラックペッパーポテト","ひんやりミルク":"アイスミルク","やさしいミルクティー":"アイスミルクティー","オレンジソーダ":"オレンジレモンソーダ","いちごミルク":"ホイップいちごミルク","ふわふわココア":"ホイップココアラテ","マンゴーソーダ":"マンゴーソーダ","キャラメル抹茶ラテ":"アイスキャラメル抹茶ラテ","バターパンケーキ":"メープルバターパンケーキ","いちごクリーム":"いちごホイップパンケーキ","はちみつバナナ":"はちみつバナナパンケーキ","ふたつ重ね":"ダブルメープルパンケーキ","森のブルーベリー":"ブルーベリーハニーパンケーキ","ナッツショコラ":"ダブルショコラナッツパンケーキ","にじいろバニラサンデー":"カラフルチョコバニラサンデー","チョコバナナサンデー":"クランチチョコバナナサンデー","いちごみるくサンデー":"いちごホイップサンデー","くだものパフェ":"彩りフルーツパフェ","抹茶と木の実のパフェ":"抹茶キャラメルナッツパフェ","夢色ミックスパフェ":"ミックスソフトのチョコパフェ"};
 function momentHtml(m){
  const person=PEOPLE[m.person]||PEOPLE[0];
- return `<div class="moment-row"><div class="moment-avatar">${person[0]}</div><div class="moment-body"><strong>${person[1]} · 第${m.serveNo}皿</strong> <span class="tiny">${'★'.repeat(Math.max(1,Math.min(3,Number(m.stars)||1)))}</span><div>${safe(m.text||'ごちそうさま！')}</div><div class="tiny">${safe(m.menu||'バーガー')}をお届け</div></div></div>`;
+ return `<div class="moment-row"><div class="moment-avatar">${person[0]}</div><div class="moment-body"><strong>${person[1]} · 第${m.serveNo}皿</strong> <span class="tiny">${'★'.repeat(Math.max(1,Math.min(3,Number(m.stars)||1)))}</span><div>${safe(m.text||'ごちそうさま！')}</div><div class="tiny">${safe(LEGACY_MENU_NAMES[m.menu]||m.menu||'バーガー')}をお届け</div></div></div>`;
 }
 function destinationCard(a){
  const owned=s.travel.owned.includes(a.id),current=s.travel.current===a.id,ix=areaIndex(a.id),previous=AREAS[ix-1],previousReady=!previous||s.travel.owned.includes(previous.id),afford=s.coins>=a.cost;
@@ -3327,13 +3472,15 @@ function travelTo(id,confirmed=false){
 
 function recordPage(){const achievements=[[1,'はじめての一皿'],[5,'常連さんのいるお店'],[12,'すこし人気のお店'],[25,'まちのバーガー名人'],[50,'こもれびの料理長']];return `<section class="card"><div class="eyebrow">SHOP ALBUM</div><h2>お店の記録</h2><div class="collection" style="margin-top:14px"><div class="record">🍔 お届けした料理<br><strong style="font-size:27px">${s.served}</strong> 食</div><div class="record">⭐ もらった星<br><strong style="font-size:27px">${s.stars}</strong> 個</div><div class="record">🪙 累計売上<br><strong style="font-size:27px">${s.earnedAll.toLocaleString('ja-JP')}</strong> G</div><div class="record">🎨 自由作品<br><strong style="font-size:27px">${s.creations.length}</strong> 皿（最大15皿記録）</div></div><div class="record">💰 現在の所持金 <strong>${s.coins.toLocaleString('ja-JP')} G</strong> · 🗺️ 解放した行き先 ${s.travel.owned.length} / ${AREAS.length} か所</div><div class="divider"></div><h2>ちいさな記念バッジ</h2>${achievements.map(([count,n])=>`<div class="record">${s.served>=count?'🏅':'🔒'} ${n} <span class="tiny">（${count}食提供）</span></div>`).join('')}<div class="divider"></div><h2>自由料理のアルバム</h2>${s.creations.length?s.creations.slice().reverse().map((a,i)=>`<div class="record"><b>🎨 ${safe(a.name)}</b><div class="tiny">${a.seq.map(id=>ING[id]?.n||'?').join('・')}</div></div>`).join(''):'<div class="emptybook">まだ作品がありません。<br>自由料理で、お気に入りの組み合わせを記録できます。</div>'}<div class="divider"></div><button class="btn" data-action="help">遊びかたを見る</button><button class="btn" data-action="resetSave" style="margin-left:8px">セーブを初期化</button></section>`}
 function render(){
+ const wasRecipeExpanded=!!document.querySelector('.play-screen.recipe-expanded');
  const pantryScroll=document.getElementById('ingredientScroll')?.scrollTop||0;
  const tabsScroll=document.querySelector('.pantry-tabs')?.scrollLeft||0;
  const pages=[['kitchen','🍔 バーガー'],['cafe','🍟 カフェ'],['set','🍽️ セット'],['shop','🗺️ おみせ'],['book','📖 レシピ'],['record','🏅 記録']];
  root.dataset.area=s.travel.current;
- root.innerHTML=`<header class="site-head"><div class="brand"><div class="brand-mark">${logo()}</div><div><div class="brand-small">PEKOPEKO DINER</div><div class="brand-name">ぺこぺこダイナー</div></div></div>${statusHtml()}</header><nav class="navline" aria-label="メインメニュー">${pages.map(([id,n])=>`<button class="nav ${ui.page===id?'active':''}" data-page="${id}" aria-label="${n}" title="${n}"><span class="nav-full">${n}</span><span class="nav-short" aria-hidden="true">${({kitchen:'🍔調理',cafe:'🍟カフェ',set:'🍽️セット',shop:'🗺️旅',book:'📖図鑑',record:'🏅記録'})[id]}</span></button>`).join('')}</nav><main>${ui.page==='kitchen'?kitchenPage():ui.page==='cafe'?cafePage():ui.page==='set'?setPage():ui.page==='shop'?shopPage():ui.page==='book'?bookPage():recordPage()}</main><footer class="foot">ぺこぺこダイナー v0.45 ・ 全${TOTAL_MENU_COUNT}種類の基本メニュー / 時間制限なし ・ オフライン対応 ・ 自動保存</footer>${ui.modal?modalHtml():''}${ui.toast?`<div class="notice" role="status">${safe(ui.toast)}</div>`:''}`;
+ root.innerHTML=`<header class="site-head"><div class="brand"><div class="brand-mark">${logo()}</div><div><div class="brand-small">PEKOPEKO DINER</div><div class="brand-name">ぺこぺこダイナー</div></div></div>${statusHtml()}</header><nav class="navline" aria-label="メインメニュー">${pages.map(([id,n])=>`<button class="nav ${ui.page===id?'active':''}" data-page="${id}" aria-label="${n}" title="${n}"><span class="nav-full">${n}</span><span class="nav-short" aria-hidden="true">${({kitchen:'🍔調理',cafe:'🍟カフェ',set:'🍽️セット',shop:'🗺️旅',book:'📖図鑑',record:'🏅記録'})[id]}</span></button>`).join('')}</nav><main>${ui.page==='kitchen'?kitchenPage():ui.page==='cafe'?cafePage():ui.page==='set'?setPage():ui.page==='shop'?shopPage():ui.page==='book'?bookPage():recordPage()}</main><footer class="foot">ぺこぺこダイナー v0.49 ・ 全${TOTAL_MENU_COUNT}種類の基本メニュー / 時間制限なし ・ オフライン対応 ・ 自動保存</footer>${ui.modal?modalHtml():''}${ui.toast?`<div class="notice" role="status">${safe(ui.toast)}</div>`:''}`;
  const pantry=document.getElementById('ingredientScroll');if(pantry)pantry.scrollTop=pantryScroll;
  const tabs=document.querySelector('.pantry-tabs');if(tabs)tabs.scrollLeft=tabsScroll;
+ if(wasRecipeExpanded&&!document.querySelector('.play-screen.recipe-expanded'))window.scrollTo({top:0,behavior:'instant'});
 }
 
 function helpHtml(){
@@ -3345,14 +3492,14 @@ function helpHtml(){
  let title='',subtitle='',cards='',note='';
  if(topic==='start'){
   title='最初のバーガーを作ろう！';subtitle='注文を見て、食材を運んで、完成させるだけ。';
-  cards+=card('1','注文票を見る',`<div class="help-ticket"><strong>🍔 まちの定番</strong><span class="help-red">− トマト抜き</span><br><span>📖 基本レシピを見る</span></div>`,'バーガー名と、下に書かれた変更希望を確認しよう。');
+  cards+=card('1','注文票を見る',`<div class="help-ticket"><strong>🍔 フレッシュトマトバーガー</strong><span class="help-red">− トマト抜き</span><br><span>📖 基本レシピを見る</span></div>`,'バーガー名と、下に書かれた変更希望を確認しよう。');
   cards+=card('2','パンから順番に重ねる',`${thing('🥯','下のパン')}${arrow}${thing('🥬','レタスなど')}${arrow}${thing('🍞','上のパン')}`,'「基本レシピを見る」で重ねる順番を確認。下のパンが最初、上のパンが最後！');
   cards+=card('3','お肉はコンロで焼こう',`${thing('🥩','生のパティ')}${arrow}${thing('🔥','コンロで焼く')}${arrow}${thing('🍳','裏返す')}`,'焼き台へドラッグ。片面が焼けたらタップして裏返そう。両面焼けたらお皿へ。');
   cards+=card('4','完成したらお渡し',`${thing('🍔','できあがり')}${arrow}${thing('🛎️','お客さんに渡す')}${arrow}${thing('⭐','評価と売上')}`,'「お客さんに渡す」を押して完成！ 間違えてもゲームオーバーはないよ。');
   note='食材は指でつかんでドラッグ。タップでも調理できます。焦げないので、ゆっくり試して大丈夫！';
  }else if(topic==='order'){
   title='「追加・抜き」の読み方';subtitle='いつものレシピに、お客さんの希望を反映しよう。';
-  cards+=card('1','まず基本メニュー',`<div class="help-ticket"><strong>🍔 まちの定番</strong><span>🥯 🥬 🥩 🍅 🍞</span><br><span>いつもの材料の順番</span></div>`,'名前だけでは材料が分からないときは「基本レシピを見る」。');
+  cards+=card('1','まず基本メニュー',`<div class="help-ticket"><strong>🍔 フレッシュトマトバーガー</strong><span>🥯 🥬 🥩 🍅 🍞</span><br><span>いつもの材料の順番</span></div>`,'名前だけでは材料が分からないときは「基本レシピを見る」。');
   cards+=card('2','「−」は使わない',`<div class="help-ticket"><strong>− 🍅 トマト抜き</strong><div class="help-pills"><span class="help-pill">🥯</span><span class="help-pill">🥬</span><span class="help-pill">🥩</span><span class="help-pill remove">🍅</span><span class="help-pill">🍞</span></div></div>`,'抜き指定の食材は、基本レシピにあっても入れないでね。');
   cards+=card('3','「＋」は枚数ぶん追加',`<div class="help-ticket"><strong>＋ 🧀 チーズ ×2 追加</strong><div class="help-pills"><span class="help-pill extra">🧀</span><span class="help-pill extra">🧀</span><span class="help-pill">＋いつもの材料</span></div></div>`,'チーズを2枚追加。指定がない元の材料はそのまま使おう。');
   cards+=card('4','材料の順番を守る',`${thing('🥯','下のパン')}${arrow}${thing('🥩🧀','具材＋追加')}${arrow}${thing('🍞','上のパン')}`,'基本材料の並びは守ってね。追加材料は上下のパンの間なら好きな位置でOK！');

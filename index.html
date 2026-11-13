@@ -1678,6 +1678,54 @@ body:has(.play-screen.recipe-expanded){
 }
 @media (prefers-reduced-motion:reduce){.record-stat,.record-current{transition:none}}
 </style>
+
+<style id="pekopeko-v055-pantry">
+/* v0.55: keep the ordinary mobile pantry accessible without expanding a recipe.
+   A horizontal shelf leaves every ingredient card intact and gives touch gestures
+   a natural sideways scroll while preserving vertical drag-to-counter movement. */
+@media(max-width:760px){
+ #ingredientScroll[data-shelf-rows]{
+   overflow-x:auto!important;overflow-y:hidden!important;
+   touch-action:pan-x;overscroll-behavior-x:contain;
+   -webkit-overflow-scrolling:touch;scrollbar-width:thin;
+   scrollbar-color:#bb895f #f4ddbb;
+ }
+ #ingredientScroll[data-shelf-rows] .ingredients{
+   display:grid!important;grid-auto-flow:column!important;
+   grid-template-columns:none!important;grid-template-rows:repeat(1,minmax(0,1fr));
+   grid-auto-columns:calc((100% - 20px)/5);
+   width:100%;height:100%;min-height:0!important;
+   gap:5px!important;align-content:stretch;
+ }
+ #ingredientScroll[data-shelf-rows="2"] .ingredients{
+   grid-template-rows:repeat(2,minmax(0,1fr));
+ }
+ #ingredientScroll[data-shelf-rows] .ingredient{
+   min-height:0!important;height:100%;
+   max-height:none;min-width:0;
+   padding:1px 1px!important;gap:0!important;
+   touch-action:pan-x!important;overflow:hidden;
+ }
+ #ingredientScroll[data-shelf-rows] .ingredient .emoji{
+   font-size:clamp(16px,4.5vw,21px)!important;line-height:1.1!important;
+   flex:0 0 auto;
+ }
+ #ingredientScroll[data-shelf-rows] .ingredient .ingname{
+   font-size:10px!important;line-height:1.12!important;
+   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+   overflow:hidden;overflow-wrap:anywhere;
+ }
+ #ingredientScroll[data-shelf-rows] .ingredient .mini{display:none!important}
+ .play-screen:not(.recipe-expanded) .play-pantry:has(#ingredientScroll[data-shelf-rows]) .pantry-heading span:after{
+   content:'  ·  ↔ 横へ';font-size:9px;color:#fff5d7;
+ }
+}
+@media(max-width:355px){
+ #ingredientScroll[data-shelf-rows] .ingredients{grid-auto-columns:calc((100% - 15px)/4)}
+ #ingredientScroll[data-shelf-rows] .ingredient .emoji{font-size:17px!important}
+ #ingredientScroll[data-shelf-rows] .ingredient .ingname{font-size:9px!important}
+}
+</style>
 </head>
 <body><div id="root"></div>
 <script>
@@ -3828,12 +3876,22 @@ const PEKOPEKO_DINER_LOGO = "data:image/webp;base64,UklGRvr1AgBXRUJQVlA4WAoAAAAQ
 function render(){
  const wasRecipeExpanded=!!document.querySelector('.play-screen.recipe-expanded');
  const pantryScroll=document.getElementById('ingredientScroll')?.scrollTop||0;
+ const pantryScrollX=document.getElementById('ingredientScroll')?.scrollLeft||0;
+ const oldPantryTab=document.querySelector('.pantry-tabs .tab.active')?.dataset.tab||'';
+ const oldCafeKind=document.querySelector('.cafe-kind.active')?.dataset.cafeKind||'';
  const tabsScroll=document.querySelector('.pantry-tabs')?.scrollLeft||0;
  const pages=[['kitchen','🍔 バーガー'],['cafe','🍟 カフェ'],['set','🍽️ セット'],['shop','🗺️ おみせ'],['book','📖 レシピ'],['record','🏅 記録']];
  root.dataset.area=s.travel.current;
  root.dataset.uiPage=ui.page;
- root.innerHTML=`<header class="site-head"><div class="brand"><img class="brand-logo-image" alt="ぺこぺこダイナー" src="${PEKOPEKO_DINER_LOGO}" width="1500" height="500" decoding="async"></div>${statusHtml()}</header><nav class="navline" aria-label="メインメニュー">${pages.map(([id,n])=>`<button class="nav ${ui.page===id?'active':''}" data-page="${id}" aria-label="${n}" title="${n}"><span class="nav-full">${n}</span><span class="nav-short" aria-hidden="true">${({kitchen:'🍔調理',cafe:'🍟カフェ',set:'🍽️セット',shop:'🗺️旅',book:'📖図鑑',record:'🏅記録'})[id]}</span></button>`).join('')}</nav><main>${ui.page==='kitchen'?kitchenPage():ui.page==='cafe'?cafePage():ui.page==='set'?setPage():ui.page==='shop'?shopPage():ui.page==='book'?bookPage():recordPage()}</main><footer class="foot">ぺこぺこダイナー v0.54 ・ 全${TOTAL_MENU_COUNT}種類の基本メニュー / 時間制限なし ・ オフライン対応 ・ 自動保存</footer>${ui.modal?modalHtml():''}${ui.toast?`<div class="notice" role="status">${safe(ui.toast)}</div>`:''}`;
- const pantry=document.getElementById('ingredientScroll');if(pantry)pantry.scrollTop=pantryScroll;
+ root.innerHTML=`<header class="site-head"><div class="brand"><img class="brand-logo-image" alt="ぺこぺこダイナー" src="${PEKOPEKO_DINER_LOGO}" width="1500" height="500" decoding="async"></div>${statusHtml()}</header><nav class="navline" aria-label="メインメニュー">${pages.map(([id,n])=>`<button class="nav ${ui.page===id?'active':''}" data-page="${id}" aria-label="${n}" title="${n}"><span class="nav-full">${n}</span><span class="nav-short" aria-hidden="true">${({kitchen:'🍔調理',cafe:'🍟カフェ',set:'🍽️セット',shop:'🗺️旅',book:'📖図鑑',record:'🏅記録'})[id]}</span></button>`).join('')}</nav><main>${ui.page==='kitchen'?kitchenPage():ui.page==='cafe'?cafePage():ui.page==='set'?setPage():ui.page==='shop'?shopPage():ui.page==='book'?bookPage():recordPage()}</main><footer class="foot">ぺこぺこダイナー v0.55 ・ 全${TOTAL_MENU_COUNT}種類の基本メニュー / 時間制限なし ・ オフライン対応 ・ 自動保存</footer>${ui.modal?modalHtml():''}${ui.toast?`<div class="notice" role="status">${safe(ui.toast)}</div>`:''}`;
+ const pantry=document.getElementById('ingredientScroll');
+ if(pantry){
+   syncIngredientShelf();
+   const sameTab=oldPantryTab===(document.querySelector('.pantry-tabs .tab.active')?.dataset.tab||'');
+   const sameCafeKind=oldCafeKind===(document.querySelector('.cafe-kind.active')?.dataset.cafeKind||'');
+   pantry.scrollTop=pantryScroll;
+   pantry.scrollLeft=sameTab&&sameCafeKind?pantryScrollX:0;
+ }
  const tabs=document.querySelector('.pantry-tabs');if(tabs)tabs.scrollLeft=tabsScroll;
  if(wasRecipeExpanded&&!document.querySelector('.play-screen.recipe-expanded'))window.scrollTo({top:0,behavior:'instant'});
 }
@@ -4117,6 +4175,20 @@ document.addEventListener('pointerup',e=>{
 });
 document.addEventListener('pointercancel',clearSetFoodDrag);
 window.addEventListener('blur',clearSetFoodDrag);
+
+
+/* v0.55: choose 1 or 2 horizontal rows using the REAL free shelf height,
+   instead of guessing based on the device height. Recipes remain normal scroll pages. */
+function syncIngredientShelf(){
+ const pane=document.getElementById('ingredientScroll');
+ if(!pane)return;
+ const mobile=window.matchMedia('(max-width:760px)').matches;
+ const normal=!document.querySelector('.play-screen.recipe-expanded');
+ if(!mobile||!normal){delete pane.dataset.shelfRows;return;}
+ const rows=pane.clientHeight>=135?2:1;
+ pane.dataset.shelfRows=String(rows);
+}
+window.addEventListener('resize',syncIngredientShelf);
 
 advanceGrillTimers();cafeAdvance();
 save();render();

@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#28647b" />
-<title>ぺこぺこダイナー v0.30 | お料理の盛り付けを改良</title>
+<title>ぺこぺこダイナー v0.41 | 複数料理のセット注文</title>
 <style>
 :root{--cream:#fff9ef;--paper:#fffdf9;--butter:#ffd789;--brown:#5e4332;--muted:#937e6b;--border:#e8d7bf;--peach:#ffb1a4;--mint:#cce9c5;--green:#43846b;--shadow:0 7px 0 #ead9bf,0 15px 28px #72552c14;--round:24px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 6% 12%,#fff6cd 0,transparent 28%),radial-gradient(circle at 92% 16%,#def1d6 0,transparent 28%),#f9f1e5;color:var(--brown);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,system-ui,sans-serif;line-height:1.5}button{font:inherit;color:inherit;cursor:pointer}button:disabled{cursor:not-allowed;opacity:.47}button:focus-visible{outline:3px solid #76b9a5;outline-offset:2px}#root{max-width:1200px;margin:0 auto;padding:14px 12px 30px}.site-head{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:16px;padding:5px 4px}.brand{display:flex;align-items:center;gap:11px}.brand-mark{width:54px;height:54px;border:3px solid #865b3e;background:#ffe4a8;border-radius:17px;display:grid;place-items:center;box-shadow:0 5px 0 #d4ba8c;transform:rotate(-4deg)}.brand-mark svg{width:44px;height:44px}.brand-small{font-size:10px;letter-spacing:2.3px;color:#a07b5b;font-weight:900}.brand-name{font-size:clamp(21px,4vw,30px);font-weight:900;line-height:1.2;letter-spacing:.4px}.meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.pill{border:2px solid #e5d0ad;background:#fff9e8;border-radius:16px;padding:7px 12px;font-size:12px;font-weight:900}.pill b{font-size:17px}.pill.no-time{background:#e3f3db;color:#437359;border-color:#bdd9ae}.navline{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.nav{border:2px solid var(--border);background:#fffaf2;padding:10px 14px;border-radius:15px;font-size:14px;font-weight:900;min-height:44px}.nav.active{background:#6d9a7e;color:white;border-color:#6d9a7e}.layout{display:grid;grid-template-columns:minmax(285px,.78fr) minmax(0,1.5fr);gap:15px;align-items:start}.left,.right{display:grid;gap:15px}.card{background:var(--paper);border:2px solid #ead8be;border-radius:var(--round);box-shadow:var(--shadow);padding:17px}.labelhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.eyebrow{font-size:11px;font-weight:900;color:#a58055;letter-spacing:2px}.card h2{font-size:19px;margin:0;line-height:1.3}.tiny{font-size:12px;color:var(--muted)}.customer{display:flex;gap:12px;align-items:center;background:#fff6e9;border:2px solid #f0dfc6;border-radius:18px;padding:12px;margin-bottom:13px}.avatar{font-size:41px;background:#deeed7;border:2px solid #bedab5;border-radius:17px;display:grid;place-items:center;min-width:68px;height:68px}.customer-name{font-weight:900;font-size:17px}.bubble{font-size:13px;color:#7c6250;line-height:1.65}.ticket{background:#fff7df;border:2px dashed #dab77e;border-radius:17px;padding:14px}.ticket-title{font-weight:900;font-size:20px;margin:1px 0 8px}.ticket-sub{font-size:12px;color:#816846;margin-bottom:9px}.target-list{display:flex;gap:5px;flex-wrap:wrap}.tag{display:inline-flex;align-items:center;gap:4px;background:#fff;border:1.5px solid #e9d4b1;border-radius:10px;padding:5px 8px;font-size:12px;font-weight:800}.tag i{font-style:normal}.order-note{background:#e9f4e8;color:#527052;padding:9px 11px;border-radius:12px;font-size:12px;margin:12px 0}.row-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.btn{padding:10px 13px;min-height:44px;border:2px solid #dcc7ae;background:#fff9f0;border-radius:13px;font-size:13px;font-weight:900}.btn.primary{background:#ffb96d;border-color:#dc974f;box-shadow:0 4px 0 #dca66f}.btn.green{background:#81b594;border-color:#659d78;color:white;box-shadow:0 4px 0 #659d78}.btn.secondary{background:#eaf3e8;border-color:#c8dec5}.btn:active:not(:disabled){transform:translateY(2px);box-shadow:none}.mode-banner{font-size:13px;color:#6b785c;background:#edf5df;border-radius:13px;padding:10px;margin-bottom:12px;font-weight:750}.kitchen{padding:15px}.kitchen-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}.stations{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(200px,.85fr);gap:12px}.station{border:2px solid #eddcc6;border-radius:20px;background:#fffaf0;padding:11px;position:relative;min-width:0}.station h3{margin:0 0 3px;font-size:15px}.plate{background:radial-gradient(ellipse at center,#f7f2e5 30%,#ece3cf 100%);border:2px dashed #dfcbb0;border-radius:17px;position:relative;display:grid;place-items:center;min-height:239px;overflow:hidden;margin:8px 0}.plate svg{width:100%;max-width:340px;height:245px;display:block}.plate.empty:after{content:"ここに食材をのせてね";position:absolute;bottom:18px;color:#a79884;font-size:12px;font-weight:800}.stack-caption{margin:8px 0 0;text-align:center;font-size:12px;color:#927f66;min-height:19px}.grill{margin-top:8px;min-height:140px;border:6px solid #d8bab1;border-radius:18px;background:repeating-linear-gradient(90deg,#5c6260 0 8px,#727673 8px 16px);display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:8px;box-shadow:inset 0 3px 10px #20231e55}.burner{background:#454b47e8;border:2px solid #9daca5;border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 3px;color:white;min-height:113px;text-align:center}.burner-emoji{font-size:38px;filter:drop-shadow(0 5px 1px #0004);line-height:1.2}.burner-name{font-size:12px;font-weight:900;margin-top:5px}.ready{color:#dcffbf;font-size:11px;font-weight:800}.grill-buttons{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px}.grill-buttons .btn{font-size:12px;padding:8px 4px}.help-tip{font-size:11px;color:#9a826e;margin:9px 2px 0}.pantry{margin-top:12px}.tabs{display:flex;gap:6px;overflow-x:auto;padding:3px 0 10px}.tab{white-space:nowrap;border:2px solid #e8d4b7;background:#fff9ec;border-radius:12px;padding:8px 11px;font-size:12px;font-weight:900;min-height:43px}.tab.active{background:#ffe0a2;border-color:#d69e5b}.ingredients{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.ingredient{min-width:0;min-height:94px;border:2px solid #ecdac0;border-bottom:5px solid #e2cca9;background:#fff9ed;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:7px 2px;user-select:none;touch-action:none}.ingredient:active{transform:translateY(2px);border-bottom-width:3px}.ingredient .emoji{font-size:31px;line-height:1.2}.ingredient .ingname{font-size:12px;font-weight:900}.ingredient .mini{font-size:10px;color:#a5896b}.ingredient.locked{filter:grayscale(1);background:#f4f0e9}.ingredient.grill-item{background:#fff2e3}.foot{text-align:center;font-size:11px;color:#ac977d;margin:30px 0 10px}.collection{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.recipe-card{border:2px solid #eddac0;background:#fffbf3;border-radius:17px;padding:13px}.recipe-title{font-size:16px;font-weight:900}.recipe-card .target-list{margin:9px 0}.progress{height:11px;border:1px solid #c9d9bd;background:#f0f3ec;border-radius:20px;overflow:hidden;margin:8px 0}.progress > div{height:100%;background:#90b99d}.record{background:#fff8e8;border-radius:15px;padding:12px;margin-top:9px;font-size:13px}.notice{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);max-width:calc(100vw - 30px);background:#514735;color:white;padding:11px 17px;border-radius:15px;box-shadow:0 10px 40px #0003;text-align:center;z-index:100;font-weight:800;font-size:13px;pointer-events:none;animation:up .2s ease}.modal-back{position:fixed;inset:0;background:#2d251d99;display:flex;align-items:center;justify-content:center;padding:16px;z-index:90}.modal{width:min(480px,100%);max-height:min(85dvh,750px);overflow-y:auto;background:#fffdf7;border:4px solid #edd5ae;border-radius:26px;padding:21px;box-shadow:0 16px 70px #24170e66}.modal h2{font-size:24px;margin:0 0 8px}.modal p{font-size:14px;line-height:1.8}.rating{font-size:43px;text-align:center;letter-spacing:6px;color:#e9a841}.modal .btn{width:100%;margin-top:8px}.drag-ghost{position:fixed;z-index:150;pointer-events:none;width:68px;height:68px;border:2px solid #deb974;background:#fff9e9e9;border-radius:19px;display:grid;place-items:center;font-size:38px;transform:translate(-50%,-50%);box-shadow:0 6px 20px #0004}.drop-highlight{outline:4px solid #8ebf9e;outline-offset:2px}.soft{color:#7c8061;font-weight:850}.emptybook{padding:24px;background:#fff6e8;border-radius:18px;color:#8b7969;font-size:14px;text-align:center}.divider{height:1px;background:#e8d8c4;margin:16px 0}.starline{display:flex;justify-content:space-between;gap:8px;align-items:center}.illustration{font-size:31px}.subtitle{font-size:12px;color:#927c65;margin:5px 0 0}.freeform{background:#f4f2e4;border:2px dashed #d8ceb7;padding:14px;border-radius:15px;font-size:13px}.mobile-brief{display:none}@keyframes up{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translate(-50%,0)}}@media(max-width:900px){.layout{grid-template-columns:1fr}.stations{grid-template-columns:1fr 1fr}.ingredients{grid-template-columns:repeat(5,minmax(0,1fr))}}@media(max-width:600px){#root{padding:10px 9px 25px}.brand-mark{height:45px;width:45px}.brand-mark svg{width:35px;height:35px}.brand-name{font-size:22px}.brand-small{font-size:9px}.site-head{margin-bottom:10px}.meta{gap:5px}.pill{font-size:11px;padding:5px 8px}.pill b{font-size:14px}.navline{margin-bottom:9px}.nav{padding:8px 11px;font-size:12px}.card{padding:12px;border-radius:20px}.layout,.left,.right{gap:12px}.customer{padding:8px;margin-bottom:10px}.avatar{min-width:55px;height:55px;font-size:34px}.ticket{padding:10px}.ticket-title{font-size:17px}.tag{font-size:11px;padding:4px 6px}.order-note{margin:8px 0}.stations{grid-template-columns:1fr}.plate{min-height:200px;margin:5px 0}.plate svg{height:223px}.grill{min-height:116px}.burner{min-height:100px}.ingredients{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.ingredient{min-height:88px}.ingredient .emoji{font-size:29px}.ingredient .ingname{font-size:11px}.collection{grid-template-columns:1fr}.kitchen-top{margin-bottom:7px}.station{padding:10px}.mobile-brief{display:inline}.desktop-brief{display:none}}
@@ -920,6 +920,13 @@ button:focus-visible{outline:3px solid #fff0ae;outline-offset:3px}
 .set-recipe-row button{background:#fff;border:1px solid #d9b67c;border-radius:7px;padding:4px 8px;font-size:11px;font-weight:850}
 .set-recipe-body{display:flex;gap:4px;flex-wrap:wrap;font-size:11px}
 .set-recipe-body span{background:white;border-radius:6px;padding:2px 5px;border:1px solid #e5d1aa}
+.set-slot .slot-name{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px}
+.set-ticket-progress{font-size:10px;color:#6c775b;font-weight:900;margin-right:4px;white-space:nowrap}
+.set-order-number{color:#9a6848;font-size:10px}
+.set-ticket-list{max-height:150px;overflow-y:auto;overscroll-behavior:contain}
+.set-tray-cells.many{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+.set-tray-cells.many .set-tray-cell{min-height:27px}
+.set-slot:focus-visible,.set-tray-cell:focus-visible{outline:3px solid #d28a29;outline-offset:1px}
 .set-food-ghost{position:fixed;pointer-events:none;z-index:150;transform:translate(-50%,-60%);background:#fff7d8;border:3px solid #dca852;border-radius:20px;padding:12px;box-shadow:0 7px 21px #0005;font-size:33px}
 .set-page [data-set-food-source]{touch-action:none}
 @media(max-width:760px){
@@ -1265,6 +1272,54 @@ button:focus-visible{outline:3px solid #fff0ae;outline-offset:3px}
  .cafe-station-empty.drink-device strong{font-size:9px}
 }
 
+
+
+/* v0.40: short SVG pour response; only the decoration animates. Cooking never waits. */
+.drink-pour-fx{pointer-events:none;--drink-age:0ms}
+.drink-pour-fx .drink-fx-jug{animation:drinkJug 940ms ease both;animation-delay:var(--drink-age);transform-origin:202px 33px;transform-box:view-box}
+.drink-pour-fx .drink-fx-stream{fill:none;stroke-dasharray:150;stroke-dashoffset:150;stroke-linecap:round;animation:drinkStream 940ms ease-in-out both;animation-delay:var(--drink-age)}
+.drink-pour-fx .drink-fx-stream-glint{fill:none;stroke-dasharray:150;stroke-dashoffset:150;stroke-linecap:round;animation:drinkStream 940ms ease-in-out both;animation-delay:var(--drink-age)}
+.drink-pour-fx .drink-fx-ring{transform-origin:center;transform-box:fill-box;animation:drinkRipple 940ms ease-out both;animation-delay:var(--drink-age)}
+.drink-pour-fx .drink-fx-drop{transform-origin:center;transform-box:fill-box;animation:drinkDroplet 940ms ease-out both;animation-delay:var(--drink-age)}
+.drink-pour-fx .drink-fx-bubble{animation:drinkBubbles 940ms ease-out both;animation-delay:calc(var(--drink-age) + var(--bubble-wait,0ms))}
+.drink-pour-fx.drink-fx-milk .drink-fx-stream{stroke-width:9;stroke-linecap:round}
+.drink-pour-fx.drink-fx-coffee .drink-fx-stream{stroke-width:5.4}
+.drink-pour-fx.drink-fx-soda .drink-fx-stream{stroke-width:3.8}
+.drink-pour-fx.drink-fx-fruit .drink-fx-stream{stroke-width:6.4}
+.drink-pour-fx.drink-fx-latte .drink-fx-stream{stroke-width:7}
+@keyframes drinkJug{0%,12%,88%,100%{opacity:0}17%,77%{opacity:1}0%{transform:translateY(-5px) rotate(-7deg)}20%{transform:translateY(0) rotate(1deg)}75%{transform:translateY(0) rotate(1deg)}100%{transform:translateY(-6px) rotate(-7deg)}}
+@keyframes drinkStream{0%,9%{opacity:0;stroke-dashoffset:150}19%{opacity:1;stroke-dashoffset:150}51%{opacity:1;stroke-dashoffset:0}77%{opacity:1;stroke-dashoffset:0}100%{opacity:0;stroke-dashoffset:-150}}
+@keyframes drinkRipple{0%,32%{opacity:0;transform:scale(.35)}52%{opacity:.93;transform:scale(.85)}82%{opacity:.58;transform:scale(1.08)}100%{opacity:0;transform:scale(1.3)}}
+@keyframes drinkDroplet{0%,40%{opacity:0;transform:translateY(0) scale(.4)}61%{opacity:.9;transform:translateY(-8px) scale(1)}100%{opacity:0;transform:translateY(-17px) scale(.65)}}
+@keyframes drinkBubbles{0%,30%{opacity:0;transform:translateY(12px) scale(.5)}48%{opacity:.88;transform:translateY(4px) scale(1)}100%{opacity:0;transform:translateY(-20px) scale(.8)}}
+@media(prefers-reduced-motion:reduce){.drink-pour-fx{display:none!important}.drink-pour-fx *{animation:none!important}}
+
+/* v0.41: keep the action row reachable on narrow and landscape displays. */
+@media (max-width:760px) and (max-height:650px){
+  .set-page .set-slot{min-height:32px!important;padding:1px 1px!important}
+  .set-page .set-tray{padding:2px 4px!important;min-height:31px!important}
+  .set-page .set-tray-cell{min-height:25px!important}
+  .set-page .set-tray-cells.many{gap:2px!important}
+  .set-page .play-workbench{min-height:123px!important}
+  .set-page .set-ticket{padding:4px 6px!important}
+  .set-page .set-mini-order{padding-top:1px!important}
+}
+@media (min-width:761px) and (max-height:530px){
+  .set-page{gap:4px!important}
+  .set-page .set-ticket{padding:5px 6px!important}
+  .set-page .set-person{width:26px;height:26px;flex-basis:26px;font-size:18px}
+  .set-page .set-ticket-text strong{font-size:11px}
+  .set-page .set-ticket-text small{font-size:9px}
+  .set-page .set-slot{min-height:31px;padding:2px!important}
+  .set-page .set-tray{min-height:32px!important;padding:2px 5px!important}
+  .set-page .set-tray-cell{min-height:24px!important}
+  .set-page .set-tray-cells.many{gap:2px!important}
+  .set-page .set-ticket-list{max-height:105px}
+}
+@media(max-width:760px){
+  .set-page .set-ticket{position:relative;z-index:4}
+  .set-page .set-ticket-list{position:absolute;top:calc(100% - 1px);left:-2px;right:-2px;z-index:8;background:#fff8e8;border:2px solid #dfad69;border-radius:0 0 12px 12px;padding:7px 9px;max-height:150px;box-shadow:0 8px 15px #4c391e38}
+}
 </style>
 </head>
 <body><div id="root"></div>
@@ -1452,31 +1507,153 @@ const CAFE_IDS=['fries','drink','pancake','sundae'];
 const TOTAL_MENU_COUNT=RECIPES.length+CAFE_IDS.reduce((n,k)=>n+CAFE_RECIPES[k].length,0);
 const SET_EMOJI={burger:'🍔',fries:'🍟',drink:'🥤',pancake:'🥞',sundae:'🍨'};
 const SET_NAME={burger:'バーガー',fries:'ポテト',drink:'ドリンク',pancake:'パンケーキ',sundae:'パフェ'};
-function cafeRandomOrder(kind,count,last='',areaId='plaza'){
- const available=availableCafe(kind,areaId);
- const options=available.filter(r=>r.id!==last);
- const pool=options.length?options:available;
- const r=pool[Math.floor(Math.random()*pool.length)];
- const mods=[];
- const baseExtras=r.seq.filter(i=>!CAFE_CORE.includes(i));
- const additions=[...allCafeIngredients(kind,areaId)].filter(i=>CAFE_ING[i]?.kind===kind&&!CAFE_ING[i].tool&&!CAFE_CORE.includes(i));
- const level=areaIndex(areaId),roll=Math.random();
- let num=level===0?0:level===1?(roll<.25?0:1):level===2?(roll<.15?0:roll<.8?1:2):level<=3?(roll<.15?0:roll<.55?1:2):level<=5?(roll<.1?0:roll<.35?1:roll<.85?2:3):(roll<.07?1:roll<.4?2:3);
- num=Math.min(num,areaById(areaId).mods);
- // The named recipe stays primary. Removal is only valid for an ingredient it contains.
- for(let j=0;j<num;j++){
-   const used=new Set(mods.map(m=>m.id));
-   const canRemove=[...new Set(baseExtras)].filter(id=>!used.has(id));
-   const canAdd=additions.filter(id=>!used.has(id));
-   const type=canRemove.length&&Math.random()<.44?'remove':'add';
-   const choices=type==='remove'?canRemove:canAdd;
-   if(!choices.length)break;
-   const id=choices[Math.floor(Math.random()*choices.length)];
-   const qty=type==='add'&&level>=3&&Math.random()<.28?2:1;
-   mods.push({type,id,qty});
- }
- return{recipe:r.id,mods,person:Math.floor(Math.random()*PEOPLE.length)};
+// v0.36: Customer orders follow recognizable patterns rather than arbitrary
+// unrelated ingredient draws. The named recipe always remains unchanged.
+const ORDER_PATTERNS=[
+ {id:'plain',steps:[],min:0,w:[25,21,12,11,9,7,7]},
+ {id:'add',steps:['add'],min:1,w:[0,30,22,15,11,9,8]},
+ {id:'remove',steps:['remove'],min:1,w:[0,32,19,13,9,7,6]},
+ {id:'double',steps:['double'],min:2,w:[0,0,14,15,13,12,11]},
+ {id:'swap',steps:['remove','swapadd'],min:2,w:[0,0,19,18,17,17,16]},
+ {id:'twice',steps:['add','add'],min:2,w:[0,0,9,12,13,11,10]},
+ {id:'lighter',steps:['remove','remove'],min:2,w:[0,0,5,7,8,8,7]},
+ {id:'mixed',steps:['remove','add','add'],min:3,w:[0,0,0,9,12,13,11]},
+ {id:'rich',steps:['double','add'],min:3,w:[0,0,0,0,8,9,8]},
+ {id:'triple',steps:['triple'],min:5,w:[0,0,0,0,0,7,8]},
+ {id:'special',steps:['remove','double','add','add'],min:6,w:[0,0,0,0,0,0,8]}
+];
+const BURGER_SAUCES=new Set(['sauce','ketchup','mayo','mustard','sesame','bbqsmoke']);
+const CAFE_SAUCES=new Set(['cheesedip','fryketchup','maplesyrup','honey','choco','berry','caramel','chocodrip','berrydrip','carameldrip']);
+const CAFE_FRUIT=new Set(['banana','strawberry','blueberry','bananafruit','berryfruit','blueberryfruit','orangefruit','kiwifruit','cherryfruit']);
+function orderGroup(id,kind){
+ if(kind==='burger')return BURGER_SAUCES.has(id)?'sauce':ING[id]?.cat==='hot'?'main':ING[id]?.cat==='veg'?'veg':'misc';
+ if(CAFE_SAUCES.has(id))return 'sauce';
+ if(CAFE_FRUIT.has(id))return 'fruit';
+ if(['salt','seaweed','chili','pepper','garlic','paprika','truffle','rainbowbits','chocobits','cookiecrumb','cereal','sundaealmond','nuts'].includes(id))return 'season';
+ if(['whip','cream','sundaecream','butter','wafer','lemon'].includes(id))return 'finish';
+ return 'liquid';
 }
+function chooseWeighted(items,weight){
+ if(!items.length)return null;
+ const total=items.reduce((sum,item)=>sum+Math.max(.01,weight(item)),0);
+ let roll=Math.random()*total;
+ for(const item of items){roll-=Math.max(.01,weight(item));if(roll<=0)return item}
+ return items[items.length-1];
+}
+function orderStyle(mods){
+ if(!mods?.length)return 'いつもの味';
+ const add=mods.filter(m=>m.type==='add'),remove=mods.filter(m=>m.type==='remove');
+ if(add.some(m=>m.qty>=3))return '特盛トッピング';
+ if(add.length&&remove.length)return '入れ替えアレンジ';
+ if(add.length>=2)return 'いろいろ追加';
+ if(remove.length>=2)return 'すっきりアレンジ';
+ if(add.some(m=>m.qty>=2))return 'ダブルトッピング';
+ return add.length?'ちょい足し':'材料抜き';
+}
+// A deliberately welcome oddity: customers can order a named menu whose
+// requested omissions/additions make it identical to another named recipe.
+// Keep the ORIGINAL name on the ticket and grade the requested ingredients.
+// This is occasional, not a separate joke mode or a new menu category.
+function crossoverOrderMods(kind,recipe,areaId,maxChanges){
+ if(maxChanges<1)return [];
+ const burger=kind==='burger',menu=burger?availableBurger(areaId):availableCafe(kind,areaId);
+ const core=new Set(burger?['bottom','top']:CAFE_CORE),capacity=burger?11:12;
+ const original=recipe.seq;
+ const counts=seq=>{const m=new Map();for(const id of seq)m.set(id,(m.get(id)||0)+1);return m};
+ const oldCounts=counts(original),matches=[];
+ for(const target of menu){
+  if(target.id===recipe.id||target.seq.length>capacity)continue;
+  const newCounts=counts(target.seq),ids=new Set([...oldCounts.keys(),...newCounts.keys()]);
+  const mods=[];let possible=true;
+  for(const id of ids){
+   const before=oldCounts.get(id)||0,after=newCounts.get(id)||0;
+   if(core.has(id)&&before!==after){possible=false;break;}
+   if(after<before){
+    // An omission removes all copies of an ingredient, not just one.
+    if(after!==0){possible=false;break;}
+    mods.push({type:'remove',id,qty:0});
+   }else if(after>before){
+    if(after-before>3){possible=false;break;}
+    mods.push({type:'add',id,qty:after-before});
+   }
+  }
+  if(!possible||!mods.length||mods.length>maxChanges)continue;
+  const kept=original.filter(id=>!mods.some(m=>m.type==='remove'&&m.id===id));
+  let pos=0;for(const id of target.seq)if(id===kept[pos])pos++;
+  if(pos!==kept.length)continue;
+  if(!burger&&(target.seq[0]!==kept[0]||(kind==='sundae'&&target.seq[1]!==kept[1])))continue;
+  matches.push(mods);
+ }
+ return matches.length?matches[Math.floor(Math.random()*matches.length)]:[];
+}
+function orderModsFor(kind,recipe,areaId){
+ const area=areaById(areaId),level=areaIndex(areaId),isBurger=kind==='burger';
+ const limit=isBurger?11:12,maximum=Math.min(area.mods,level===0?0:4);
+ const base=recipe.seq,unlocked=isBurger?Object.keys(ING).filter(id=>!['bottom','top'].includes(id)&&ING[id].at<=area.burger):[...allCafeIngredients(kind,areaId)].filter(id=>CAFE_ING[id]?.kind===kind&&!CAFE_ING[id].tool&&!CAFE_CORE.includes(id));
+ const core=new Set(isBurger?['bottom','top']:CAFE_CORE);
+ const removable=[...new Set(base.filter(id=>!core.has(id)&&(level>=3||!['patty','fish','chicken','shrimp'].includes(id))))];
+ // Never discard an order just because another menu would have this result.
+ // A few such crossovers are intentionally included in the natural rotation.
+ if(maximum>0&&Math.random()<(level>=4?.18:.10)){
+  const crossover=crossoverOrderMods(kind,recipe,areaId,maximum);
+  if(crossover.length)return crossover;
+ }
+ const styles=ORDER_PATTERNS.filter(p=>p.min<=level&&p.steps.length<=maximum);
+ const pattern=chooseWeighted(styles,p=>p.w[level])||ORDER_PATTERNS[0];
+ if(pattern.id==='plain')return [];
+ let best=[];
+ for(let attempt=0;attempt<15;attempt++){
+  const mods=[];let previousRemoved=null;
+  for(const step of pattern.steps){
+   const seen=new Set(mods.map(m=>m.id));
+   if(step==='remove'){
+    const pool=removable.filter(id=>!seen.has(id));if(!pool.length)break;
+    const menuName=String(recipe.n||recipe.name||'');
+    const id=chooseWeighted(pool,id=>{
+     const weight=base.filter(x=>x===id).length>1?.75:1;
+     const named=(id==='cheese'&&menuName.includes('チーズ'))
+       ||(id==='bacon'&&menuName.includes('ベーコン'))
+       ||(id==='butter'&&menuName.includes('バター'))
+       ||(id==='honey'&&menuName.includes('はちみつ'))
+       ||(id==='chocodrip'&&menuName.includes('チョコ'));
+     return weight*(named?2.4:1);
+    });
+    mods.push({type:'remove',id,qty:0});previousRemoved=id;
+   }else{
+    const qty=step==='double'?2:step==='triple'?3:1;
+    const currentSize=base.length+mods.reduce((n,m)=>n+(m.type==='add'?m.qty:-base.filter(id=>id===m.id).length),0);
+    const pool=unlocked.filter(id=>!seen.has(id)&&currentSize+qty<=limit);
+    if(!pool.length)break;
+    // Swaps prefer another ingredient from the same family, with a fallback.
+    const group=previousRemoved&&step==='swapadd'?orderGroup(previousRemoved,kind):null;
+    const same=group?pool.filter(id=>orderGroup(id,kind)===group):[];
+    const pickPool=same.length&&Math.random()<.86?same:pool;
+    const id=chooseWeighted(pickPool,id=>{
+     let w=base.includes(id)?2.0:1.0;
+     if(isBurger){
+      if(BURGER_SAUCES.has(id)&&base.some(v=>BURGER_SAUCES.has(v)))w*=1.7;
+      if(ING[id].cat==='veg'&&base.some(v=>ING[v]?.cat==='veg'))w*=1.3;
+      if(ING[id].cat==='hot'&&base.some(v=>ING[v]?.cat==='hot'))w*=1.3;
+     }else{
+      if(base.some(v=>orderGroup(v,kind)===orderGroup(id,kind)))w*=1.5;
+     }
+     return w;
+    });
+    mods.push({type:'add',id,qty});previousRemoved=null;
+   }
+  }
+  if(mods.length===pattern.steps.length)return mods;
+  if(mods.length>best.length)best=mods;
+ }
+ // Do not invent an impossible request if a highly stacked recipe cannot fit it.
+ return best;
+}
+function cafeRandomOrder(kind,count,last='',areaId='plaza'){
+ const available=availableCafe(kind,areaId),options=available.filter(r=>r.id!==last),pool=options.length?options:available;
+ const r=pool[Math.floor(Math.random()*pool.length)];
+ return {recipe:r.id,mods:orderModsFor(kind,r,areaId),person:Math.floor(Math.random()*PEOPLE.length)};
+}
+
 function normalizeCafe(old,areaId='plaza'){
  const c={active:CAFE_IDS.includes(old?.active)?old.active:'fries',counts:{},orders:{},drafts:{}};
  for(const kind of CAFE_IDS){
@@ -1484,7 +1661,7 @@ function normalizeCafe(old,areaId='plaza'){
   const draftStarted=!!(old?.drafts?.[kind]?.seq?.length||old?.drafts?.[kind]?.tool);
   const valid=CAFE_RECIPES[kind].some(r=>r.id===old?.orders?.[kind]?.recipe&&(cafeAvailable(r,areaId)||draftStarted));
   let ord=valid?old.orders[kind]:cafeRandomOrder(kind,count,'',areaId);
-  ord={recipe:ord.recipe,person:Number.isInteger(ord.person)&&ord.person>=0&&ord.person<PEOPLE.length?ord.person:0,mods:Array.isArray(ord.mods)?ord.mods.filter(m=>CAFE_ING[m?.id]?.kind===kind&&!CAFE_CORE.includes(m.id)&&(m.type==='add'||m.type==='remove')).map(m=>({type:m.type,id:m.id,qty:m.type==='add'?Math.min(2,Math.max(1,Number(m.qty)||1)):0})):[]};
+  ord={recipe:ord.recipe,person:Number.isInteger(ord.person)&&ord.person>=0&&ord.person<PEOPLE.length?ord.person:0,mods:Array.isArray(ord.mods)?ord.mods.filter(m=>CAFE_ING[m?.id]?.kind===kind&&!CAFE_CORE.includes(m.id)&&(m.type==='add'||m.type==='remove')).map(m=>({type:m.type,id:m.id,qty:m.type==='add'?Math.min(3,Math.max(1,Number(m.qty)||1)):0})):[]};
   c.orders[kind]=ord;
   const oldDraft=old?.drafts?.[kind];
   const seq=Array.isArray(oldDraft?.seq)?oldDraft.seq.filter(id=>CAFE_ING[id]?.kind===kind&&(!CAFE_ING[id]?.tool||(kind==='sundae'&&SUNDAE_SOFT.includes(id)))).slice(0,12):[];
@@ -1507,7 +1684,7 @@ function cafeBase(k=cafeKind()){
 }
 function cafeTarget(k=cafeKind()){
  const ord=cafeOrder(k),seq=cafeBase(k).slice();
- for(const m of ord.mods)if(m.type==='add')seq.push(...Array(Math.min(2,m.qty)).fill(m.id));
+ for(const m of ord.mods)if(m.type==='add')seq.push(...Array(Math.min(3,m.qty)).fill(m.id));
  return seq;
 }
 function cafePerfect(seq,k=cafeKind()){
@@ -1546,6 +1723,33 @@ function cafeCanPlace(id,k,zone){
 let cafeFx=null;
 function cafeAnimate(kind,id){cafeFx={kind,id,at:Date.now()};}
 function cafeCurrentFx(k){return cafeFx&&cafeFx.kind===k&&Date.now()-cafeFx.at<1200?cafeFx:null;}
+// Transient only. This is intentionally NOT part of the saved drink state.
+const DRINK_FX_LIQUIDS=new Set(['milk','tea','coffee','orange','soda','berry','mango','matcha','cocoa','caramel']);
+let drinkFx=null;
+function drinkAnimate(id){if(DRINK_FX_LIQUIDS.has(id))drinkFx={id,at:Date.now()};}
+function drinkCurrentFx(seq){return drinkFx&&seq?.at(-1)===drinkFx.id&&Date.now()-drinkFx.at<940?drinkFx:null;}
+function drinkPourFxSvg(seq){
+ const fx=drinkCurrentFx(seq);if(!fx||!seq.includes('cup'))return '';
+ const liquids=seq.filter(id=>DRINK_FX_LIQUIDS.has(id));
+ const level=Math.min(118,80+Math.max(0,liquids.length-1)*12),surface=195-level;
+ const id=fx.id,spec=drinkLiquidSpec(id);
+ const type=id==='soda'?'soda':['milk'].includes(id)?'milk':['tea','coffee','cocoa'].includes(id)?'coffee':['orange','berry','mango'].includes(id)?'fruit':'latte';
+ const age=Math.max(0,Math.min(940,Date.now()-fx.at));
+ const stream=`M205 38Q191 47 179 71Q167 ${Math.max(69,surface-12)} 161 ${surface+1}`;
+ const bubbleDecor=type==='soda'?Array.from({length:11},(_,i)=>{
+  const x=125+(i*17)%70,y=surface+9+(i*13)%Math.max(16,level-16),r=[1.6,2.3,3.1][i%3];
+  return `<circle class="drink-fx-bubble" style="--bubble-wait:${i*23}ms" cx="${x}" cy="${y}" r="${r}" fill="none" stroke="#faffff" stroke-width="1.5"/>`;
+ }).join(''):'';
+ const droplets=type==='milk'?`<ellipse class="drink-fx-drop" cx="146" cy="${surface+2}" rx="5.5" ry="2.5" fill="${spec.foam}"/><ellipse class="drink-fx-drop" cx="174" cy="${surface+1}" rx="4" ry="2" fill="${spec.foam}"/>`:type==='fruit'?Array.from({length:4},(_,i)=>`<ellipse class="drink-fx-drop" cx="${145+i*10}" cy="${surface+2+(i%2)*2}" rx="2" ry="1.2" fill="${spec.highlight}" opacity=".8"/>`).join(''):'';
+ const ringColor=type==='coffee'?spec.foam:type==='milk'?'#fffef6':type==='fruit'?spec.highlight:'#ffffff';
+ return `<g class="drink-pour-fx drink-fx-${type}" data-drink-fx="${id}" style="--drink-age:-${age}ms" aria-hidden="true"><defs><linearGradient id="drink-fx-${id}" x1="0" y1="0" x2="0" y2="1"><stop stop-color="${spec.top}"/><stop offset="1" stop-color="${spec.bottom}"/></linearGradient></defs>
+  <g class="drink-fx-jug"><path d="M185 16L209 13Q218 15 216 24L212 42Q198 47 190 37Z" fill="#f5fbf6" stroke="#8da9ae" stroke-width="2.6"/><path d="M191 21L211 19L207 37L194 35Z" fill="${spec.mid}" opacity="${spec.alpha}"/><path d="M188 18L181 24L188 30" fill="none" stroke="#98aab0" stroke-width="3" stroke-linecap="round"/><path d="M212 21Q226 21 224 29Q224 35 213 35" fill="none" stroke="#9ab7ba" stroke-width="3.1"/><path d="M195 20L209 18" stroke="#fff" stroke-width="2.5" opacity=".88"/></g>
+  <path class="drink-fx-stream" d="${stream}" stroke="url(#drink-fx-${id})"/>
+  <path class="drink-fx-stream-glint" d="${stream}" stroke="${spec.highlight}" stroke-width="${type==='milk'?2:type==='soda'?1:1.6}" opacity="${type==='soda'?.8:.55}"/>
+  <ellipse class="drink-fx-ring" cx="160" cy="${surface+2}" rx="${type==='milk'?20:35}" ry="${type==='milk'?3.6:5.6}" fill="none" stroke="${ringColor}" stroke-width="${type==='soda'?2.7:3.5}" opacity=".88"/>
+  ${type==='coffee'?`<path class="drink-fx-ring" d="M129 ${surface+4}Q160 ${surface-4} 190 ${surface+4}" stroke="${spec.foam}" stroke-width="3.4" fill="none" opacity=".8"/>`:''}
+  ${bubbleDecor}${droplets}</g>`;
+}
 let sundaeFx=null;
 function sundaeAnimate(type,id){sundaeFx={type,id,at:Date.now()};}
 function sundaeCurrentFx(){return sundaeFx&&Date.now()-sundaeFx.at<1450?sundaeFx:null;}
@@ -1568,6 +1772,7 @@ function cafePlace(id,zone){
  else{
   d.seq.push(id);
   cafeAnimate(k,id);
+  if(k==='drink')drinkAnimate(id);
   if(k==='sundae'){
    if(id==='rainbowbits'||id==='chocobits'){sundaeAnimate('sprinkles',id);playSprinkle();}
    else if(['chocodrip','berrydrip','carameldrip'].includes(id)){sundaeAnimate('drizzle',id);playSqueeze();}
@@ -1605,6 +1810,7 @@ function cafeAdvance(){
  if(changed){save();if((ui.page==='cafe'||(ui.page==='set'&&s.setMeal?.active!=='burger'))&&!drag?.started&&!cafeDrag?.moved)render();}
 }
 function cafeNext(k=cafeKind()){
+ drinkFx=null;
  const c=s.cafe,old=c.orders[k].recipe;
  c.orders[k]=cafeRandomOrder(k,c.counts[k],old,s.travel.current);c.drafts[k]={seq:[],tool:null};
  ui.showCafeRecipe=false;save();render();
@@ -1675,13 +1881,61 @@ function sundaeDispenserArt(flavor){
  <circle cx="94" cy="67" r="4" fill="${ready?'#80d791':'#c9c9ac'}" stroke="#739b87" stroke-width="1.5"/>
  </svg>`;
 }
+function drinkLiquidSpec(id){
+ const map={
+  milk:{top:'#fffefb',mid:'#f7f0e6',bottom:'#e9e1d5',alpha:.99,highlight:'#ffffff',texture:'milk',foam:'#fff8eb'},
+  tea:{top:'#e7b77f',mid:'#ca8b57',bottom:'#9e6038',alpha:.9,highlight:'#ffe1bb',texture:'tea',foam:'#e8c39a'},
+  coffee:{top:'#b18a65',mid:'#805139',bottom:'#4f3028',alpha:.98,highlight:'#e2b88f',texture:'coffee',foam:'#cfa27d'},
+  orange:{top:'#ffd272',mid:'#f6ab48',bottom:'#eb8128',alpha:.9,highlight:'#ffe4a6',texture:'fruit',foam:'#ffe0a0'},
+  soda:{top:'#effffb',mid:'#b8efe4',bottom:'#79d7c9',alpha:.72,highlight:'#ffffff',texture:'soda',foam:'#f7ffff'},
+  berry:{top:'#f7b0c3',mid:'#e07b98',bottom:'#c24b76',alpha:.89,highlight:'#ffd4df',texture:'fruit',foam:'#ffd3df'},
+  mango:{top:'#ffda7c',mid:'#f4bc53',bottom:'#e69526',alpha:.9,highlight:'#ffe7ab',texture:'fruit',foam:'#ffe3aa'},
+  matcha:{top:'#cadbaa',mid:'#9fba7c',bottom:'#6f8f53',alpha:.92,highlight:'#eef8d8',texture:'latte',foam:'#dfecc2'},
+  cocoa:{top:'#aa7e67',mid:'#835741',bottom:'#59382d',alpha:.97,highlight:'#d9b39d',texture:'coffee',foam:'#cfa282'},
+  caramel:{top:'#ecc18b',mid:'#d29961',bottom:'#b67641',alpha:.9,highlight:'#ffe3bb',texture:'latte',foam:'#efd4a7'},
+  berrymilk:{top:'#ffeaf1',mid:'#f5bed0',bottom:'#e7a2b9',alpha:.97,highlight:'#fffdfd',texture:'milk',foam:'#fff3f7'},
+  cocoamilk:{top:'#e8d0be',mid:'#caa38c',bottom:'#a77b65',alpha:.98,highlight:'#fff0e4',texture:'latte',foam:'#f2d9c9'},
+  milktea:{top:'#f3dabf',mid:'#d4af8c',bottom:'#ad7f5d',alpha:.97,highlight:'#fff2de',texture:'latte',foam:'#efdfc8'},
+  coffeelatte:{top:'#e8d4bd',mid:'#b89174',bottom:'#956950',alpha:.97,highlight:'#fff2e1',texture:'latte',foam:'#f0d9bd'},
+  matchalatte:{top:'#e5edd7',mid:'#adc798',bottom:'#799b70',alpha:.97,highlight:'#f9ffef',texture:'latte',foam:'#e7f3dd'},
+  orangesoda:{top:'#fff0ad',mid:'#ffc46d',bottom:'#ed9c37',alpha:.86,highlight:'#fff7dc',texture:'fizzfruit',foam:'#fff8df'},
+  mangosoda:{top:'#fff3a6',mid:'#ffd271',bottom:'#e9aa35',alpha:.88,highlight:'#fff7d6',texture:'fizzfruit',foam:'#fff6de'}
+ };
+ return map[id]||{top:'#f7dcc0',mid:'#d7a378',bottom:'#af6c45',alpha:.92,highlight:'#fff4e3',texture:'latte',foam:'#efd2b7'};
+}
+// Visual composition only: recipes and ingredient counts remain unchanged.
+// Blended drinks should not look like separated rectangles of syrup and water.
+function drinkBlendProfile(liquids){
+ const has=id=>liquids.includes(id);
+ if(has('soda')&&!has('milk')&&!has('coffee')&&!has('tea')&&!has('cocoa')&&!has('matcha')){
+  if(has('mango')&&(!has('orange')||liquids.lastIndexOf('mango')>liquids.lastIndexOf('orange')))return 'mangosoda';
+  if(has('orange'))return 'orangesoda';
+ }
+ if(has('milk')){
+  if(has('matcha'))return 'matchalatte';
+  if(has('cocoa'))return 'cocoamilk';
+  if(has('berry'))return 'berrymilk';
+  if(has('tea'))return 'milktea';
+  if(has('coffee'))return 'coffeelatte';
+ }
+ return null;
+}
 function drinkDispenserArt(seq){
- const liquids=seq.filter(id=>['milk','tea','coffee','orange','soda','berry','mango','matcha','cocoa','caramel'].includes(id));
- const tint={milk:'#faeac6',tea:'#c68e5c',coffee:'#76503b',orange:'#fbb05e',soda:'#a8e5da',berry:'#de7895',mango:'#efc058',matcha:'#9bc179',cocoa:'#91624c',caramel:'#d4a063'};
- const liquid=liquids[liquids.length-1],filled=Math.min(38,liquids.length*14);
+ const liquidIds=['milk','tea','coffee','orange','soda','berry','mango','matcha','cocoa','caramel'];
+ const liquids=seq.filter(id=>liquidIds.includes(id));
+ const liquid=drinkBlendProfile(liquids)||liquids[liquids.length-1],spec=liquid?drinkLiquidSpec(liquid):null,filled=Math.min(40,liquids.length*14.5),topY=89-filled*.55;
+ const bubbles=liquids.includes('soda')?Array.from({length:10},(_,i)=>{
+  const x=58+(i*7)%11,y=topY+4+(i*9)%Math.max(12,filled*.5),r=[1.8,2.3,1.4][i%3];
+  return `<circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="${.5+(i%4)*.1}"/>`;
+ }).join(''):'';
+ const pulp=liquid&&['orange','mango','berry','orangesoda','mangosoda'].includes(liquid)?Array.from({length:6},(_,i)=>{
+  const x=58+(i*5)%11,y=topY+7+(i*8)%Math.max(9,filled*.45),rx=1.4+(i%2)*.5,ry=.9+(i%3)*.25;
+  return `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="#fff6d3" opacity=".28" transform="rotate(${(i*21)%70-35} ${x} ${y})"/>`;
+ }).join(''):'';
  return `<svg viewBox="0 0 124 118" class="equipment-svg" aria-hidden="true"><defs>
  <linearGradient id="eq26-drink-case" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3fcfd"/><stop offset=".52" stop-color="#c7e2e5"/><stop offset="1" stop-color="#82b0b9"/></linearGradient>
  <linearGradient id="eq26-drink-metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7ffff"/><stop offset=".65" stop-color="#c5d9dc"/><stop offset="1" stop-color="#91aab0"/></linearGradient>
+ ${spec?`<linearGradient id="eq26-liquid" x1="0" y1="0" x2="0" y2="1"><stop stop-color="${spec.top}"/><stop offset=".58" stop-color="${spec.mid}"/><stop offset="1" stop-color="${spec.bottom}"/></linearGradient>`:''}
  </defs>
  <ellipse cx="62" cy="111" rx="49" ry="5" fill="#263f43" opacity=".17"/>
  <rect x="15" y="8" width="94" height="99" rx="12" fill="url(#eq26-drink-case)" stroke="#577f8b" stroke-width="3"/>
@@ -1691,7 +1945,7 @@ function drinkDispenserArt(seq){
  <rect x="29" y="42" width="66" height="47" rx="6" fill="#456773" stroke="#648c97" stroke-width="2"/>
  ${[40,62,84].map(x=>`<rect x="${x-5}" y="45" width="10" height="9" rx="3" fill="url(#eq26-drink-metal)" stroke="#7e9ca5" stroke-width="1"/><path d="M${x} 54v7" stroke="#cfebf0" stroke-width="4" stroke-linecap="round"/>`).join('')}
  <path d="M32 88h60v9H32z" fill="url(#eq26-drink-metal)" stroke="#779da6" stroke-width="2"/>
- ${liquid?`<path d="M51 64h22l-3 27H54z" fill="#dff8ff" stroke="#a8d6dc" stroke-width="2"/><path d="M54 ${89-filled*.55}h17l-2 ${filled*.55}H56z" fill="${tint[liquid]}" opacity=".95"/><path d="M55 68h14" stroke="#fff" stroke-width="2.3" opacity=".75"/>`:`<path d="M51 71h22l-3 18H54z" fill="#cde9f0" stroke="#8ab5c0" stroke-width="2" opacity=".7"/><path d="M55 76h14" stroke="#fff" stroke-width="2" opacity=".8"/>`}
+ ${liquid?`<path d="M51 64h22l-3 27H54z" fill="#dff8ff" stroke="#a8d6dc" stroke-width="2"/><path d="M54 ${topY}Q62 ${topY-2.2} 71 ${topY}L69 ${89}H56Z" fill="url(#eq26-liquid)" opacity="${spec.alpha}"/><path d="M56 ${topY+1}Q62 ${topY-1.7} 69 ${topY+1}" stroke="#fff" stroke-width="1.9" opacity=".58" fill="none"/>${bubbles}${pulp}${['coffee','cocoa','tea'].includes(liquid)?`<path d="M56 ${topY+3}Q62 ${topY+1.4} 69 ${topY+3}" stroke="${spec.foam}" stroke-width="2.4" opacity=".72" fill="none"/>`:''}`:`<path d="M51 71h22l-3 18H54z" fill="#cde9f0" stroke="#8ab5c0" stroke-width="2" opacity=".7"/><path d="M55 76h14" stroke="#fff" stroke-width="2" opacity=".8"/>`}
  <path d="M31 101h62" stroke="#fff" opacity=".75" stroke-width="2.6" stroke-linecap="round"/>
  </svg>`;
 }
@@ -1789,6 +2043,61 @@ function sundaeFruitArt(id,x,y,i=0){
  else if(id==='cherryfruit')shape=`<path d="M-7 -3Q-14 -19 3 -30M6 -6Q2 -23 3 -30" fill="none" stroke="#65814f" stroke-width="3"/><ellipse cx="-9" cy="2" rx="11" ry="12" fill="url(#sd26-cherry)" stroke="#982e44" stroke-width="2.5"/><ellipse cx="9" cy="6" rx="11" ry="12" fill="url(#sd26-cherry)" stroke="#a83c48" stroke-width="2.5"/><ellipse cx="-12" cy="-3" rx="3" ry="4" fill="#ffb4ad"/><ellipse cx="5" cy="1" rx="3" ry="4" fill="#ffb4ad"/><path d="M-14 10Q-9 12 -4 10M4 14Q9 16 14 13" fill="none" stroke="#82263b" stroke-width="1.6" opacity=".35"/>`;
  return `<g class="${anim}" transform="translate(${x} ${y}) rotate(${rot})">${shape}</g>`;
 }
+// The garnish planner keeps toppings legible without altering recipe order or scoring.
+// Deterministic positions prevent reshuffling between renders or after loading a save.
+function sundaeFruitLayout(fruits,creamCount=0,waferCount=0){
+ const candidates=[
+  [160,113],[127,110],[193,110],[141,89],[179,89],
+  [127,139],[194,139],[161,142],[113,92],[207,92],
+  [142,122],[181,122],[137,154],[184,152],[160,91],
+  [116,121],[204,120],[149,151],[173,151]
+ ];
+ const size=fruits.length<=2?.98:fruits.length<=4?.86:fruits.length<=6?.75:fruits.length<=8?.66:fruits.length<=10?.60:.54;
+ const radii={berryfruit:24,cherryfruit:24,bananafruit:22,kiwifruit:23,orangefruit:23,blueberryfruit:16};
+ const creams=creamCount===1?[[160,78,19]]:creamCount===2?[[141,81,16],[181,82,16]]:creamCount?[[133,82,15],[160,77,15],[189,83,15]]:[];
+ const wafers=waferCount?[[197,101,waferCount===1?18:14],...(waferCount>=2?[[169,98,13]]:[]),...(waferCount>=3?[[216,104,13]]:[])]:[];
+ const occupied=[];
+ for(let i=0;i<fruits.length;i++){
+  const id=fruits[i],radius=(radii[id]||22)*size;
+  let best=null,lowest=Infinity;
+  for(let j=0;j<candidates.length;j++){
+   if(occupied.some(p=>p.slot===j))continue;
+   const [x,y]=candidates[j];
+   let score=j*.72;
+   // Top decorations should read as separate objects, not a single merged shape.
+   for(const p of occupied){
+    const dist=Math.hypot(x-p.x,y-p.y);
+    const min=radius+p.r+2;
+    score+=Math.pow(Math.max(0,min-dist),2)*1.15;
+    if(p.id===id)score+=Math.pow(Math.max(0,min+10-dist),2)*.3;
+   }
+   for(const [cx,cy,cr] of creams){
+    const dist=Math.hypot(x-cx,y-cy);
+    score+=Math.pow(Math.max(0,radius+cr-dist),2)*.74;
+   }
+   for(const [wx,wy,wr] of wafers){
+    // Wafer sticks occupy the upper-right silhouette, including their tip.
+    const dist=Math.hypot((x-wx)*.9,(y-wy)*.55);
+    score+=Math.pow(Math.max(0,radius+wr-dist),2)*.6;
+   }
+   // Stay inside the glass silhouette. Tall fruit can be near the rim but not lost.
+   const edgeLeft=91+(y-44)*.19,edgeRight=229-(y-44)*.19;
+   score+=Math.pow(Math.max(0,edgeLeft+radius-x),2)*3;
+   score+=Math.pow(Math.max(0,x+radius-edgeRight),2)*3;
+   score+=Math.pow(Math.max(0,y+radius-167),2)*2.2;
+   score+=Math.pow(Math.max(0,64-(y-radius)),2)*.65;
+   // Bias toward visual balance across the dessert, with the first fruit near center.
+   const sumX=occupied.reduce((a,p)=>a+p.x-160,0)+(x-160);
+   score+=Math.abs(sumX)/(occupied.length+1)*.18;
+   // Deterministic tie-breaking: neither Math.random nor render-time time dependence.
+   score+=j*.0001;
+   if(score<lowest){lowest=score;best={id,x,y,r:radius,slot:j,scale:size};}
+  }
+  if(best)occupied.push(best);
+ }
+ return occupied;
+}
+
 function sundaeFoodArt(seq){
  const count=id=>seq.filter(x=>x===id).length;
  const soft=seq.find(id=>SUNDAE_SOFT.includes(id));
@@ -1839,7 +2148,11 @@ function sundaeFoodArt(seq){
   const active=fx?.type==='drizzle'&&fx.id===id?'sd-drizzle-enter':'';
   art+=`<g class="${active}">${sundaeGlaze(id,n,index)}</g>`;
  });
- if(count('sundaecream'))art+=`<g class="${fx?.type==='topping'&&fx.id==='sundaecream'?'sd-topping-pop':''}"><path d="M144 92Q134 83 145 78Q139 69 151 66Q149 57 160 61Q166 54 174 63Q185 66 180 76Q194 84 184 93Z" fill="#fffbf3" stroke="#e4d4c1" stroke-width="2.4"/><path d="M150 84Q161 89 174 83M154 72q9 5 16 0" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/></g>`;
+ const sundaeCreamN=Math.min(3,count('sundaecream'));
+ if(sundaeCreamN){
+  const positions=sundaeCreamN===1?[[160,79,1]]:sundaeCreamN===2?[[141,81,.78],[181,82,.78]]:[[133,82,.68],[160,77,.68],[189,83,.68]];
+  art+=positions.map(([cx,cy,sc])=>`<g class="${fx?.type==='topping'&&fx.id==='sundaecream'?'sd-topping-pop':''}" transform="translate(${cx} ${cy}) scale(${sc}) translate(-160 -79)"><path d="M144 92Q134 83 145 78Q139 69 151 66Q149 57 160 61Q166 54 174 63Q185 66 180 76Q194 84 184 93Z" fill="#fffbf3" stroke="#e4d4c1" stroke-width="2.4"/><path d="M150 84Q161 89 174 83M154 72q9 5 16 0" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/></g>`).join('');
+ }
  for(const [id,palette] of [['rainbowbits',['#e55973','#e9c045','#6baad1','#79b86a','#cc79c1']],['chocobits',['#6f4432','#a76a45','#553625']]]){
   const doses=Math.min(3,count(id));if(!doses)continue;
   const reveal=fx?.type==='sprinkles'&&fx.id===id;let pieces=[];
@@ -1854,11 +2167,15 @@ function sundaeFoodArt(seq){
   const total=Math.min(30,count(id)*11);if(!total)continue;
   art+=`<g class="${fx?.type==='topping'&&fx.id===id?'sd-topping-pop':''}">`+Array.from({length:total},(_,i)=>{let x=122+(i*37+(id==='sundaealmond'?13:0))%77,y=79+(i*19)%60;return `<ellipse cx="${x}" cy="${y}" rx="${id==='cookiecrumb'?3.7:6}" ry="${id==='cookiecrumb'?2.6:3.8}" fill="${color}" stroke="${edge}" stroke-width="1.2" transform="rotate(${i*39%90-45} ${x} ${y})"/>`}).join('')+'</g>';
  }
- // A fixed set of positions keeps toppings inside the bowl; the clip prevents overhang.
- const pos=[[126,113],[196,108],[135,84],[186,83],[152,128],[176,129],[125,137],[192,139],[160,100],[159,113],[142,103],[181,105]];
- const fruitScale=fruits.length>=8?.74:fruits.length>=5?.86:1;
- art+=fruits.map((id,i)=>{const [x,y]=pos[i%pos.length];return `<g transform="translate(${x} ${y}) scale(${fruitScale}) translate(${-x} ${-y})">${sundaeFruitArt(id,x,y,i)}</g>`}).join('');
- if(count('wafer'))art+=`<g class="${fx?.type==='topping'&&fx.id==='wafer'?'sd-topping-pop':''}" transform="rotate(12 201 95)"><rect x="188" y="49" width="19" height="94" rx="5" fill="#dfb77b" stroke="#a67347" stroke-width="2.6"/><path d="M190 69L204 79M190 88L204 99M190 107L204 118" stroke="#b48b5c" stroke-width="2.6"/></g>`;
+ // Wafer sticks are placed BEHIND fresh fruit; their tips no longer obscure fruit slices.
+ const waferN=Math.min(3,count('wafer'));
+ if(waferN){
+  const positions=[[197,93,12],[169,88,-16],[218,92,25]];
+  art+=positions.slice(0,waferN).map(([cx,cy,rot])=>`<g class="${fx?.type==='topping'&&fx.id==='wafer'?'sd-topping-pop':''}" transform="translate(${cx} ${cy}) rotate(${rot})"><rect x="-9.5" y="-46" width="19" height="94" rx="5" fill="#dfb77b" stroke="#a67347" stroke-width="2.6"/><path d="M-7 -26L7 -16M-7 -7L7 4M-7 12L7 23" stroke="#b48b5c" stroke-width="2.6"/><path d="M-4 -36L2 -28M-4 -17L2 -9" stroke="#f5ddac" stroke-width="2" opacity=".65"/></g>`).join('');
+ }
+ // Fruit positions adapt to available room, nearby fruit sizes, cream and wafer sticks.
+ const laidOut=sundaeFruitLayout(fruits,count('sundaecream'),count('wafer'));
+ art+=laidOut.map((p,i)=>`<g data-fruit="${p.id}" data-slot="${p.slot}" transform="translate(${p.x} ${p.y}) scale(${p.scale}) translate(${-p.x} ${-p.y})">${sundaeFruitArt(p.id,p.x,p.y,i)}</g>`).join('');
  art+=`</g>
  <path d="M87 42L113 167Q160 189 207 167L233 42" fill="url(#sd-clear-glass)" fill-opacity=".46" stroke="#6ea7b8" stroke-width="3.2" stroke-linejoin="round"/>
  <path d="M96 58L119 158Q130 176 148 177" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity=".70"/>
@@ -1874,6 +2191,103 @@ function sundaeFoodArt(seq){
  return `<svg class="sundae-svg" viewBox="0 0 320 210" role="img" aria-label="グラスの中に盛り付けたサンデーパフェ">${art}`;
 }
 
+// Stable, spacing-aware pancake garnish layout. Rendering positions are cosmetic;
+// all ingredients stay in seq and the order-scoring/save rules stay unchanged.
+function pancakeGarnishLayout(count,top){
+ const butterN=Math.min(3,count('butter')),creamN=Math.min(3,count('cream'));
+ const both=butterN>0&&creamN>0;
+ const butterX=butterN===0?[]:butterN===1?[both?137:160]:butterN===2?(both?[119,149]:[143,181]):(both?[109,131,151]:[124,160,199]);
+ const creamX=creamN===0?[]:creamN===1?[both?190:160]:creamN===2?(both?[179,211]:[135,186]):(both?[171,195,217]:[124,161,199]);
+ const core=[];
+ butterX.forEach((x,i)=>{
+  const scale=butterN===1?1:butterN===2?.77:.68;
+  core.push({id:'butter',x,y:top-12+(i%2)*2,scale,rx:17*scale+3,ry:13*scale+2});
+ });
+ creamX.forEach((x,i)=>{
+  const scale=creamN===1?(both?.88:1):creamN===2?.72:.62;
+  core.push({id:'cream',x,y:top-19+(i%2)*2,scale,rx:27*scale+3,ry:19*scale+3});
+ });
+ const groups=[
+  Array.from({length:Math.min(3,count('strawberry'))},()=> 'strawberry'),
+  Array.from({length:Math.min(6,count('banana')*2)},()=> 'banana'),
+  Array.from({length:Math.min(9,count('blueberry')*3)},()=> 'blueberry')
+ ];
+ const ids=[];
+ while(groups.some(g=>g.length))for(const g of groups)if(g.length)ids.push(g.shift());
+ // Positions follow the visible top pancake ellipse, not a rectangular grid.
+ const spots=[
+ [159,-15],[135,-9],[185,-9],[116,-13],[205,-13],
+ [143,-28],[181,-28],[105,-4],[217,-4],[126,7],[198,7],
+ [121,-27],[198,-27],[153,8],[174,8],[99,-16],[222,-17],
+ [146,-4],[173,-4],[111,4],[211,5],[159,-30],[139,1],[188,1]
+ ];
+ const scale=ids.length>=15?.68:ids.length>=10?.76:ids.length>=6?.86:1;
+ const placed=[];
+ // Collision score is based on approximate occupied ellipses rather than exact
+ // SVG bounds; a little overlap feels natural, complete occlusion does not.
+ for(let i=0;i<ids.length;i++){
+  const id=ids[i],rx=(id==='strawberry'?13:id==='banana'?12:8)*scale,
+    ry=(id==='strawberry'?17:id==='banana'?9:8)*scale;
+  let best=null;
+  for(let j=0;j<spots.length;j++){
+   const [x,dy]=spots[j],y=top+dy;
+   let score=j*.065;
+   for(const o of [...core,...placed]){
+    const dx=(x-o.x)/(rx+o.rx+2),dy=(y-o.y)/(ry+o.ry+1);
+    const dist=dx*dx+dy*dy;
+    if(dist<1.25)score+=(1.25-dist)*(o.id==='cream'||o.id==='butter'?17:14);
+   }
+   // Heavier strawberries should not hang over the outer edge of the disk.
+   if(id==='strawberry'&&(x<112||x>208))score+=1.2;
+   if(!best||score<best.score)best={x,y,score,j};
+  }
+  const angle=(i%5-2)*7;
+  placed.push({id,x:best.x,y:best.y,rx,ry,scale,angle});
+ }
+ // Scattered pieces are placed *behind* larger garnishes and never erase them.
+ const nutTotal=Math.min(20,count('nuts')*9),nuts=[];
+ for(let i=0;i<nutTotal;i++){
+  let best=null;
+  for(let j=0;j<65;j++){
+   const v=(j*0.61803398875+i*.117)%1;
+   const ang=2*Math.PI*v,r=25+((j*19+i*7)%48);
+   const x=160+Math.cos(ang)*r,y=top+Math.sin(ang)*(9+(r/72)*7);
+   let penalty=(j%11)*.027;
+   for(const o of [...core,...placed]){
+    const dx=(x-o.x)/(o.rx+5),dy=(y-o.y)/(o.ry+4);
+    const dist=dx*dx+dy*dy;
+    if(dist<1.1)penalty+=(1.1-dist)*9;
+   }
+   for(const p of nuts){
+    const dx=(x-p.x)/9,dy=(y-p.y)/6;
+    const dist=dx*dx+dy*dy;
+    if(dist<1)penalty+=(1-dist)*3;
+   }
+   if(!best||penalty<best.penalty)best={x,y,penalty};
+  }
+  nuts.push({x:best.x,y:best.y,angle:(i*37)%105-52});
+ }
+ return {core,fruits:placed,nuts};
+}
+// One continuous whipped-cream crown: extra doses increase volume, not tiny separate blobs.
+// It rests against the glass rim at y=60 and leaves room for the citrus garnish.
+function drinkWhipArt(doses,whipClass=''){
+ const n=Math.min(3,Math.max(0,doses));if(!n)return '';
+ const widths=[0,.67,.84,1],heights=[0,.44,.72,1];
+ const sx=widths[n],sy=heights[n];
+ const tr=`translate(160 60) scale(${sx} ${sy}) translate(-160 -60)`;
+ return `<g class="${whipClass} drink-whip-volume drink-whip-volume-${n}" aria-label="ホイップ${n}回分">
+  <ellipse cx="160" cy="58" rx="${29+n*6}" ry="8.5" fill="#f7f1e6" stroke="#d9c8b7" stroke-width="2.2"/>
+  <ellipse cx="160" cy="62" rx="${26+n*6}" ry="3.6" fill="#bd9f83" opacity=".14"/>
+  <g transform="${tr}">
+   <path d="M116 60Q105 55 117 46Q111 40 127 34Q122 25 141 22Q137 15 153 12Q157 3 168 8Q181 11 178 19Q196 25 191 33Q208 38 199 47Q213 55 197 62Q160 70 120 64Z" fill="url(#cf21-whip)" stroke="#d6c4b5" stroke-width="2.6" stroke-linejoin="round"/>
+   <path d="M120 57Q156 68 199 57M127 44Q161 55 194 43M138 31Q161 40 186 30M149 20Q164 27 179 18" fill="none" stroke="#fffdf6" stroke-width="5.7" stroke-linecap="round" opacity=".92"/>
+   <path d="M129 50Q151 56 174 53M142 37Q165 44 181 37M154 24Q164 30 174 24" fill="none" stroke="#d5c1af" stroke-width="2.6" stroke-linecap="round" opacity=".56"/>
+   <path d="M128 59Q156 64 183 59" stroke="#fff" stroke-width="3.1" stroke-linecap="round" fill="none" opacity=".58"/>
+   <path d="M150 13Q158 9 166 11" fill="none" stroke="#fff" stroke-width="2.7" stroke-linecap="round" opacity=".8"/>
+  </g>
+ </g>`;
+}
 function cafeFoodArt(k,seq){
  if(k==='sundae')return sundaeFoodArt(seq);
  const count=id=>seq.filter(v=>v===id).length;
@@ -1948,38 +2362,84 @@ function cafeFoodArt(k,seq){
  }else if(k==='drink'&&count('cup')){
   const liquidIds=['milk','tea','coffee','orange','soda','berry','mango','matcha','cocoa','caramel'];
   const liquids=seq.filter(id=>liquidIds.includes(id));
-  const colors={milk:'#fff0c9',tea:'#c99161',coffee:'#74523f',orange:'#ffb753',soda:'#a4e3d7',berry:'#df7099',mango:'#ffc05b',matcha:'#8ebc81',cocoa:'#795448',caramel:'#c78b5e'};
   const h=Math.min(118,80+Math.max(0,liquids.length-1)*12),surface=195-h;
-  art+=`<defs><clipPath id="cf21-cupclip"><path d="M110 60L115 180Q160 198 205 180L210 60Z"/></clipPath></defs>
+  const blendId=drinkBlendProfile(liquids);
+  const visibleLiquids=blendId?[blendId]:liquids;
+  const topLiquid=visibleLiquids[visibleLiquids.length-1];
+  const gradientDefs=[...liquidIds,'berrymilk','cocoamilk','milktea','coffeelatte','matchalatte','orangesoda','mangosoda'].map(id=>{const s=drinkLiquidSpec(id);return `<linearGradient id="cf21-liq-${id}" x1="0" y1="0" x2="0" y2="1"><stop stop-color="${s.top}"/><stop offset=".58" stop-color="${s.mid}"/><stop offset="1" stop-color="${s.bottom}"/></linearGradient>`;}).join('');
+  art+=`<defs><clipPath id="cf21-cupclip"><path d="M110 60L115 180Q160 198 205 180L210 60Z"/></clipPath>${gradientDefs}</defs>
   <path d="M107 59L113 185Q160 206 207 185L213 59Z" fill="url(#cf21-drinkglass)" stroke="#95bfc9" stroke-width="3"/>
   <g clip-path="url(#cf21-cupclip)">`;
   if(liquids.length){
-   art+=liquids.map((id,i)=>{
-    // The first poured drink is underneath subsequent pours.
-    const yy=surface+(liquids.length-1-i)*h/liquids.length;
-    return `<rect x="107" y="${yy}" width="107" height="${h/liquids.length+2}" fill="${colors[id]}" opacity=".94"/>`;
+   const layerHeight=h/visibleLiquids.length;
+   art+=visibleLiquids.map((id,i)=>{
+    const spec=drinkLiquidSpec(id);
+    const yy=surface+(visibleLiquids.length-1-i)*layerHeight;
+    const end=yy+layerHeight+1.5;
+    const wave=(i%2===0?1:-1)*Math.min(2.7,layerHeight*.17);
+    const shape=`M110 ${yy+1}Q160 ${yy+wave} 210 ${yy+1}L210 ${end}Q160 ${end-2.2} 110 ${end}Z`;
+    let layer=`<g data-liquid="${id}"><path d="${shape}" fill="url(#cf21-liq-${id})" opacity="${spec.alpha}"/><path d="M116 ${yy+2.4}Q160 ${yy+wave+1.1} 203 ${yy+2.4}" stroke="${spec.highlight}" stroke-width="1.8" opacity=".26" fill="none"/>`;
+    if(spec.texture==='milk'){
+      layer+=`<ellipse cx="145" cy="${yy+layerHeight*.45}" rx="18" ry="${Math.max(4.5,layerHeight*.18)}" fill="#fffaf2" opacity=".18"/><ellipse cx="181" cy="${yy+layerHeight*.68}" rx="13" ry="${Math.max(4,layerHeight*.15)}" fill="#f8eed8" opacity=".12"/>`;
+    }else if(spec.texture==='tea'){
+      layer+=`<path d="M128 ${yy+layerHeight*.32}Q142 ${yy+layerHeight*.43} 154 ${yy+layerHeight*.39}" stroke="#f7d7aa" stroke-width="1.5" opacity=".22" fill="none" stroke-linecap="round"/><path d="M165 ${yy+layerHeight*.6}Q179 ${yy+layerHeight*.7} 193 ${yy+layerHeight*.56}" stroke="#e8bf87" stroke-width="1.4" opacity=".18" fill="none" stroke-linecap="round"/>`;
+    }else if(spec.texture==='coffee'){
+      layer+=`<path d="M118 ${yy+layerHeight*.74}Q160 ${yy+layerHeight*.88} 202 ${yy+layerHeight*.74}" stroke="#3e241d" stroke-width="2.1" opacity=".15" fill="none" stroke-linecap="round"/>`;
+      if(i===visibleLiquids.length-1)layer+=`<path d="M119 ${yy+3}Q160 ${yy-1.4} 201 ${yy+3}" stroke="${spec.foam}" stroke-width="3.1" opacity=".78" fill="none" stroke-linecap="round"/>`;
+    }else if(spec.texture==='soda'){
+      layer+=`<ellipse cx="160" cy="${yy+layerHeight*.42}" rx="34" ry="${Math.max(6,layerHeight*.22)}" fill="#f7fffd" opacity=".12"/>`;
+    }else if(spec.texture==='fruit'||spec.texture==='fizzfruit'){
+      const n=id==='berry'?6:7;
+      for(let j=0;j<n;j++){
+       const x=126+((j*17+i*9)%69),y=yy+6+((j*11+i*7)%Math.max(8,layerHeight-10)),rx=1.5+(j%2)*.6,ry=1+(j%3)*.28;
+       layer+=`<ellipse cx="${x}" cy="${y.toFixed(1)}" rx="${rx.toFixed(1)}" ry="${ry.toFixed(1)}" fill="#fff6d6" opacity="${id==='berry'?'.18':'.26'}" transform="rotate(${(j*21)%70-35} ${x} ${y.toFixed(1)})"/>`;
+      }
+      layer+=`<path d="M124 ${yy+layerHeight*.28}Q160 ${yy+layerHeight*.12} 196 ${yy+layerHeight*.28}" stroke="#fff1c7" stroke-width="1.5" opacity=".18" fill="none" stroke-linecap="round"/>`;
+    }else if(spec.texture==='latte'){
+      layer+=`<path d="M124 ${yy+layerHeight*.44}Q145 ${yy+layerHeight*.31} 167 ${yy+layerHeight*.44}Q186 ${yy+layerHeight*.56} 197 ${yy+layerHeight*.47}" stroke="#f5ecd1" stroke-width="1.5" opacity=".2" fill="none" stroke-linecap="round"/><path d="M128 ${yy+layerHeight*.71}Q153 ${yy+layerHeight*.58} 183 ${yy+layerHeight*.71}" stroke="#e5d0ae" stroke-width="1.3" opacity=".16" fill="none" stroke-linecap="round"/>`;
+    }
+    layer+='</g>';
+    return layer;
    }).join('');
-   art+=`<ellipse cx="160" cy="${surface}" rx="52" ry="7" fill="${colors[liquids[liquids.length-1]]}" opacity=".85"/><path d="M118 ${surface+6}Q160 ${surface+1} 201 ${surface+6}" stroke="#fff" stroke-width="3" opacity=".56" fill="none"/>`;
+   art+=`<ellipse cx="160" cy="${surface}" rx="51" ry="6.6" fill="url(#cf21-liq-${topLiquid})" opacity=".94"/><path d="M119 ${surface+1}Q160 ${surface-3.2} 201 ${surface+1}" stroke="#fff" stroke-width="3.1" opacity=".57" fill="none"/>`;
+   const topSpec=drinkLiquidSpec(topLiquid);
+   if(topLiquid==='berrymilk')art+=`<g opacity=".36"><path d="M119 ${surface+22}Q144 ${surface+4} 166 ${surface+18}T206 ${surface+12}" stroke="#d86e9b" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M119 ${surface+56}Q150 ${surface+45} 174 ${surface+59}T203 ${surface+50}" stroke="#fff2f5" stroke-width="7" fill="none" stroke-linecap="round"/></g>`;
+   if(topLiquid==='matchalatte')art+=`<g opacity=".4"><path d="M123 ${surface+17}Q146 ${surface+32} 169 ${surface+18}T201 ${surface+30}" stroke="#e7f4d8" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M121 ${surface+58}Q150 ${surface+45} 178 ${surface+61}T201 ${surface+55}" stroke="#729a69" stroke-width="6" fill="none" stroke-linecap="round"/></g>`;
+   if(['coffee','cocoa','tea','milk','matcha','caramel','berrymilk','cocoamilk','milktea','coffeelatte','matchalatte'].includes(topLiquid))art+=`<path d="M121 ${surface+3}Q160 ${surface+1} 199 ${surface+3}" stroke="${topSpec.foam||'#fff1da'}" stroke-width="3.4" opacity=".62" fill="none" stroke-linecap="round"/>`;
+   if(['orange','mango','berry','orangesoda','mangosoda'].includes(topLiquid))art+=Array.from({length:8},(_,i)=>{const x=127+(i*9)%66,y=surface+3+(i%2)*3;return `<ellipse cx="${x}" cy="${y}" rx="${i%2?2.2:1.6}" ry="${i%2?1.2:.9}" fill="#fff6d6" opacity=".28" transform="rotate(${i*13-40} ${x} ${y})"/>`;}).join('');
+   if(count('soda'))art+=Array.from({length:12},(_,i)=>{const x=122+(i*7)%76,y=surface+3+(i*5)%12;return `<circle cx="${x}" cy="${y}" r="${[1.4,1.9,2.4][i%3]}" fill="none" stroke="#ffffff" stroke-width="1.1" opacity="${.44+(i%4)*.1}"/>`;}).join('');
+  }
+  if(count('soda')&&liquids.length){
+   art+=Array.from({length:Math.min(68,count('soda')*22)},(_,i)=>{
+    const col=i%5,row=Math.floor(i/5);
+    const x=123+col*17+((row%2)*4),travel=Math.max(18,h-12),y=Math.min(173,surface+7+(i*13)%travel),r=[1.3,1.8,2.4,1.6][i%4],filled=i%5===0;
+    return filled?`<circle cx="${x}" cy="${y}" r="${r}" fill="#fbffff" opacity="${.18+(i%4)*.09}" stroke="#f7ffff" stroke-width=".8"/>`:`<circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke="#f7ffff" stroke-width="1.4" opacity="${.34+(i%4)*.11}"/>`;
+   }).join('');
+  }
+  for(const id of ['berry','caramel'])if(count(id)&&liquids.length){
+   art+=`<g class="${sauceclass(id)}" opacity="${blendId?'.42':'1'}">${drinkSyrupGlaze(id,count(id),surface)}</g>`;
   }
   if(count('ice')&&liquids.length){
-   art+=Array.from({length:Math.min(6,count('ice')*2)},(_,i)=>{
-    const x=125+i%3*26,y=Math.min(160,surface+5+Math.floor(i/3)*17);
-    return `<g transform="rotate(${i%2?14:-15} ${x+9} ${y+9})"><rect x="${x}" y="${y}" width="19" height="19" rx="4" fill="#e9f9ff" fill-opacity=".73" stroke="#9fd3dc" stroke-width="1.9"/><path d="M${x+4} ${y+6}l4 -2" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>`;
+   const iceTotal=Math.min(6,count('ice')*2);
+   art+=Array.from({length:iceTotal},(_,i)=>{
+    const col=i%3,row=Math.floor(i/3);
+    const x=123+col*26+(row?5:0),y=surface+2+row*18+(col===1?3:0);
+    const ang=(i%2?12:-11),op=row ? .66 : .83;
+    return `<g transform="rotate(${ang} ${x+9} ${y+9})"><rect x="${x+1}" y="${y+3}" width="19" height="19" rx="4.2" fill="#496c76" opacity=".13"/><rect x="${x}" y="${y}" width="19" height="19" rx="4.2" fill="#eafaff" fill-opacity="${op}" stroke="#addbe6" stroke-width="1.8"/><path d="M${x+3} ${y+6}l5 -3M${x+13} ${y+4}l2 5" stroke="#fff" stroke-width="2.8" stroke-linecap="round" opacity=".92"/><path d="M${x+4} ${y+16}q5 3 11 -1" fill="none" stroke="#8bbac8" stroke-width="1.5" opacity=".38"/></g>`;
    }).join('');
   }
-  if(count('soda')&&liquids.length){art+=Array.from({length:18},(_,i)=>`<circle cx="${121+(i*29)%79}" cy="${Math.min(172,surface+9+(i*17)%Math.max(19,h-12))}" r="${1.8+i%3}" fill="none" stroke="#f7ffff" stroke-width="1.6" opacity=".8"/>`).join('');}
-  // Syrup blooms and folds into the liquid. The existing cup clip masks overflow.
-  for(const id of ['berry','caramel'])if(count(id)&&liquids.length){
-   art+=`<g class="${sauceclass(id)}">${drinkSyrupGlaze(id,count(id),surface)}</g>`;
-  }
-  // Straw begins below the rim and follows the vessel's interior.
   art+=`<path d="M192 48L177 155" stroke="#da8982" stroke-width="8" stroke-linecap="round"/><path d="M190 48L176 145" stroke="#ffb8aa" stroke-width="3" opacity=".75" stroke-linecap="round"/>`;
   art+=`</g><path d="M108 61L114 184Q160 204 207 184L212 61" fill="url(#cf21-drinkglass)" stroke="#7daab7" stroke-width="3.7"/><path d="M119 66Q160 74 201 66" fill="none" stroke="#fff" stroke-width="2" opacity=".75"/>
   <path d="M118 78L121 173" fill="none" stroke="#ffffff" stroke-width="6" opacity=".7" stroke-linecap="round"/>
   <path d="M204 77L200 163" fill="none" stroke="#fff" stroke-width="2.5" opacity=".37"/>
   <ellipse cx="160" cy="61" rx="53" ry="9" fill="none" stroke="#8dc6d2" stroke-width="5"/><path d="M112 61Q159 48 209 61" fill="none" stroke="#fff" stroke-width="2.5" opacity=".9"/>`;
-  if(count('whip'))art+=`<path d="M122 58Q117 45 135 43Q132 31 149 31Q160 15 173 30Q190 28 187 42Q207 44 199 59Z" fill="url(#cf21-whip)" stroke="#d8c4b7" stroke-width="2.8"/><path d="M139 44Q159 49 181 43M149 34Q161 38 172 33" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M139 55Q160 59 182 54" stroke="#e7d7c7" stroke-width="2.4" fill="none" opacity=".45"/>`;
-  if(count('lemon'))art+=`<g class="${fclass('lemon')}"><circle cx="209" cy="61" r="20" fill="url(#cf21-lemon)" stroke="#dcae45" stroke-width="4"/><circle cx="209" cy="61" r="15.5" fill="#fff5c6" stroke="#f6c75e" stroke-width="2"/><path d="M209 46V77M194 61H224M199 50L219 72M219 50L198 72" stroke="#f0c65c" stroke-width="1.8"/></g>`;
+  art+=drinkWhipArt(count('whip'),fclass('whip'));
+  if(count('whip'))art+=`<path d="M216 15L207 43L196 65" fill="none" stroke="#c87572" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><path d="M214 16L204 43L194 61" fill="none" stroke="#ffc5b5" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" opacity=".9"/>`;
+  const lemonN=Math.min(3,count('lemon'));
+  if(lemonN){
+   const wheels=[[212,66,19],[109,65,16],[217,40,12]];
+   art+=wheels.slice(0,lemonN).map(([cx,cy,r],i)=>`<g class="${fclass('lemon')}" transform="translate(${cx} ${cy}) rotate(${i===0?0:i===1?-17:18}) scale(${r/20})"><circle r="20" fill="url(#cf21-lemon)" stroke="#dcae45" stroke-width="4"/><circle r="15.5" fill="#fff5c6" stroke="#f6c75e" stroke-width="2"/><path d="M0 -15V16M-15 0H15M-11 -11L11 11M11 -11L-11 11" stroke="#f0c65c" stroke-width="1.8"/></g>`).join('');
+  }
  }else if(k==='pancake'&&count('pancake')){
   const n=Math.min(3,count('pancake'));
   art+=`<ellipse cx="160" cy="170" rx="91" ry="17" fill="#986e46" opacity=".17"/>`;
@@ -1999,34 +2459,30 @@ function cafeFoodArt(k,seq){
   for(const id of ['maplesyrup','honey','choco'])if(count(id)){
    art+=`<g class="${sauceclass(id)}">${pancakeGlaze(id,top,count(id))}</g>`;
   }
-  if(count('butter'))art+=`<g class="${fclass('butter')}"><path d="M146 ${top-22}h34v17q-17 6-34 0Z" fill="#f8df89" stroke="#d1a94d" stroke-width="2.5"/><path d="M149 ${top-18}h26" stroke="#fff6cc" stroke-width="4"/><path d="M148 ${top-9}q15 6 30 0" stroke="#c9933c" stroke-width="2" opacity=".32" fill="none"/></g>`;
-  if(count('cream'))art+=`<path class="${fclass('cream')}" d="M139 ${top-4}Q128 ${top-18} 148 ${top-26}Q143 ${top-39} 159 ${top-39}Q172 ${top-44} 175 ${top-29}Q194 ${top-19} 180 ${top-6}Z" fill="url(#cf21-whip)" stroke="#e2d1bd" stroke-width="2.7"/><path d="M150 ${top-21}Q162 ${top-14} 174 ${top-23}" stroke="#fff" stroke-width="4" fill="none"/>`;
-  // Keep fruit readable as a garnish even when three kinds are ordered together.
-  // Each fruit uses a different slot; cream/butter can remain at the crown's center.
-  const groups=[
-   Array.from({length:Math.min(3,count('strawberry'))},()=> 'strawberry'),
-   Array.from({length:Math.min(6,count('banana')*2)},()=> 'banana'),
-   Array.from({length:Math.min(9,count('blueberry')*3)},()=> 'blueberry')
-  ];
-  const garnish=[];
-  while(groups.some(g=>g.length))for(const g of groups)if(g.length)garnish.push(g.shift());
-  const ring=[[109,-9],[212,-9],[127,-14],[194,-14],[112,4],[207,3],
-   [139,1],[182,0],[104,-21],[217,-20],[136,-25],[186,-25],
-   [121,-3],[198,-2],[148,4],[174,4],[145,-16],[175,-17]];
-  const shrink=garnish.length>12?.70:garnish.length>7?.83:1;
-  art+=garnish.map((id,i)=>{
-   const [x,dy]=ring[i],y=top+dy,angle=(i%3-1)*14;
+  const garnish=pancakeGarnishLayout(count,top);
+  // Small nut pieces follow the gaps between fruit and cream. They are drawn
+  // first so they never cover a recognizable strawberry or banana slice.
+  if(garnish.nuts.length){
+   art+=`<g class="${fclass('nuts')}">`+garnish.nuts.map((p,i)=>`<g transform="translate(${p.x.toFixed(1)} ${p.y.toFixed(1)}) rotate(${p.angle})"><ellipse cx="0" cy="0" rx="4.3" ry="2.5" fill="${i%2?'#bc9261':'#d3ad73'}" stroke="#866341" stroke-width="1.2"/><path d="M-2 -1Q0 -2 2 -1" stroke="#f5d4a3" stroke-width="1" opacity=".7" fill="none"/></g>`).join('')+'</g>';
+  }
+  // Fruit pieces occupy non-colliding spaces while staying on the pancake.
+  art+=garnish.fruits.map(({id,x,y,angle,scale})=>{
    const fruit=id==='strawberry'
     ?`<path d="M0 -13Q-13 -9 -11 2Q-6 13 0 16Q11 12 12 1Q13 -9 0 -13Z" fill="#e65c6d" stroke="#a9434d" stroke-width="2"/><path d="M-8 -12L0 -17L8 -12" fill="#72aa63"/><path d="M-4 -4v2M4 1v2" stroke="#ffe5ab" stroke-width="2"/><path d="M-6 -8Q-1 -11 5 -7" stroke="#ffb3b5" stroke-width="2" fill="none"/>`
     :id==='banana'
     ?`<ellipse rx="11" ry="7.6" fill="#f5df98" stroke="#b99050" stroke-width="2"/><ellipse rx="8" ry="5.2" fill="#fff6c8"/><circle cx="-2" cy="-1" r="1.1" fill="#9e7951"/><circle cx="3" cy="2" r="1" fill="#9e7951"/>`
     :`<circle r="7" fill="#667bb9" stroke="#43558a" stroke-width="1.7"/><path d="M-3 -2L-1 -5L2 -3L4 -4L3 1L0 2Z" fill="#aabce0"/><circle cx="-2" cy="-3" r="1.5" fill="#d9ddf1" opacity=".7"/>`;
-   return `<g class="${fclass(id)}" transform="translate(${x} ${y}) rotate(${angle}) scale(${shrink})"><ellipse cx="0" cy="5" rx="${id==='blueberry'?7:11}" ry="3.5" fill="#785335" opacity=".16"/>${fruit}</g>`;
+   return `<g class="${fclass(id)}" transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})"><ellipse cx="0" cy="5" rx="${id==='blueberry'?7:11}" ry="3.5" fill="#785335" opacity=".14"/>${fruit}</g>`;
   }).join('');
-  if(count('nuts'))art+=`<g class="${fclass('nuts')}">`+Array.from({length:Math.min(20,count('nuts')*9)},(_,i)=>{let x=105+(i*43)%111,y=top+3-(i*11)%15;return `<ellipse cx="${x}" cy="${y}" rx="4.3" ry="2.5" fill="${i%2?'#bc9261':'#d3ad73'}" stroke="#866341" stroke-width="1.2" transform="rotate(${(i*29)%100-50} ${x} ${y})"/>`;}).join('')+'</g>';
+  // Butter and cream are the highest garnish, with dedicated slots if both
+  // were requested. This prevents cream from hiding the butter entirely.
+  for(const o of garnish.core){
+   if(o.id==='butter')art+=`<g class="${fclass('butter')}" transform="translate(${o.x} ${o.y}) scale(${o.scale})"><path d="M-17 -10h34v17q-17 6-34 0Z" fill="#f8df89" stroke="#d1a94d" stroke-width="2.5"/><path d="M-13 -6h26" stroke="#fff6cc" stroke-width="4"/><path d="M-15 3q15 6 30 0" stroke="#c9933c" stroke-width="2" opacity=".32" fill="none"/></g>`;
+   else art+=`<g class="${fclass('cream')}" transform="translate(${o.x} ${o.y}) scale(${o.scale})"><path d="M-21 14Q-32 0 -12 -8Q-17 -21 -1 -21Q12 -26 15 -11Q34 -1 20 13Z" fill="url(#cf21-whip)" stroke="#e2d1bd" stroke-width="2.7"/><path d="M-11 -4Q2 3 14 -5" stroke="#fff" stroke-width="4" fill="none"/></g>`;
+  }
  }
  if(!art)art=`<text x="160" y="135" font-size="50" text-anchor="middle">${k==='fries'?'🍟':k==='drink'?'🥤':'🥞'}</text><text x="160" y="160" font-size="13" text-anchor="middle" fill="#8d7563">ここに置いてね</text>`;
- return `<svg viewBox="0 0 320 210" role="img" aria-label="作っている${CAFE_KINDS[k].name}">${plate}${art}</svg>`;
+ return `<svg viewBox="0 0 320 210" role="img" aria-label="作っている${CAFE_KINDS[k].name}">${plate}${art}${k==='drink'?drinkPourFxSvg(seq):''}</svg>`;
 }
 function cafePage(setMode=false){
  const k=cafeKind(),cfg=CAFE_KINDS[k],d=cafeDraft(k),o=cafeOrder(k),r=cafeRecipe(k),p=PEOPLE[o.person];
@@ -2040,9 +2496,9 @@ function cafePage(setMode=false){
 }
 function cafeAction(a){const k=cafeKind(),d=cafeDraft(k);
  if(a==='cafeRecipe'){ui.showCafeRecipe=!ui.showCafeRecipe;render();return}
- if(a==='cafeReroll'){sundaeFx=null;cafeNext();toast('別のご注文になりました。');return}
- if(a==='cafeUndo'){d.seq.pop();sundaeFx=null;cafeFx=null;save();render();return}
- if(a==='cafeClear'){d.seq=[];d.tool=null;sundaeFx=null;cafeFx=null;save();render();return}
+ if(a==='cafeReroll'){drinkFx=null;sundaeFx=null;cafeNext();toast('別のご注文になりました。');return}
+ if(a==='cafeUndo'){d.seq.pop();drinkFx=null;sundaeFx=null;cafeFx=null;save();render();return}
+ if(a==='cafeClear'){d.seq=[];d.tool=null;drinkFx=null;sundaeFx=null;cafeFx=null;save();render();return}
  if(a==='cafeServe'){cafeServe();return}
  if(a==='cafeNext'){ui.modal=null;cafeNext(k);return}
 }
@@ -2293,27 +2749,7 @@ function playSqueeze(){const ctx=audio();if(!ctx)return;try{const osc=ctx.create
 // Early customers have simpler wishes; later orders can mix additions,
 // exclusions and quantities. These frequencies are an original game balance choice.
 function customizations(r,served,areaId='plaza'){
- const area=areaById(areaId),rank=areaIndex(areaId),roll=Math.random();
- const n=rank===0?0:rank===1?(roll<.25?0:1):rank===2?(roll<.12?0:roll<.77?1:2):rank===3?(roll<.12?0:roll<.42?1:2):rank===4?(roll<.1?0:roll<.36?1:roll<.83?2:3):rank===5?(roll<.06?1:roll<.32?2:3):(roll<.06?1:roll<.32?2:roll<.8?3:4);
- const mods=[];
- for(let k=0;k<Math.min(n,area.mods);k++){
-  const used=new Set(mods.map(m=>m.id));
-  const removals=[...new Set(r.seq.filter(id=>!['bottom','top'].includes(id)&&!used.has(id)&&((id!=='patty'&&id!=='fish')||rank>=2)))];
-  const additions=Object.keys(ING).filter(id=>!['bottom','top'].includes(id)&&ING[id].at<=area.burger&&!used.has(id));
-  const choices=[];
-  if(removals.length)choices.push('remove');
-  if(additions.length&&orderedIngredients(r,mods).length<11)choices.push('add');
-  if(!choices.length)break;
-  const type=choices.length===1?choices[0]:(Math.random()<.45?'remove':'add');
-  const pool=type==='remove'?removals:additions;
-  const id=pool[Math.floor(Math.random()*pool.length)];
-  let qty=type==='add'&&rank>=3&&Math.random()<.33?2:1;
-  let mod={type,id,qty};
-  if(type==='add'&&orderedIngredients(r,[...mods,mod]).length>11)mod.qty=1;
-  if(orderedIngredients(r,[...mods,mod]).length>11)continue;
-  mods.push(mod);
- }
- return mods;
+ return orderModsFor('burger',r,areaId);
 }
 
 function orderedIngredients(r,mods=[]){
@@ -2375,77 +2811,159 @@ function cloneData(x){return JSON.parse(JSON.stringify(x))}
 function setCount(){return Math.max(0,Math.floor(Number(s.setMeal?.completed)||0))}
 function setSizes(count,areaId=s.travel.current){
  const rank=areaIndex(areaId);
- const choices=[['burger','fries'],['burger','drink']];
- if(rank>=2)choices.push(['burger','fries','drink']);
- if(rank>=3)choices.push(['pancake','drink']);
- if(rank>=4)choices.push(['sundae','drink']);
- return choices;
+ const combos=[
+  [0,['burger','fries']],[0,['burger','drink']],
+  [1,['fries','drink']],[1,['pancake','drink']],
+  [2,['burger','fries','drink']],
+  [3,['burger','pancake']],[3,['burger','pancake','drink']],
+  [4,['sundae','drink']],[4,['burger','sundae']],[4,['burger','fries','sundae']],
+  [5,['pancake','sundae']],[5,['burger','drink','sundae']],[5,['fries','drink','sundae']],
+  [6,['pancake','drink','sundae']]
+ ];
+ return combos.filter(([stage])=>stage<=rank).map(([,items])=>items);
 }
 function setMenuName(slots){
- if(slots.length===3)return 'こもれびランチセット';
- if(slots.includes('sundae'))return 'きらきらサンデーセット';
- if(slots.includes('pancake'))return 'のんびりおやつセット';
- return slots.includes('fries')?'バーガー＆ポテトセット':'バーガー＆ドリンクセット';
+ const key=slots.join(',');
+ const names={
+  'burger,fries':'バーガー＆ポテトセット','burger,drink':'バーガー＆ドリンクセット',
+  'fries,drink':'ほくほくおやつセット','pancake,drink':'のんびりティータイムセット',
+  'burger,fries,drink':'こもれびランチセット','burger,pancake':'朝のごほうびセット',
+  'burger,pancake,drink':'ダイナーブランチセット',
+  'sundae,drink':'きらきらサンデーセット','burger,sundae':'ごほうびデザートセット',
+  'burger,fries,sundae':'おなかぺこぺこセット','pancake,sundae':'甘いものづくしセット',
+  'burger,drink,sundae':'デザート付きランチセット','fries,drink,sundae':'わくわくおやつセット',
+  'pancake,drink,sundae':'スイーツパーティーセット'
+ };
+ return names[key]||(new Set(slots).size<slots.length?`みんなの${slots.length}品オーダー`:slots.length>=4?`とくべつ${slots.length}品セット`:slots.length===3?'とくべつ3品セット':'今日のおすすめセット');
+}
+
+// v0.41: Each ordered dish has an independent line id, even if its kind and
+// recipe are identical to another line. Never use a food kind as a tray key.
+function setLineKind(slot,set=s.setMeal){return set?.items?.[slot]?.kind|| (SET_NAME[slot]?slot:null)}
+function blankSetLine(kind){return {seq:[],grill:[null,null],tool:null}}
+function setLineName(slot,set=s.setMeal){
+ const item=set?.items?.[slot],kind=setLineKind(slot,set);
+ const r=kind==='burger'?RECIPES.find(r=>r.id===item?.recipe):CAFE_RECIPES[kind]?.find(r=>r.id===item?.recipe);
+ return r?.n||r?.name||SET_NAME[kind]||'料理';
+}
+function setChoiceKinds(count,previous){
+ const rank=areaIndex(s.travel.current);
+ const options=setSizes(count,s.travel.current);
+ const last=previous?.slots?.map(id=>setLineKind(id,previous)).join(',')||'';
+ let pool=options.filter(xs=>xs.join(',')!==last);if(!pool.length)pool=options;
+ const kinds=pool[Math.floor(Math.random()*pool.length)].slice();
+ const max=[2,3,3,4,4,5,6][Math.min(6,rank)];
+ // Repeated genres begin early, while larger groups unlock farther away.
+ // No extra food requires a new ingredient that the destination hasn't unlocked.
+ const extraWeights=rank===0?[0]:rank===1?[0,0,1]:rank===2?[0,1,1]:rank===3?[0,1,1,2]:rank===4?[0,1,2,2]:rank===5?[0,1,2,2,3]:[0,1,2,3,3,4];
+ const extras=extraWeights[Math.floor(Math.random()*extraWeights.length)];
+ for(let i=0;i<extras&&kinds.length<max;i++){
+  const type=kinds[Math.floor(Math.random()*kinds.length)];
+  const at=Math.floor(Math.random()*(kinds.length+1));
+  kinds.splice(at,0,type);
+ }
+ return kinds;
 }
 function createSetMeal(count=0,previous=null){
- let choices=setSizes(count,s.travel.current),last=previous?.slots?.join(',')||'';
- let pool=choices.filter(xs=>xs.join(',')!==last);if(!pool.length)pool=choices;
- const slots=pool[Math.floor(Math.random()*pool.length)].slice();
+ const kinds=setChoiceKinds(count,previous),slots=kinds.map((_,i)=>'q'+(i+1));
  let person=Math.floor(Math.random()*PEOPLE.length);
- if(previous&&Math.random()<.8)person=(person+(person===previous.person?1:0))%PEOPLE.length;
- const budget=areaById(s.travel.current).mods;
- let remaining=Math.floor(Math.random()*(budget+1)),items={};
- const counts=s.cafe?.counts||{fries:0,drink:0,pancake:0};
+ if(previous&&Math.random()<.8&&person===previous.person)person=(person+1)%PEOPLE.length;
+ const rank=areaIndex(s.travel.current),budget=areaById(s.travel.current).mods;
+ const amounts=rank===0?[0]:rank===1?[0,1,1,1]:rank===2?[0,1,1,2,2]:rank<=3?[0,1,2,2]:rank<=5?[0,1,2,2,3,3]:[0,1,2,2,3,3,4];
+ let remaining=Math.min(budget,amounts[Math.floor(Math.random()*amounts.length)]);
+ const items={},lineWork={},counts=s.cafe?.counts||{};
  const cafe=normalizeCafe({counts},s.travel.current);
- for(const slot of slots){
-  if(slot==='burger'){
-   const allowed=availableBurger(s.travel.current);
-   const poolFav=allowed.filter(r=>REGULARS[person].likes.includes(r.id));
-   const menuPool=(poolFav.length&&Math.random()<.52?poolFav:allowed);
-   const r=menuPool[Math.floor(Math.random()*menuPool.length)]||allowed[0];
-   const mods=customizations(r,s.served,s.travel.current).slice(0,Math.max(0,remaining));
-   remaining-=mods.length;
-   items.burger={recipe:r.id,mods};
-  }else{
-   const order=cafeRandomOrder(slot,counts[slot]||0,'',s.travel.current);
-   const mods=order.mods.slice(0,Math.max(0,remaining));remaining-=mods.length;
-   items[slot]={recipe:order.recipe,mods};
+ for(let i=0;i<slots.length;i++){
+  const slot=slots[i],kind=kinds[i];
+  let allowed=kind==='burger'?availableBurger(s.travel.current):availableCafe(kind,s.travel.current);
+  if(!allowed.length)allowed=kind==='burger'?RECIPES:CAFE_RECIPES[kind];
+  // Identical dish names can appear more than once; their modifications are
+  // generated separately below, never shared between copies.
+  const earlier=slots.slice(0,i).map(id=>items[id]).filter(it=>it?.kind===kind);
+  let r;
+  if(earlier.length&&Math.random()<.55){const same=earlier[Math.floor(Math.random()*earlier.length)];r=allowed.find(t=>t.id===same.recipe)}
+  if(!r){
+   const fav=kind==='burger'?allowed.filter(t=>REGULARS[person].likes.includes(t.id)):[];
+   const pool=fav.length&&Math.random()<.52?fav:allowed;
+   r=pool[Math.floor(Math.random()*pool.length)]||allowed[0];
   }
+  items[slot]={kind,recipe:r.id,mods:[]};
+  lineWork[slot]=blankSetLine(kind);
  }
- // Spread early changes across items rather than always placing them on the burger.
- if(count>0&&budget&&Object.values(items).every(x=>!x.mods.length)){
-  const slot=slots[Math.floor(Math.random()*slots.length)];
-  if(slot==='burger'){
-   const r=RECIPES.find(r=>r.id===items[slot].recipe);
-   const options=Object.keys(ING).filter(id=>!['bottom','top'].includes(id)&&isCookAllowed(id));
-   const rem=r.seq.find(id=>!['bottom','top'].includes(id));
-   if(rem)items[slot].mods=[{type:'remove',id:rem,qty:0}];
-   else if(options.length)items[slot].mods=[{type:'add',id:options[0],qty:1}];
-  }else{
-   const r=CAFE_RECIPES[slot].find(r=>r.id===items[slot].recipe);
-   const rem=r.seq.find(id=>!CAFE_CORE.includes(id));
-   if(rem)items[slot].mods=[{type:'remove',id:rem,qty:0}];
-  }
- }
+ // Each line gets its own valid extra/removed ingredients. Overall complexity
+ // remains tied to the destination; duplicates can have different requests.
+ const offered={};
  for(const slot of slots){
-  if(slot!=='burger')cafe.orders[slot]={recipe:items[slot].recipe,mods:cloneData(items[slot].mods),person};
+  const item=items[slot],kind=item.kind;
+  const r=kind==='burger'?RECIPES.find(t=>t.id===item.recipe):CAFE_RECIPES[kind].find(t=>t.id===item.recipe);
+  let best=[];
+  for(let t=0;t<9;t++){
+   const candidate=orderModsFor(kind,r,s.travel.current);
+   if(candidate.length>best.length)best=candidate;
+   if(best.length>=Math.min(budget,rank>=4?3:2))break;
+  }
+  offered[slot]=best;
  }
- const b=items.burger||{recipe:(s.order?.recipe||'cheese'),mods:[]};
+ const order=slots.slice().sort(()=>Math.random()-.5);
+ while(remaining>0){
+  let added=false;
+  for(const slot of order){
+   if(!remaining)break;
+   const m=offered[slot].shift();if(!m)continue;
+   items[slot].mods.push(m);remaining--;added=true;
+  }
+  if(!added)break;
+ }
+ const b=slots.map(id=>items[id]).find(t=>t.kind==='burger')||{recipe:s.order?.recipe||'cheese',mods:[]};
  const work={seq:[],grill:[null,null],order:{recipe:b.recipe,mods:cloneData(b.mods),person,number:(s.serial||0)+1},cafe,mode:'order',pendingNext:false,lastRecipe:'',serial:s.serial||0};
- const active=slots[0];
- return {completed:count,number:(previous?.number||0)+1,slots,person,items,tray:{},active,work,paid:false,viewActive:false};
+ return {completed:count,number:(previous?.number||0)+1,slots,person,items,tray:{},lineWork,active:slots[0],work,paid:false,viewActive:false};
 }
 function normalizeSetMeal(x,areaId='plaza'){
- if(!x||!Array.isArray(x.slots)||!x.slots.length||!x.slots.every(id=>SET_NAME[id])||!x.items||!x.work)return null;
- if(!x.slots.every(id=>x.items[id]&&typeof x.items[id].recipe==='string'))return null;
- const tray={};for(const id of x.slots){const t=x.tray?.[id];if(t&&Array.isArray(t.seq)&&Number.isFinite(t.stars))tray[id]={seq:t.seq.slice(0,14),stars:Math.min(3,Math.max(1,Math.floor(t.stars))),recipe:t.recipe};}
+ if(!x||!Array.isArray(x.slots)||x.slots.length<2||x.slots.length>6||!x.items||!x.work)return null;
+ // Seamless migration of v0.40 sets, whose ids were unique food categories.
+ const oldStyle=x.slots.every(id=>SET_NAME[id]);
+ const slots=x.slots.map((id,i)=>oldStyle?'q'+(i+1):id);
+ if(new Set(slots).size!==slots.length)return null;
+ const items={},tray={},lineWork={},savedCafe=normalizeCafe(x.work?.cafe,areaId);
+ for(let i=0;i<slots.length;i++){
+  const slot=slots[i],oldId=x.slots[i],raw=x.items[oldId],kind=oldStyle?oldId:raw?.kind;
+  if(!SET_NAME[kind]||!raw||typeof raw.recipe!=='string')return null;
+  const list=kind==='burger'?RECIPES:CAFE_RECIPES[kind];
+  if(!list.some(r=>r.id===raw.recipe))return null;
+  items[slot]={kind,recipe:raw.recipe,mods:Array.isArray(raw.mods)?raw.mods.filter(m=>m&&['add','remove'].includes(m.type)&&typeof m.id==='string').map(m=>({type:m.type,id:m.id,qty:m.type==='add'?Math.min(3,Math.max(1,Math.floor(Number(m.qty)||1))):0})):[]};
+  const oldLine=x.lineWork?.[oldId];
+  const oldDraft=oldStyle?savedCafe.drafts[kind]:null;
+  const base=oldLine||{seq:kind==='burger'?x.work.seq:oldDraft?.seq,grill:kind==='burger'?x.work.grill:[],tool:oldDraft?.tool};
+  lineWork[slot]={seq:Array.isArray(base.seq)?base.seq.filter(id=>kind==='burger'?!!ING[id]:CAFE_ING[id]?.kind===kind).slice(0,kind==='burger'?30:12):[],grill:kind==='burger'?(Array.isArray(base.grill)?base.grill.map(it=>it&&ING[it.id]?normalizeGrill(it):null).slice(0,2):[null,null]):[null,null],tool:kind!=='burger'?base.tool||null:null};
+  if(lineWork[slot].grill.length!==2)lineWork[slot].grill=[null,null];
+  const t=x.tray?.[oldId];
+  if(t&&Array.isArray(t.seq)&&Number.isFinite(t.stars))tray[slot]={seq:t.seq.slice(0,30),stars:Math.min(3,Math.max(1,Math.floor(t.stars))),recipe:items[slot].recipe};
+ }
+ const current=oldStyle?slots[x.slots.indexOf(x.active)]:x.active;
  const work=x.work;
- return {completed:Math.max(0,Math.floor(Number(x.completed)||0)),number:Math.max(1,Math.floor(Number(x.number)||1)),slots:x.slots,person:Number.isInteger(x.person)&&x.person>=0&&x.person<PEOPLE.length?x.person:0,items:x.items,tray,active:x.slots.includes(x.active)?x.active:x.slots[0],work:{seq:Array.isArray(work.seq)?work.seq:[],grill:Array.isArray(work.grill)?work.grill.map(it=>it&&ING[it.id]?normalizeGrill(it):null):[null,null],order:work.order||null,cafe:normalizeCafe(work.cafe,areaId),mode:'order',pendingNext:false,lastRecipe:'',serial:work.serial||0},paid:!!x.paid,viewActive:false};
+ return {completed:Math.max(0,Math.floor(Number(x.completed)||0)),number:Math.max(1,Math.floor(Number(x.number)||1)),slots,person:Number.isInteger(x.person)&&x.person>=0&&x.person<PEOPLE.length?x.person:0,items,tray,lineWork,active:slots.includes(current)?current:slots[0],work:{seq:Array.isArray(work.seq)?work.seq:[],grill:Array.isArray(work.grill)?work.grill.map(it=>it&&ING[it.id]?normalizeGrill(it):null):[null,null],order:work.order||null,cafe:savedCafe,mode:'order',pendingNext:false,lastRecipe:'',serial:work.serial||0},paid:!!x.paid,viewActive:false};
 }
 function isSetActive(){return !!s.setMeal?.viewActive}
 function captureSetWork(){
  if(!isSetActive())return;
- s.setMeal.work={seq:cloneData(s.seq),grill:cloneData(s.grill),order:cloneData(s.order),cafe:cloneData(s.cafe),mode:'order',pendingNext:false,lastRecipe:'',serial:s.serial};
+ const set=s.setMeal,slot=set.active,kind=setLineKind(slot);
+ if(kind==='burger')set.lineWork[slot]={seq:cloneData(s.seq),grill:cloneData(s.grill),tool:null};
+ else{const d=s.cafe.drafts[kind];set.lineWork[slot]={seq:cloneData(d?.seq||[]),grill:[null,null],tool:cloneData(d?.tool||null)};}
+ set.work={seq:cloneData(s.seq),grill:cloneData(s.grill),order:cloneData(s.order),cafe:cloneData(s.cafe),mode:'order',pendingNext:false,lastRecipe:'',serial:s.serial};
+}
+function setLoadLine(slot){
+ const set=s.setMeal,item=set.items[slot],kind=item.kind;
+ const line=set.lineWork[slot]||blankSetLine(kind);
+ set.active=slot;
+ if(kind==='burger'){
+  s.seq=cloneData(line.seq||[]);s.grill=cloneData(line.grill||[null,null]);
+  s.order={recipe:item.recipe,mods:cloneData(item.mods),person:set.person,number:set.number};
+ }else{
+  s.seq=[];s.grill=[null,null];
+  s.cafe.active=kind;
+  s.cafe.orders[kind]={recipe:item.recipe,mods:cloneData(item.mods),person:set.person};
+  s.cafe.drafts[kind]={seq:cloneData(line.seq||[]),tool:cloneData(line.tool||null)};
+ }
 }
 function enterSet(){
  if(isSetActive())return;
@@ -2453,8 +2971,8 @@ function enterSet(){
  s.singleSession={seq:cloneData(s.seq),grill:cloneData(s.grill),order:cloneData(s.order),cafe:cloneData(s.cafe),mode:s.mode,pendingNext:s.pendingNext,lastRecipe:s.lastRecipe,serial:s.serial};
  const work=s.setMeal.work;
  s.seq=cloneData(work.seq);s.grill=cloneData(work.grill);s.order=cloneData(work.order);s.cafe=normalizeCafe(work.cafe,s.travel.current);s.mode='order';s.pendingNext=false;
- if(s.setMeal.active!=='burger')s.cafe.active=s.setMeal.active;
- s.setMeal.viewActive=true;ui.tab='order';ui.showRecipe=false;ui.showCafeRecipe=false;
+ s.setMeal.viewActive=true;setLoadLine(s.setMeal.active);
+ ui.tab='order';ui.showRecipe=false;ui.showCafeRecipe=false;
  save();
 }
 function leaveSet(){
@@ -2466,46 +2984,58 @@ function leaveSet(){
 }
 function setSelect(slot){
  if(!isSetActive()||!s.setMeal.slots.includes(slot))return;
- s.setMeal.active=slot;if(slot!=='burger')s.cafe.active=slot;
+ captureSetWork();setLoadLine(slot);
  ui.tab='order';ui.showRecipe=false;ui.showCafeRecipe=false;save();render();
 }
 function setMenu(slot){
- const item=s.setMeal.items[slot];
- return slot==='burger'?RECIPES.find(r=>r.id===item.recipe):CAFE_RECIPES[slot].find(r=>r.id===item.recipe);
+ const item=s.setMeal.items[slot];if(!item)return null;
+ const kind=item.kind;
+ return kind==='burger'?RECIPES.find(r=>r.id===item.recipe):CAFE_RECIPES[kind]?.find(r=>r.id===item.recipe);
 }
-function setModText(slot,mods){
- const dict=slot==='burger'?ING:CAFE_ING;
- return mods?.length?mods.map(m=>`<span class="cafe-mod ${m.type}">${m.type==='add'?'＋':'−'} ${slot==='burger'?ingredientIcon(m.id):cafeIngredientIcon(m.id)}<span>${safe(dict[m.id]?.n||dict[m.id]?.name||m.id)}${m.type==='add'?` ×${m.qty} 追加`:'抜き'}</span></span>`).join(''):'<span class="cafe-mod none">変更なし</span>';
+function setModText(kind,mods){
+ const dict=kind==='burger'?ING:CAFE_ING;
+ return mods?.length?mods.map(m=>`<span class="cafe-mod ${m.type}">${m.type==='add'?'＋':'−'} ${kind==='burger'?ingredientIcon(m.id):cafeIngredientIcon(m.id)}<span>${safe(dict[m.id]?.n||dict[m.id]?.name||m.id)}${m.type==='add'?` ×${m.qty} 追加`:'抜き'}</span></span>`).join(''):'<span class="cafe-mod none">変更なし</span>';
 }
-function setOrderLine(slot){
- const item=s.setMeal.items[slot],r=setMenu(slot);
- return `<strong>${SET_EMOJI[slot]} ${safe(r?.n||r?.name||'料理')}</strong>${setModText(slot,item.mods)}`;
+function setOrderLine(slot,numbered=false){
+ const item=s.setMeal.items[slot],kind=item.kind;
+ const number=numbered?`<span class="set-order-number">${s.setMeal.slots.indexOf(slot)+1}.</span> `:'';
+ return `<strong>${number}${SET_EMOJI[kind]} ${safe(setLineName(slot))}</strong>${setModText(kind,item.mods)}`;
+}
+function setTicketGroups(){
+ const set=s.setMeal,groups=[],keys=new Map();
+ for(const slot of set.slots){
+  const item=set.items[slot],key=JSON.stringify([item.kind,item.recipe,item.mods]);
+  if(keys.has(key)){groups[keys.get(key)].ids.push(slot);continue;}
+  keys.set(key,groups.length);groups.push({ids:[slot],kind:item.kind,recipe:item.recipe,mods:item.mods});
+ }
+ return groups;
 }
 function setPage(){
- const set=s.setMeal,active=set.active,paid=set.paid,all=set.slots.every(id=>set.tray[id]);
- const p=PEOPLE[set.person],m=setMenu(active);
- const ticket=`<section class="set-ticket"><div class="set-ticket-head"><span class="set-person">${p[0]}</span><div class="set-ticket-text"><strong>注文 #S${String(set.number).padStart(3,'0')} · ${setMenuName(set.slots)}</strong><small>${p[1]} 「ゆっくり作ってね！」</small></div><button class="set-toggle" data-action="setToggleTicket" aria-expanded="${ui.showSetTicket}">${ui.showSetTicket?'注文を閉じる':'注文票 ▾'}</button></div><div class="set-mini-order">${setOrderLine(active)}</div>${ui.showSetTicket?`<div class="set-ticket-list">${set.slots.map(id=>`<div class="set-ticket-item">${setOrderLine(id)}</div>`).join('')}</div>`:''}</section>`;
- const slots=`<div class="set-slots ${set.slots.length===2?'two':''}" role="tablist" aria-label="セットの料理を選ぶ">${set.slots.map(id=>`<button role="tab" aria-selected="${active===id}" class="set-slot ${id===active?'active':''} ${set.tray[id]?'finished':''}" data-set-slot="${id}">${SET_EMOJI[id]} ${SET_NAME[id]}<span class="slot-sub">${set.tray[id]?'✓ トレー済み':id===active?'● 調理台':'切り替える'}</span></button>`).join('')}</div>`;
- const cells=set.slots.map(id=>`<div class="set-tray-cell ${set.tray[id]?'filled':''}" data-set-tray-target="${id}" aria-label="${SET_NAME[id]}のトレー">${SET_EMOJI[id]} ${set.tray[id]?`<span class="set-tray-star">${'★'.repeat(set.tray[id].stars)}</span>`:'□'}</div>`).join('');
- const tray=`<section class="set-tray" aria-label="お渡しトレー"><div class="set-tray-title">🍽️ トレー<br>${Object.keys(set.tray).length}/${set.slots.length}品</div><div class="set-tray-cells">${cells}</div>${paid?`<button class="set-finish" data-action="setNext">次のセット</button>`:all?`<button class="set-finish" data-action="setServe">まとめて提供！</button>`:''}</section>`;
+ const set=s.setMeal,active=set.active,kind=setLineKind(active),paid=set.paid,all=set.slots.every(id=>set.tray[id]);
+ const p=PEOPLE[set.person],m=setMenu(active),groups=setTicketGroups(),done=set.slots.filter(id=>set.tray[id]).length;
+ const ticket=`<section class="set-ticket"><div class="set-ticket-head"><span class="set-person">${p[0]}</span><div class="set-ticket-text"><strong>注文 #S${String(set.number).padStart(3,'0')} · ${setMenuName(set.slots.map(id=>setLineKind(id)))}</strong><small>${p[1]} 「ゆっくり作ってね！」 · ${done}/${set.slots.length}品完成</small></div><button class="set-toggle" data-action="setToggleTicket" aria-expanded="${ui.showSetTicket}">${ui.showSetTicket?'注文を閉じる':'注文票 ▾'}</button></div><div class="set-mini-order">${setOrderLine(active)}</div>${ui.showSetTicket?`<div class="set-ticket-list">${groups.map(g=>`<div class="set-ticket-item"><strong>${SET_EMOJI[g.kind]} ${safe(setLineName(g.ids[0]))}${g.ids.length>1?' ×'+g.ids.length:''}</strong><span class="set-ticket-progress">${g.ids.filter(id=>set.tray[id]).length}/${g.ids.length}品</span>${setModText(g.kind,g.mods)}</div>`).join('')}</div>`:''}</section>`;
+ const slots=`<div class="set-slots ${set.slots.length===2?'two':''}" role="tablist" aria-label="セットの料理を選ぶ">${set.slots.map((id,i)=>`<button role="tab" aria-selected="${active===id}" class="set-slot ${id===active?'active':''} ${set.tray[id]?'finished':''}" data-set-slot="${id}" aria-label="${i+1}番 ${safe(setLineName(id))}"><span class="slot-name">${SET_EMOJI[setLineKind(id)]} ${i+1}. ${safe(setLineName(id))}</span><span class="slot-sub">${set.tray[id]?'✓ トレー済み':id===active?'● 調理中':'切り替える'}</span></button>`).join('')}</div>`;
+ const cells=set.slots.map((id,i)=>`<div class="set-tray-cell ${set.tray[id]?'filled':''}" data-set-tray-target="${id}" aria-label="${i+1}番 ${safe(setLineName(id))}のトレー" title="${i+1}. ${safe(setLineName(id))}">${i+1}${SET_EMOJI[setLineKind(id)]}${set.tray[id]?`<span class="set-tray-star">${'★'.repeat(set.tray[id].stars)}</span>`:'□'}</div>`).join('');
+ const tray=`<section class="set-tray" aria-label="お渡しトレー"><div class="set-tray-title">🍽️ トレー<br>${done}/${set.slots.length}品</div><div class="set-tray-cells ${set.slots.length>3?'many':''}">${cells}</div>${paid?`<button class="set-finish" data-action="setNext">次のセット</button>`:all?`<button class="set-finish" data-action="setServe">まとめて提供！</button>`:''}</section>`;
  let workspace='';
  if(paid)workspace=`<div class="set-completed"><div class="meal-emoji">🎉</div><strong>セットをお渡ししました！</strong><span>お客さんが喜んでいます。また次のセットを作れます。</span><button class="btn green" data-action="setNext">次のセット注文へ</button></div>`;
- else if(set.tray[active])workspace=`<div class="set-completed"><div class="meal-emoji">${SET_EMOJI[active]}</div><strong>${safe(m?.n||m?.name||'料理')}をトレーに置きました！</strong><span class="stars">${'★'.repeat(set.tray[active].stars)}</span><span>冷めないので、ほかの料理もゆっくり作れます。</span><button class="btn secondary" data-action="setRemake">この料理だけ作り直す</button></div>`;
- else workspace=(active==='burger'?kitchenPage(true):cafePage(true));
- const r=active==='burger'?recipe():cafeRecipe(active),sequence=active==='burger'?r.seq: r.seq;
- const detail=`<section class="set-recipe-row"><div>📖 ${safe(r.n||r.name)}の基本レシピ</div><button data-action="setToggleRecipe" aria-expanded="${ui.showSetRecipe}">${ui.showSetRecipe?'閉じる':'見る ▾'}</button>${ui.showSetRecipe?`<div class="set-recipe-body" style="flex-basis:100%">${sequence.map(id=>inlineIng(id,active==='burger'?'burger':'cafe','recipe-inline')).join('')}</div>`:''}</section>`;
+ else if(set.tray[active])workspace=`<div class="set-completed"><div class="meal-emoji">${SET_EMOJI[kind]}</div><strong>${safe(m?.n||m?.name||'料理')}をトレーに置きました！</strong><span class="stars">${'★'.repeat(set.tray[active].stars)}</span><span>冷めないので、ほかの料理もゆっくり作れます。</span><button class="btn secondary" data-action="setRemake">この料理だけ作り直す</button></div>`;
+ else workspace=(kind==='burger'?kitchenPage(true):cafePage(true));
+ const r=kind==='burger'?recipe():cafeRecipe(kind);
+ const detail=`<section class="set-recipe-row"><div>📖 ${safe(r.n||r.name)}の基本レシピ</div><button data-action="setToggleRecipe" aria-expanded="${ui.showSetRecipe}">${ui.showSetRecipe?'閉じる':'見る ▾'}</button>${ui.showSetRecipe?`<div class="set-recipe-body" style="flex-basis:100%">${r.seq.map(id=>inlineIng(id,kind==='burger'?'burger':'cafe','recipe-inline')).join('')}</div>`:''}</section>`;
  return `<div class="set-page">${ticket}${slots}${tray}${workspace}${!paid&&!set.tray[active]?detail:''}</div>`;
 }
 function setTrayPut(){
  if(!isSetActive()||s.setMeal.paid)return;
- const slot=s.setMeal.active;if(s.setMeal.tray[slot]){toast('トレーにある料理は「作り直す」から変更できます。');return}
- const seq=slot==='burger'?s.seq:s.cafe.drafts[slot]?.seq;
+ const set=s.setMeal,slot=set.active,kind=setLineKind(slot);
+ if(set.tray[slot]){toast('トレーにある料理は「作り直す」から変更できます。');return}
+ const seq=kind==='burger'?s.seq:s.cafe.drafts[kind]?.seq;
  if(!seq?.length){toast('まずはお料理を作ってね。');return}
- const rating=slot==='burger'?score(seq,recipe(),orderMods()):cafeScore(seq,slot);
- s.setMeal.tray[slot]={seq:seq.slice(),stars:rating,recipe:s.setMeal.items[slot].recipe};
- // Remove the working copy after the completed plate has been safely stored.
- if(slot==='burger'){s.seq=[];s.grill=[null,null];}else{s.cafe.drafts[slot]={seq:[],tool:null};}
- const next=s.setMeal.slots.find(id=>!s.setMeal.tray[id]);if(next){s.setMeal.active=next;if(next!=='burger')s.cafe.active=next;}
+ const rating=kind==='burger'?score(seq,recipe(),orderMods()):cafeScore(seq,kind);
+ set.tray[slot]={seq:seq.slice(),stars:rating,recipe:set.items[slot].recipe};
+ set.lineWork[slot]=blankSetLine(kind);
+ if(kind==='burger'){s.seq=[];s.grill=[null,null];}else{s.cafe.drafts[kind]={seq:[],tool:null};}
+ const next=set.slots.find(id=>!set.tray[id]);if(next)setLoadLine(next);
  ui.showSetRecipe=false;ui.showRecipe=false;ui.showCafeRecipe=false;
  playFinishSound();save();render();toast(next?'トレーに置きました。次の料理を作ろう！':'全部そろったね！ まとめてお渡ししよう。');
 }
@@ -2517,34 +3047,34 @@ function setRemake(){
 }
 function confirmSetRemake(){
  if(!isSetActive()||s.setMeal.paid||ui.modal?.type!=='set-remake')return;
- const slot=ui.modal.slot;delete s.setMeal.tray[slot];
- if(slot==='burger'){s.seq=[];s.grill=[null,null];}else{s.cafe.drafts[slot]={seq:[],tool:null};}
- ui.modal=null;save();render();toast(`${SET_NAME[slot]}だけ作り直せます。`);
+ const slot=ui.modal.slot,kind=setLineKind(slot);
+ delete s.setMeal.tray[slot];s.setMeal.lineWork[slot]=blankSetLine(kind);
+ setLoadLine(slot);
+ ui.modal=null;save();render();toast(`${SET_NAME[kind]}だけ作り直せます。`);
 }
 function setServe(){
  const set=s.setMeal;if(!isSetActive()||!set||set.paid)return;
  if(!set.slots.every(id=>set.tray[id])){toast('セットの料理をすべてトレーにそろえてね。');return}
  const stars=Math.min(...set.slots.map(id=>set.tray[id].stars));
  const price=set.slots.reduce((v,id)=>v+(setMenu(id)?.price||0),0),bonus=stars===3?Math.floor(price*.05):0,gain=price+bonus;
- // Idempotence guard: paid is saved together with all financial changes.
+ // A single payment for the entire tray, never one payment per dish.
  set.paid=true;set.completed++;
  s.coins+=gain;s.earnedAll+=gain;s.stars+=set.slots.reduce((t,id)=>t+set.tray[id].stars,0);
  s.served+=set.slots.length;s.finished+=set.slots.length;s.best=Math.max(s.best,stars);
- for(const id of set.slots)if(id!=='burger'){
-  s.cafe.counts[id]++;if(s.singleSession?.cafe?.counts)s.singleSession.cafe.counts[id]++;
- }
+ for(const id of set.slots){const kind=setLineKind(id);if(kind!=='burger'){
+  s.cafe.counts[kind]++;if(s.singleSession?.cafe?.counts)s.singleSession.cafe.counts[kind]++;
+ }}
  s.visits[set.person]++;const visitNo=s.visits[set.person];
  const reaction=customerReaction(set.person,stars,visitNo);
- s.moments.push({person:set.person,stars,serveNo:s.served,text:reaction,menu:setMenuName(set.slots)});s.moments=s.moments.slice(-20);
- ui.modal={type:'set-result',stars,gain,bonus,person:set.person,reaction,visitNo,items:set.slots.map(id=>({name:setMenu(id)?.n||setMenu(id)?.name,stars:set.tray[id].stars}))};
+ s.moments.push({person:set.person,stars,serveNo:s.served,text:reaction,menu:setMenuName(set.slots.map(id=>setLineKind(id)))});s.moments=s.moments.slice(-20);
+ ui.modal={type:'set-result',stars,gain,bonus,person:set.person,reaction,visitNo,items:set.slots.map(id=>({name:setLineName(id),stars:set.tray[id].stars}))};
  save();render();
 }
 function setNext(){
  if(!isSetActive()||!s.setMeal.paid)return;
  const old=s.setMeal;s.setMeal=createSetMeal(old.completed,old);
  s.seq=[];s.grill=[null,null];s.order=cloneData(s.setMeal.work.order);s.cafe=normalizeCafe(s.setMeal.work.cafe,s.travel.current);
- s.setMeal.viewActive=true;
- if(s.setMeal.active!=='burger')s.cafe.active=s.setMeal.active;
+ s.setMeal.viewActive=true;setLoadLine(s.setMeal.active);
  ui.modal=null;ui.showSetTicket=false;ui.showSetRecipe=false;ui.tab='order';save();render();
 }
 
@@ -2580,19 +3110,22 @@ function expandedBurgerLayer(id,y){
 function svgLayer(id,y,previous){let x=79,w=185;
  if(isSauce(id))return burgerGlaze(id,y);
  const expanded=expandedBurgerLayer(id,y);if(expanded!==null)return expanded;
- switch(id){case'bottom':return `<path d="M${x+1} ${y} Q${x+12} ${y-6} ${x+w-4} ${y} L${x+w-9} ${y+16} Q${x+w/2} ${y+27} ${x+8} ${y+16}Z" fill="url(#kb21-bun-bottom)" stroke="#8f5e3a" stroke-width="3"/><path d="M${x+15} ${y+5}Q${x+w/2} ${y+10} ${x+w-17} ${y+5}" fill="none" stroke="#ffd08b" stroke-width="5" opacity=".9"/><path d="M${x+10} ${y+13}Q${x+w/2} ${y+22} ${x+w-13} ${y+13}" fill="none" stroke="#9a6436" stroke-width="3" opacity=".34"/>`;case'top':return `<path d="M${x} ${y+15} Q${x+4} ${y-36} ${x+w/2} ${y-42} Q${x+w-5} ${y-35} ${x+w} ${y+15} Q${x+w/2} ${y+23} ${x} ${y+15}Z" fill="url(#kb21-bun-top)" stroke="#915a37" stroke-width="3"/><path d="M${x+18} ${y+5} Q${x+w/2} ${y+17} ${x+w-18} ${y+5}" fill="none" stroke="#ffe1a3" stroke-width="7" opacity=".95"/><path d="M${x+21} ${y+12}Q${x+w/2} ${y+23} ${x+w-19} ${y+12}" fill="none" stroke="#b06f3c" stroke-width="2.6" opacity=".24"/><g fill="#fff0bd"><ellipse cx="${x+59}" cy="${y-18}" rx="6" ry="2.3" transform="rotate(-27 ${x+59} ${y-18})"/><ellipse cx="${x+98}" cy="${y-26}" rx="6" ry="2.3" transform="rotate(20 ${x+98} ${y-26})"/><ellipse cx="${x+132}" cy="${y-9}" rx="6" ry="2.3" transform="rotate(-16 ${x+132} ${y-9})"/></g>`;case'patty':return `<path d="M${x+6} ${y-1}Q${x+18} ${y-17} ${x+w-12} ${y-5}Q${x+w+5} ${y+8} ${x+w-6} ${y+14}Q${x+28} ${y+25} ${x+2} ${y+12}Z" fill="url(#kb21-patty)" stroke="#513127" stroke-width="4"/><path d="M${x+20} ${y+3}Q${x+85} ${y-5} ${x+149} ${y+5}" stroke="#c6946c" stroke-width="4" fill="none" opacity=".86"/><g stroke="#4e3026" stroke-width="2.3" opacity=".42"><path d="M${x+43} ${y-2}l9 18"/><path d="M${x+82} ${y-5}l10 20"/><path d="M${x+125} ${y-3}l8 17"/></g><g fill="#442920" opacity=".28"><ellipse cx="${x+57}" cy="${y+8}" rx="5" ry="2"/><ellipse cx="${x+108}" cy="${y+11}" rx="4" ry="2"/><ellipse cx="${x+147}" cy="${y+6}" rx="5" ry="2"/></g><path d="M${x+43} ${y+1}Q${x+95} ${y-9} ${x+151} ${y+1}" fill="none" stroke="#d29a70" stroke-width="2.5" opacity=".54" stroke-linecap="round"/>`;case'cheese':return ['patty','egg','fish','bacon','chicken','shrimp','salami','eggplant'].includes(previous)?`<g class="melted-cheese"><path d="M${x+6} ${y-1}Q${x+96} ${y-6} ${x+w-8} ${y-1}L${x+w-7} ${y+10}Q${x+w-17} ${y+15} ${x+w-27} ${y+8}L${x+w-33} ${y+24}Q${x+w-42} ${y+28} ${x+w-45} ${y+18}L${x+103} ${y+10}L${x+77} ${y+24}Q${x+66} ${y+31} ${x+62} ${y+18}L${x+7} ${y+10}Z" fill="url(#kb21-cheese)" stroke="#de9f2f" stroke-width="3"/><path d="M${x+23} ${y+3}Q${x+89} ${y-1} ${x+159} ${y+4}" fill="none" stroke="#fff1b1" stroke-width="4" opacity=".88"/></g>`:`<path d="M${x+9} ${y-2}L${x+w-10} ${y-3}L${x+w-1} ${y+8}L${x+w-46} ${y+21}L${x+100} ${y+12}L${x+43} ${y+23}L${x+4} ${y+8}Z" fill="url(#kb21-cheese)" stroke="#de9f2f" stroke-width="3"/>`;case'lettuce':return `<path d="M${x-3} ${y+6}Q${x+5} ${y-12} ${x+29} ${y}T${x+69} ${y-1}T${x+111} ${y-2}T${x+157} ${y-4}T${x+w+3} ${y+6}Q${x+w-9} ${y+23} ${x+w-27} ${y+12}T${x+94} ${y+14}T${x+39} ${y+14}T${x-3} ${y+6}Z" fill="url(#kb21-lettuce)" stroke="#39875a" stroke-width="3"/><path d="M${x+10} ${y+7}Q${x+80} ${y-7} ${x+w-10} ${y+7}" fill="none" stroke="#c2f1ad" stroke-width="3" opacity=".72"/>`;case'tomato':return `<ellipse cx="171" cy="${y+8}" rx="93" ry="12" fill="url(#kb21-tomato)" stroke="#ab393c" stroke-width="3"/><path d="M90 ${y+7}Q171 ${y-2} 252 ${y+8}" fill="none" stroke="#ffb19c" stroke-width="3.6" opacity=".78"/><ellipse cx="171" cy="${y+12}" rx="70" ry="4" fill="#8c2a2c" opacity=".15"/>`;case'onion':return `<ellipse cx="171" cy="${y+7}" rx="85" ry="11" fill="url(#kb21-onion)" stroke="#b38cb9" stroke-width="4"/><ellipse cx="171" cy="${y+6}" rx="62" ry="6" fill="none" stroke="#f9eff8" stroke-width="3" opacity=".75"/>`;case'cabbage':return `<path d="M${x-1} ${y+6}Q${x+15} ${y-11} ${x+32} ${y+2}T${x+80} ${y-1}T${x+129} ${y-2}T${x+w+2} ${y+5}Q${x+w-6} ${y+19} ${x+150} ${y+13}T${x+95} ${y+15}T${x+41} ${y+13}T${x-1} ${y+6}Z" fill="url(#kb22-cabbage)" stroke="#84589a" stroke-width="3"/><path d="M103 ${y+7}Q161 ${y-7} 242 ${y+8}" fill="none" stroke="#f2d3ef" stroke-width="4" opacity=".85"/><path d="M123 ${y+13}Q165 ${y+18} 215 ${y+10}" fill="none" stroke="#915f9f" stroke-width="2.5" opacity=".26"/>`;case'jalapeno':return `<g fill="url(#kb22-jalapeno)" stroke="#246a47" stroke-width="3"><ellipse cx="111" cy="${y+5}" rx="26" ry="10" transform="rotate(-9 111 ${y+5})"/><ellipse cx="163" cy="${y+7}" rx="28" ry="11"/><ellipse cx="218" cy="${y+6}" rx="27" ry="11" transform="rotate(8 218 ${y+6})"/></g><g fill="#dbe894" opacity=".9"><ellipse cx="112" cy="${y+5}" rx="12" ry="4"/><ellipse cx="163" cy="${y+7}" rx="14" ry="5"/><ellipse cx="218" cy="${y+6}" rx="13" ry="4"/></g><g fill="none" stroke="#97d4a0" stroke-width="2.3" opacity=".75"><path d="M92 ${y+4}Q111 ${y-3} 129 ${y+4}"/><path d="M143 ${y+6}Q163 ${y-1} 183 ${y+6}"/><path d="M198 ${y+5}Q218 ${y-2} 237 ${y+5}"/></g>`;case'mushroom':return `<g fill="url(#kb22-mushroom)" stroke="#795339" stroke-width="3"><ellipse cx="105" cy="${y+6}" rx="25" ry="12"/><ellipse cx="154" cy="${y+3}" rx="28" ry="13"/><ellipse cx="208" cy="${y+7}" rx="29" ry="12"/><ellipse cx="243" cy="${y+9}" rx="20" ry="10"/></g><g fill="none" stroke="#f4debc" stroke-width="3" opacity=".9"><path d="M92 ${y+5}Q105 ${y-3} 117 ${y+6}"/><path d="M137 ${y+3}Q154 ${y-7} 170 ${y+4}"/><path d="M193 ${y+7}Q209 ${y-2} 223 ${y+7}"/></g>`;case'hashbrown':return `<path d="M${x+6} ${y-2}Q${x+2} ${y-13} ${x+20} ${y-14}L${x+w-22} ${y-14}Q${x+w+1} ${y-13} ${x+w-1} ${y+1}L${x+w-8} ${y+16}Q${x+w/2} ${y+23} ${x+10} ${y+16}Z" fill="url(#kb22-hashbrown)" stroke="#8e5b2e" stroke-width="4"/><g stroke="#f8d68b" stroke-width="4" stroke-linecap="round" opacity=".9"><path d="M105 ${y-1}l28 10M148 ${y-6}l30 13M197 ${y-3}l29 9M132 ${y+11}l28 -3M197 ${y+12}l25 -4"/></g><g stroke="#a1662d" stroke-width="2.1" stroke-linecap="round" opacity=".4"><path d="M116 ${y+8}l18 5M175 ${y+8}l20 5M215 ${y+7}l16 4"/></g>`;case'pickle':return `<g fill="url(#kb22-pickle)" stroke="#557e52" stroke-width="3"><ellipse cx="127" cy="${y+6}" rx="35" ry="11"/><ellipse cx="180" cy="${y+5}" rx="35" ry="11"/><ellipse cx="225" cy="${y+9}" rx="35" ry="11"/></g><g fill="none" stroke="#d6e8ac" stroke-width="2.3" opacity=".8"><ellipse cx="127" cy="${y+6}" rx="22" ry="6"/><ellipse cx="180" cy="${y+5}" rx="22" ry="6"/><ellipse cx="225" cy="${y+9}" rx="21" ry="6"/></g><g fill="#d9efaa"><circle cx="129" cy="${y+5}" r="3"/><circle cx="179" cy="${y+5}" r="3"/><circle cx="225" cy="${y+8}" r="3"/></g>`;case'sauce':return `<path d="M80 ${y+3}Q93 ${y-8} 111 ${y+1}T149 ${y+2}T186 ${y+1}T225 ${y+1}T264 ${y+4}L262 ${y+14}Q248 ${y+22} 242 ${y+12}Q220 ${y+30} 208 ${y+13}Q187 ${y+20} 171 ${y+14}Q146 ${y+29} 135 ${y+12}Q115 ${y+18} 98 ${y+14}Z" fill="url(#kb22-sauce)" stroke="#a95d34" stroke-width="2.4"/><path d="M98 ${y+8}Q170 ${y-3} 244 ${y+8}" fill="none" stroke="#f4bf90" stroke-width="3" opacity=".78"/>`;case'egg':return `<path d="M86 ${y+11}Q74 ${y-4} 116 ${y-6}Q142 ${y-15} 165 ${y-8}Q193 ${y-16} 211 ${y-5}Q254 ${y-3} 258 ${y+8}Q260 ${y+21} 219 ${y+17}Q195 ${y+28} 165 ${y+17}Q139 ${y+25} 118 ${y+16}Q91 ${y+22} 86 ${y+11}Z" fill="url(#kb22-eggwhite)" stroke="#ead9b1" stroke-width="2"/><path d="M98 ${y+10}Q170 ${y-5} 242 ${y+10}" fill="none" stroke="#ffffff" stroke-width="4" opacity=".72"/><ellipse cx="171" cy="${y+4}" rx="24" ry="10" fill="url(#kb22-yolk)" stroke="#d9961c" stroke-width="3"/>`;case'bacon':return `<path d="M89 ${y+3}Q116 ${y-16} 141 ${y+2}T194 ${y+1}T251 ${y+3}L251 ${y+16}Q224 ${y+29} 197 ${y+15}T142 ${y+16}T89 ${y+17}Z" fill="url(#kb22-bacon)" stroke="#7d433f" stroke-width="3"/><path d="M91 ${y+10}Q115 ${y-3} 142 ${y+10}T194 ${y+9}T250 ${y+10}" stroke="#ffd0b6" fill="none" stroke-width="5" opacity=".92"/><path d="M94 ${y+5}Q141 ${y+18} 190 ${y+6}T246 ${y+7}" stroke="#8f403e" fill="none" stroke-width="2" opacity=".34"/>`;case'fish':return `<path d="M86 ${y+5}Q96 ${y-16} 162 ${y-15}Q223 ${y-15} 258 ${y+6}Q269 ${y+24} 241 ${y+25}L109 ${y+24}Q81 ${y+19} 86 ${y+5}Z" fill="url(#kb22-fish)" stroke="#9d6f38" stroke-width="3"/><path d="M106 ${y+4}L124 ${y+16}M137 ${y-1}L158 ${y+19}M174 ${y-2}L192 ${y+19}M209 ${y-1}L227 ${y+16}" stroke="#ffe6a8" stroke-width="5" opacity=".88"/><path d="M99 ${y+7}Q171 ${y-6} 243 ${y+7}" fill="none" stroke="#f9d18a" stroke-width="3" opacity=".56"/>`;case'avocado':return `<g fill="url(#kb22-avocado)" stroke="#598e60" stroke-width="3"><path d="M84 ${y+13}Q111 ${y-13} 141 ${y+2}Q164 ${y+14} 141 ${y+18}Z"/><path d="M146 ${y+13}Q171 ${y-16} 200 ${y+2}Q224 ${y+16} 197 ${y+18}Z"/><path d="M204 ${y+11}Q228 ${y-13} 261 ${y+2}Q273 ${y+15} 248 ${y+18}Z"/></g><g fill="none" stroke="#e1f0b6" stroke-width="3" opacity=".78"><path d="M95 ${y+10}Q112 ${y-2} 131 ${y+10}"/><path d="M156 ${y+10}Q171 ${y-3} 190 ${y+9}"/><path d="M216 ${y+8}Q234 ${y-2} 250 ${y+8}"/></g>`;default:return''}}
+ switch(id){case'bottom':return `<path d="M${x+1} ${y} Q${x+12} ${y-6} ${x+w-4} ${y} L${x+w-9} ${y+16} Q${x+w/2} ${y+27} ${x+8} ${y+16}Z" fill="url(#kb21-bun-bottom)" stroke="#8f5e3a" stroke-width="3"/><path d="M${x+15} ${y+5}Q${x+w/2} ${y+10} ${x+w-17} ${y+5}" fill="none" stroke="#ffd08b" stroke-width="5" opacity=".9"/><path d="M${x+10} ${y+13}Q${x+w/2} ${y+22} ${x+w-13} ${y+13}" fill="none" stroke="#9a6436" stroke-width="3" opacity=".34"/>`;case'top':return `<path d="M${x} ${y+15} Q${x+4} ${y-36} ${x+w/2} ${y-42} Q${x+w-5} ${y-35} ${x+w} ${y+15} Q${x+w/2} ${y+23} ${x} ${y+15}Z" fill="url(#kb21-bun-top)" stroke="#915a37" stroke-width="3"/><path d="M${x+18} ${y+5} Q${x+w/2} ${y+17} ${x+w-18} ${y+5}" fill="none" stroke="#ffe1a3" stroke-width="7" opacity=".95"/><path d="M${x+21} ${y+12}Q${x+w/2} ${y+23} ${x+w-19} ${y+12}" fill="none" stroke="#b06f3c" stroke-width="2.6" opacity=".24"/><g fill="#fff0bd"><ellipse cx="${x+59}" cy="${y-18}" rx="6" ry="2.3" transform="rotate(-27 ${x+59} ${y-18})"/><ellipse cx="${x+98}" cy="${y-26}" rx="6" ry="2.3" transform="rotate(20 ${x+98} ${y-26})"/><ellipse cx="${x+132}" cy="${y-9}" rx="6" ry="2.3" transform="rotate(-16 ${x+132} ${y-9})"/></g>`;case'patty':return `<path d="M${x+6} ${y-1}Q${x+18} ${y-17} ${x+w-12} ${y-5}Q${x+w+5} ${y+8} ${x+w-6} ${y+14}Q${x+28} ${y+25} ${x+2} ${y+12}Z" fill="url(#kb21-patty)" stroke="#513127" stroke-width="4"/><path d="M${x+20} ${y+3}Q${x+85} ${y-5} ${x+149} ${y+5}" stroke="#c6946c" stroke-width="4" fill="none" opacity=".86"/><g stroke="#4e3026" stroke-width="2.3" opacity=".42"><path d="M${x+43} ${y-2}l9 18"/><path d="M${x+82} ${y-5}l10 20"/><path d="M${x+125} ${y-3}l8 17"/></g><g fill="#3e271f" opacity=".3"><ellipse cx="${x+27}" cy="${y+5}" rx="5" ry="2"/><ellipse cx="${x+66}" cy="${y+9}" rx="4.8" ry="2.3"/><ellipse cx="${x+111}" cy="${y+7}" rx="6" ry="2"/><ellipse cx="${x+150}" cy="${y+5}" rx="4" ry="2"/></g><path d="M${x+25} ${y+1}Q${x+62} ${y-8} ${x+103} ${y-2}" stroke="#f0be8f" stroke-width="2.5" opacity=".52" stroke-linecap="round" fill="none"/><g fill="#442920" opacity=".28"><ellipse cx="${x+57}" cy="${y+8}" rx="5" ry="2"/><ellipse cx="${x+108}" cy="${y+11}" rx="4" ry="2"/><ellipse cx="${x+147}" cy="${y+6}" rx="5" ry="2"/></g><path d="M${x+43} ${y+1}Q${x+95} ${y-9} ${x+151} ${y+1}" fill="none" stroke="#d29a70" stroke-width="2.5" opacity=".54" stroke-linecap="round"/>`;case'cheese':return ['patty','egg','fish','bacon','chicken','shrimp','salami','eggplant'].includes(previous)?`<g class="melted-cheese"><path d="M${x+6} ${y-1}Q${x+96} ${y-6} ${x+w-8} ${y-1}L${x+w-7} ${y+10}Q${x+w-17} ${y+15} ${x+w-27} ${y+8}L${x+w-33} ${y+24}Q${x+w-42} ${y+28} ${x+w-45} ${y+18}L${x+103} ${y+10}L${x+77} ${y+24}Q${x+66} ${y+31} ${x+62} ${y+18}L${x+7} ${y+10}Z" fill="url(#kb21-cheese)" stroke="#de9f2f" stroke-width="3"/><path d="M${x+23} ${y+3}Q${x+89} ${y-1} ${x+159} ${y+4}" fill="none" stroke="#fff1b1" stroke-width="4" opacity=".88"/></g>`:`<path d="M${x+9} ${y-2}L${x+w-10} ${y-3}L${x+w-1} ${y+8}L${x+w-46} ${y+21}L${x+100} ${y+12}L${x+43} ${y+23}L${x+4} ${y+8}Z" fill="url(#kb21-cheese)" stroke="#de9f2f" stroke-width="3"/>`;case'lettuce':return `<path d="M${x-3} ${y+6}Q${x+5} ${y-12} ${x+29} ${y}T${x+69} ${y-1}T${x+111} ${y-2}T${x+157} ${y-4}T${x+w+3} ${y+6}Q${x+w-9} ${y+23} ${x+w-27} ${y+12}T${x+94} ${y+14}T${x+39} ${y+14}T${x-3} ${y+6}Z" fill="url(#kb21-lettuce)" stroke="#39875a" stroke-width="3"/><path d="M${x+10} ${y+7}Q${x+80} ${y-7} ${x+w-10} ${y+7}" fill="none" stroke="#c2f1ad" stroke-width="3" opacity=".72"/>`;case'tomato':return `<ellipse cx="171" cy="${y+8}" rx="93" ry="12" fill="url(#kb21-tomato)" stroke="#ab393c" stroke-width="3"/><path d="M90 ${y+7}Q171 ${y-2} 252 ${y+8}" fill="none" stroke="#ffb19c" stroke-width="3.6" opacity=".78"/><ellipse cx="171" cy="${y+12}" rx="70" ry="4" fill="#8c2a2c" opacity=".15"/>`;case'onion':return `<ellipse cx="171" cy="${y+7}" rx="85" ry="11" fill="url(#kb21-onion)" stroke="#b38cb9" stroke-width="4"/><ellipse cx="171" cy="${y+6}" rx="62" ry="6" fill="none" stroke="#f9eff8" stroke-width="3" opacity=".75"/>`;case'cabbage':return `<path d="M${x-1} ${y+6}Q${x+15} ${y-11} ${x+32} ${y+2}T${x+80} ${y-1}T${x+129} ${y-2}T${x+w+2} ${y+5}Q${x+w-6} ${y+19} ${x+150} ${y+13}T${x+95} ${y+15}T${x+41} ${y+13}T${x-1} ${y+6}Z" fill="url(#kb22-cabbage)" stroke="#84589a" stroke-width="3"/><path d="M103 ${y+7}Q161 ${y-7} 242 ${y+8}" fill="none" stroke="#f2d3ef" stroke-width="4" opacity=".85"/><path d="M123 ${y+13}Q165 ${y+18} 215 ${y+10}" fill="none" stroke="#915f9f" stroke-width="2.5" opacity=".26"/>`;case'jalapeno':return `<g fill="url(#kb22-jalapeno)" stroke="#246a47" stroke-width="3"><ellipse cx="111" cy="${y+5}" rx="26" ry="10" transform="rotate(-9 111 ${y+5})"/><ellipse cx="163" cy="${y+7}" rx="28" ry="11"/><ellipse cx="218" cy="${y+6}" rx="27" ry="11" transform="rotate(8 218 ${y+6})"/></g><g fill="#dbe894" opacity=".9"><ellipse cx="112" cy="${y+5}" rx="12" ry="4"/><ellipse cx="163" cy="${y+7}" rx="14" ry="5"/><ellipse cx="218" cy="${y+6}" rx="13" ry="4"/></g><g fill="none" stroke="#97d4a0" stroke-width="2.3" opacity=".75"><path d="M92 ${y+4}Q111 ${y-3} 129 ${y+4}"/><path d="M143 ${y+6}Q163 ${y-1} 183 ${y+6}"/><path d="M198 ${y+5}Q218 ${y-2} 237 ${y+5}"/></g>`;case'mushroom':return `<g fill="url(#kb22-mushroom)" stroke="#795339" stroke-width="3"><ellipse cx="105" cy="${y+6}" rx="25" ry="12"/><ellipse cx="154" cy="${y+3}" rx="28" ry="13"/><ellipse cx="208" cy="${y+7}" rx="29" ry="12"/><ellipse cx="243" cy="${y+9}" rx="20" ry="10"/></g><g fill="none" stroke="#f4debc" stroke-width="3" opacity=".9"><path d="M92 ${y+5}Q105 ${y-3} 117 ${y+6}"/><path d="M137 ${y+3}Q154 ${y-7} 170 ${y+4}"/><path d="M193 ${y+7}Q209 ${y-2} 223 ${y+7}"/></g>`;case'hashbrown':return `<path d="M${x+6} ${y-2}Q${x+2} ${y-13} ${x+20} ${y-14}L${x+w-22} ${y-14}Q${x+w+1} ${y-13} ${x+w-1} ${y+1}L${x+w-8} ${y+16}Q${x+w/2} ${y+23} ${x+10} ${y+16}Z" fill="url(#kb22-hashbrown)" stroke="#8e5b2e" stroke-width="4"/><g stroke="#f8d68b" stroke-width="4" stroke-linecap="round" opacity=".9"><path d="M105 ${y-1}l28 10M148 ${y-6}l30 13M197 ${y-3}l29 9M132 ${y+11}l28 -3M197 ${y+12}l25 -4"/></g><g stroke="#a1662d" stroke-width="2.1" stroke-linecap="round" opacity=".4"><path d="M116 ${y+8}l18 5M175 ${y+8}l20 5M215 ${y+7}l16 4"/></g>`;case'pickle':return `<g fill="url(#kb22-pickle)" stroke="#557e52" stroke-width="3"><ellipse cx="127" cy="${y+6}" rx="35" ry="11"/><ellipse cx="180" cy="${y+5}" rx="35" ry="11"/><ellipse cx="225" cy="${y+9}" rx="35" ry="11"/></g><g fill="none" stroke="#d6e8ac" stroke-width="2.3" opacity=".8"><ellipse cx="127" cy="${y+6}" rx="22" ry="6"/><ellipse cx="180" cy="${y+5}" rx="22" ry="6"/><ellipse cx="225" cy="${y+9}" rx="21" ry="6"/></g><g fill="#d9efaa"><circle cx="129" cy="${y+5}" r="3"/><circle cx="179" cy="${y+5}" r="3"/><circle cx="225" cy="${y+8}" r="3"/></g>`;case'sauce':return `<path d="M80 ${y+3}Q93 ${y-8} 111 ${y+1}T149 ${y+2}T186 ${y+1}T225 ${y+1}T264 ${y+4}L262 ${y+14}Q248 ${y+22} 242 ${y+12}Q220 ${y+30} 208 ${y+13}Q187 ${y+20} 171 ${y+14}Q146 ${y+29} 135 ${y+12}Q115 ${y+18} 98 ${y+14}Z" fill="url(#kb22-sauce)" stroke="#a95d34" stroke-width="2.4"/><path d="M98 ${y+8}Q170 ${y-3} 244 ${y+8}" fill="none" stroke="#f4bf90" stroke-width="3" opacity=".78"/>`;case'egg':return `<path d="M86 ${y+11}Q74 ${y-4} 116 ${y-6}Q142 ${y-15} 165 ${y-8}Q193 ${y-16} 211 ${y-5}Q254 ${y-3} 258 ${y+8}Q260 ${y+21} 219 ${y+17}Q195 ${y+28} 165 ${y+17}Q139 ${y+25} 118 ${y+16}Q91 ${y+22} 86 ${y+11}Z" fill="url(#kb22-eggwhite)" stroke="#ead9b1" stroke-width="2"/><path d="M98 ${y+10}Q170 ${y-5} 242 ${y+10}" fill="none" stroke="#ffffff" stroke-width="4" opacity=".72"/><ellipse cx="171" cy="${y+4}" rx="24" ry="10" fill="url(#kb22-yolk)" stroke="#d9961c" stroke-width="3"/>`;case'bacon':return `<path d="M89 ${y+3}Q116 ${y-16} 141 ${y+2}T194 ${y+1}T251 ${y+3}L251 ${y+16}Q224 ${y+29} 197 ${y+15}T142 ${y+16}T89 ${y+17}Z" fill="url(#kb22-bacon)" stroke="#7d433f" stroke-width="3"/><path d="M91 ${y+10}Q115 ${y-3} 142 ${y+10}T194 ${y+9}T250 ${y+10}" stroke="#ffd0b6" fill="none" stroke-width="5" opacity=".92"/><path d="M94 ${y+5}Q141 ${y+18} 190 ${y+6}T246 ${y+7}" stroke="#8f403e" fill="none" stroke-width="2" opacity=".34"/>`;case'fish':return `<path d="M86 ${y+5}Q96 ${y-16} 162 ${y-15}Q223 ${y-15} 258 ${y+6}Q269 ${y+24} 241 ${y+25}L109 ${y+24}Q81 ${y+19} 86 ${y+5}Z" fill="url(#kb22-fish)" stroke="#9d6f38" stroke-width="3"/><path d="M106 ${y+4}L124 ${y+16}M137 ${y-1}L158 ${y+19}M174 ${y-2}L192 ${y+19}M209 ${y-1}L227 ${y+16}" stroke="#ffe6a8" stroke-width="5" opacity=".88"/><path d="M99 ${y+7}Q171 ${y-6} 243 ${y+7}" fill="none" stroke="#f9d18a" stroke-width="3" opacity=".56"/>`;case'avocado':return `<g fill="url(#kb22-avocado)" stroke="#598e60" stroke-width="3"><path d="M84 ${y+13}Q111 ${y-13} 141 ${y+2}Q164 ${y+14} 141 ${y+18}Z"/><path d="M146 ${y+13}Q171 ${y-16} 200 ${y+2}Q224 ${y+16} 197 ${y+18}Z"/><path d="M204 ${y+11}Q228 ${y-13} 261 ${y+2}Q273 ${y+15} 248 ${y+18}Z"/></g><g fill="none" stroke="#e1f0b6" stroke-width="3" opacity=".78"><path d="M95 ${y+10}Q112 ${y-2} 131 ${y+10}"/><path d="M156 ${y+10}Q171 ${y-3} 190 ${y+9}"/><path d="M216 ${y+8}Q234 ${y-2} 250 ${y+8}"/></g>`;default:return''}}
 function art(seq){
  const solids=seq.filter(id=>!isSauce(id)).length;
- // Make stacks denser rather than flattening their ingredients vertically.
- // The tallest bun must remain within the 340 x 260 viewBox.
+ // A tall stack keeps the height of each drawn ingredient: only the gaps compress.
+ // Offsets follow ingredient order, never Math.random(), so rerenders do not shuffle food.
  const step=Math.min(20,145/Math.max(1,solids-1));
- let y=199;
+ let y=199, solidIndex=0, lastOffset=0;
  const layers=seq.map((id,i)=>{
   const sauce=isSauce(id),layerY=sauce?y+7:y;
-  const contact=!sauce&&i>0&&id!=='top'?`<ellipse cx="171" cy="${layerY+13}" rx="77" ry="7" fill="#4d352c" opacity=".13"/>`:'';
+  const offset=sauce?lastOffset:((id==='bottom'||id==='top')?0:[-2.2,1.8,-1.2,2.4,-1.9,1.3][solidIndex%6]);
+  if(!sauce){lastOffset=offset;solidIndex++;}
+  // Shadows sit beneath the ingredient instead of forming a horizontal black stripe across it.
+  const contact=!sauce&&i>0&&id!=='top'?`<ellipse cx="171" cy="${layerY+15}" rx="72" ry="4.5" fill="#503b2f" opacity=".11"/>`:'';
   const drawing=svgLayer(id,layerY,seq[i-1]);
   if(!sauce)y-=step;
-  return `<g class="${sauce&&ui.sauceFlash===i?'sauce-fresh':(!sauce&&ui.burgerFlash===i?'burger-layer-drop':'')}">${contact}${drawing}</g>`;
+  return `<g class="${sauce&&ui.sauceFlash===i?'sauce-fresh':(!sauce&&ui.burgerFlash===i?'burger-layer-drop':'')}" transform="translate(${offset} 0)">${contact}${drawing}</g>`;
  }).join('');
  const tr='translate(0 0)';
  return `<svg viewBox="0 0 340 260" aria-label="作成中のバーガー" role="img"><defs><radialGradient id="kb21-plate" cx=".44" cy=".34" r=".8"><stop stop-color="#fffef9"/><stop offset=".56" stop-color="#f2e7d5"/><stop offset="1" stop-color="#dccab4"/></radialGradient><linearGradient id="kb21-bun-bottom" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#efb26c"/><stop offset=".55" stop-color="#da944d"/><stop offset="1" stop-color="#bd733a"/></linearGradient><linearGradient id="kb21-bun-top" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffd487"/><stop offset=".56" stop-color="#f0a953"/><stop offset="1" stop-color="#c97c3d"/></linearGradient><linearGradient id="kb21-patty" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#986048"/><stop offset=".5" stop-color="#744534"/><stop offset="1" stop-color="#563126"/></linearGradient><linearGradient id="kb21-cheese" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe98f"/><stop offset=".56" stop-color="#f7c94d"/><stop offset="1" stop-color="#e1a336"/></linearGradient><linearGradient id="kb21-lettuce" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8fdb79"/><stop offset=".58" stop-color="#63b764"/><stop offset="1" stop-color="#3e8f53"/></linearGradient><linearGradient id="kb21-tomato" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff7b62"/><stop offset=".5" stop-color="#dc5147"/><stop offset="1" stop-color="#b7373a"/></linearGradient><linearGradient id="kb21-onion" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff1ff"/><stop offset=".58" stop-color="#efd7f0"/><stop offset="1" stop-color="#d3b0d7"/></linearGradient><linearGradient id="kb22-cabbage" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#efc1ee"/><stop offset=".58" stop-color="#bf86c2"/><stop offset="1" stop-color="#91559b"/></linearGradient><linearGradient id="kb22-jalapeno" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5cca75"/><stop offset=".55" stop-color="#33975a"/><stop offset="1" stop-color="#216941"/></linearGradient><linearGradient id="kb22-mushroom" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d7b18e"/><stop offset=".55" stop-color="#b68562"/><stop offset="1" stop-color="#8d6043"/></linearGradient><linearGradient id="kb22-hashbrown" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0c06a"/><stop offset=".5" stop-color="#d09a47"/><stop offset="1" stop-color="#ad702f"/></linearGradient><linearGradient id="kb22-pickle" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#bfdc7a"/><stop offset=".55" stop-color="#8cad52"/><stop offset="1" stop-color="#658340"/></linearGradient><linearGradient id="kb22-sauce" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0a062"/><stop offset=".5" stop-color="#d37b46"/><stop offset="1" stop-color="#b45d33"/></linearGradient><linearGradient id="kb22-eggwhite" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffef4"/><stop offset=".7" stop-color="#f7efcf"/><stop offset="1" stop-color="#ebddb0"/></linearGradient><radialGradient id="kb22-yolk" cx=".42" cy=".35" r=".78"><stop stop-color="#ffd55d"/><stop offset=".65" stop-color="#f6b33a"/><stop offset="1" stop-color="#dd8e17"/></radialGradient><linearGradient id="kb22-bacon" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#df8a76"/><stop offset=".5" stop-color="#be6558"/><stop offset="1" stop-color="#924648"/></linearGradient><linearGradient id="kb22-fish" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f7cd84"/><stop offset=".55" stop-color="#e2af5e"/><stop offset="1" stop-color="#bc8442"/></linearGradient><linearGradient id="kb22-avocado" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d5ef9d"/><stop offset=".55" stop-color="#abd173"/><stop offset="1" stop-color="#779c53"/></linearGradient><linearGradient id="kb26-redpepper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffa38b"/><stop offset=".56" stop-color="#e95447"/><stop offset="1" stop-color="#a53633"/></linearGradient><linearGradient id="kb26-spinach" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b2e597"/><stop offset=".56" stop-color="#59a964"/><stop offset="1" stop-color="#2c7544"/></linearGradient><linearGradient id="kb26-cucumber" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d1efb1"/><stop offset=".56" stop-color="#97c76b"/><stop offset="1" stop-color="#588f52"/></linearGradient><linearGradient id="kb26-pineapple" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe79b"/><stop offset=".56" stop-color="#f3c94d"/><stop offset="1" stop-color="#ca9238"/></linearGradient><linearGradient id="kb26-corn" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffec9d"/><stop offset=".56" stop-color="#efbf46"/><stop offset="1" stop-color="#cf9336"/></linearGradient><linearGradient id="kb26-olive" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#789c79"/><stop offset=".56" stop-color="#516e52"/><stop offset="1" stop-color="#304839"/></linearGradient><linearGradient id="kb26-chicken" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f8d6a5"/><stop offset=".56" stop-color="#dda261"/><stop offset="1" stop-color="#a16e3e"/></linearGradient><linearGradient id="kb26-shrimp" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe0c0"/><stop offset=".56" stop-color="#f2a67a"/><stop offset="1" stop-color="#bd6851"/></linearGradient><linearGradient id="kb26-salami" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#eaa29a"/><stop offset=".56" stop-color="#bc6260"/><stop offset="1" stop-color="#874242"/></linearGradient><linearGradient id="kb26-eggplant" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c6a5d7"/><stop offset=".56" stop-color="#9172b1"/><stop offset="1" stop-color="#583e7a"/></linearGradient></defs><ellipse cx="171" cy="236" rx="143" ry="19" fill="#866849" opacity=".18"/><ellipse cx="171" cy="228" rx="143" ry="24" fill="url(#kb21-plate)" stroke="#d5c3ab" stroke-width="5"/><ellipse cx="171" cy="221" rx="118" ry="13" fill="none" stroke="#fff" stroke-width="4" opacity=".85"/><ellipse cx="171" cy="232" rx="99" ry="10" fill="#fff" opacity=".45"/><g transform="${tr}">${layers}</g></svg>`;
@@ -2721,7 +3254,7 @@ function render(){
  const tabsScroll=document.querySelector('.pantry-tabs')?.scrollLeft||0;
  const pages=[['kitchen','🍔 バーガー'],['cafe','🍟 カフェ'],['set','🍽️ セット'],['shop','🗺️ おみせ'],['book','📖 レシピ'],['record','🏅 記録']];
  root.dataset.area=s.travel.current;
- root.innerHTML=`<header class="site-head"><div class="brand"><div class="brand-mark">${logo()}</div><div><div class="brand-small">PEKOPEKO DINER</div><div class="brand-name">ぺこぺこダイナー</div></div></div>${statusHtml()}</header><nav class="navline" aria-label="メインメニュー">${pages.map(([id,n])=>`<button class="nav ${ui.page===id?'active':''}" data-page="${id}" aria-label="${n}" title="${n}"><span class="nav-full">${n}</span><span class="nav-short" aria-hidden="true">${({kitchen:'🍔調理',cafe:'🍟カフェ',set:'🍽️セット',shop:'🗺️旅',book:'📖図鑑',record:'🏅記録'})[id]}</span></button>`).join('')}</nav><main>${ui.page==='kitchen'?kitchenPage():ui.page==='cafe'?cafePage():ui.page==='set'?setPage():ui.page==='shop'?shopPage():ui.page==='book'?bookPage():recordPage()}</main><footer class="foot">ぺこぺこダイナー v0.30 ・ 全${TOTAL_MENU_COUNT}種類の基本メニュー / 時間制限なし ・ オフライン対応 ・ 自動保存</footer>${ui.modal?modalHtml():''}${ui.toast?`<div class="notice" role="status">${safe(ui.toast)}</div>`:''}`;
+ root.innerHTML=`<header class="site-head"><div class="brand"><div class="brand-mark">${logo()}</div><div><div class="brand-small">PEKOPEKO DINER</div><div class="brand-name">ぺこぺこダイナー</div></div></div>${statusHtml()}</header><nav class="navline" aria-label="メインメニュー">${pages.map(([id,n])=>`<button class="nav ${ui.page===id?'active':''}" data-page="${id}" aria-label="${n}" title="${n}"><span class="nav-full">${n}</span><span class="nav-short" aria-hidden="true">${({kitchen:'🍔調理',cafe:'🍟カフェ',set:'🍽️セット',shop:'🗺️旅',book:'📖図鑑',record:'🏅記録'})[id]}</span></button>`).join('')}</nav><main>${ui.page==='kitchen'?kitchenPage():ui.page==='cafe'?cafePage():ui.page==='set'?setPage():ui.page==='shop'?shopPage():ui.page==='book'?bookPage():recordPage()}</main><footer class="foot">ぺこぺこダイナー v0.41 ・ 全${TOTAL_MENU_COUNT}種類の基本メニュー / 時間制限なし ・ オフライン対応 ・ 自動保存</footer>${ui.modal?modalHtml():''}${ui.toast?`<div class="notice" role="status">${safe(ui.toast)}</div>`:''}`;
  const pantry=document.getElementById('ingredientScroll');if(pantry)pantry.scrollTop=pantryScroll;
  const tabs=document.querySelector('.pantry-tabs');if(tabs)tabs.scrollLeft=tabsScroll;
 }
@@ -2757,9 +3290,9 @@ function helpHtml(){
   note='ポテトやパンケーキは焼き上がっても焦げません。パフェも自分のペースで飾れます。';
  }else{
   title='セット注文と新しい旅先';subtitle='料理が増えても、自分のペースで楽しもう。';
-  cards+=card('1','🍽️ セットの注文票',`<div class="help-ticket"><strong>ランチセット</strong><span>🍔 バーガー</span><span>🍟 ポテト</span><span>🥤 ドリンク</span></div>`,'注文票にある2〜3品を作るよ。料理のボタンで作業台を切り替えよう。');
+  cards+=card('1','🍽️ セットの注文票',`<div class="help-ticket"><strong>ランチセット</strong><span>🍔 バーガー</span><span>🍟 ポテト</span><span>🥤 ドリンク</span></div>`,'注文票の2〜6品を作ろう。同じ料理が2個でも、1品ずつ別の作業台として切り替えられるよ。');
   cards+=card('2','できた料理はトレーへ',`${thing('🍔','完成した料理')}${arrow}${thing('🍽️','お渡しトレー')}`,'完成品をトレーにドラッグ。あるいは「トレーに置く」を押そう。');
-  cards+=card('3','全部そろったら提供',`<div class="help-mini-tray"><span class="done">🍔 ✓</span><span class="done">🍟 ✓</span><span class="done">🥤 ✓</span></div>`,'3品全部そろったら「まとめて提供！」。ほかの料理は作り途中でも保存されるよ。');
+  cards+=card('3','全部そろったら提供',`<div class="help-mini-tray"><span class="done">🍔 ✓</span><span class="done">🍟 ✓</span><span class="done">🥤 ✓</span></div>`,'注文した品数を全部そろえたら「まとめて提供！」。どの料理も作り途中の状態を保存できるよ。');
   cards+=card('4','🗺️ お金で街を解放',`${thing('🪙','料理でお金を貯める')}${arrow}${thing('🏡','おみせで購入')}${arrow}${thing('🌈','新メニュー解放')}`,'「おみせ」から次の行き先を解放。遠くほどメニューが増え、前の街にも無料で戻れます。');
   note='自由料理は好きな材料を重ねられるモード。レシピ帳や記録も好きなときに見返せます。';
  }
@@ -2770,7 +3303,7 @@ function helpHtml(){
 function modalHtml(){const m=ui.modal;
  if(m.type==='travel-buy'){const a=areaById(m.id);return `<div class="modal-back"><div class="modal" role="dialog" aria-modal="true" aria-label="行き先の解放確認"><div class="eyebrow">NEW DESTINATION</div><h2>${a.emoji} ${a.name}を解放しますか？</h2><p>${a.description}<br>新しく使えるメニューは <b>${allAreaMenus(a.id)}種類</b>、変更注文は最大<b>${a.mods}件</b>になります。</p><div class="record">解放費用 <b>${a.cost.toLocaleString('ja-JP')} G</b><br>購入後の所持金 <b>${Math.max(0,s.coins-a.cost).toLocaleString('ja-JP')} G</b></div><button class="btn green" data-action="confirmTravelBuy">この行き先を解放する</button><button class="btn" data-action="close">やめる</button></div></div>`;}
  if(m.type==='set-result')return `<div class="modal-back"><div class="modal" role="dialog" aria-modal="true" aria-label="セット提供の結果"><div class="eyebrow">SET MEAL COMPLETE!</div><h2>🍽️ セットをお渡ししました！</h2><div class="rating">${'★'.repeat(m.stars)}${'☆'.repeat(3-m.stars)}</div><div class="result-customer"><div class="portrait">${PEOPLE[m.person][0]}</div><div><strong>${PEOPLE[m.person][1]}</strong><div class="quote">「${safe(m.reaction)}」</div></div></div>${m.items.map(it=>`<div class="record">${safe(it.name)}：${'★'.repeat(it.stars)}</div>`).join('')}<div class="record">🪙 合計 +${m.gain} G${m.bonus?'（セットボーナス込み +'+m.bonus+' G）':''}</div><button class="btn green" data-action="setNext">次のセット注文へ</button><button class="btn" data-action="close">お店に戻る</button></div></div>`;
- if(m.type==='set-remake')return `<div class="modal-back"><div class="modal" role="dialog" aria-modal="true"><h2>${SET_EMOJI[m.slot]} この料理だけ作り直しますか？</h2><p>トレーに置いた${SET_NAME[m.slot]}だけ取り消します。ほかの料理はそのまま残ります。</p><button class="btn green" data-action="setConfirmRemake">作り直す</button><button class="btn" data-action="close">やめる</button></div></div>`;
+ if(m.type==='set-remake')return `<div class="modal-back"><div class="modal" role="dialog" aria-modal="true"><h2>${SET_EMOJI[setLineKind(m.slot)]} この料理だけ作り直しますか？</h2><p>トレーに置いた${safe(setLineName(m.slot))}だけ取り消します。ほかの料理はそのまま残ります。</p><button class="btn green" data-action="setConfirmRemake">作り直す</button><button class="btn" data-action="close">やめる</button></div></div>`;
  if(m.type==='result'){
  const customer=PEOPLE[m.person]||PEOPLE[0];
  return `<div class="modal-back" role="presentation"><div class="modal" role="dialog" aria-modal="true" aria-label="料理の評価"><div class="eyebrow">THANK YOU!</div><h2>${m.title}</h2><div class="rating">${'★'.repeat(m.stars)}${'☆'.repeat(3-m.stars)}</div><div class="result-customer"><div class="portrait">${customer[0]}</div><div><b>${customer[1]}</b> <span class="tiny">来店 ${m.visitNo} 回目</span><div class="quote">「${safe(m.reaction)}」</div></div></div><div class="record">🪙 売上 <b>+${m.gain} G</b><br>⭐ 評価 <b>+${m.stars} 個</b></div>${m.familiar?`<p class="mode-banner">🌼 ${customer[1]}と、もっと仲良くなりました！</p>`:''}${m.unlocked?`<p class="mode-banner">🎉 新しいレシピを覚えました！ 「${m.unlocked}」</p>`:''}<button class="btn green" data-action="next">次のお客さんを迎える</button></div></div>`;
@@ -2973,14 +3506,14 @@ let setFoodDrag=null;
 root.addEventListener('pointerdown',e=>{
  if(!isSetActive()||ui.page!=='set'||ui.modal||!e.isPrimary||e.button!==0||s.setMeal?.tray?.[s.setMeal.active])return;
  const el=e.target.closest('[data-set-food-source]');if(!el)return;
- const slot=s.setMeal.active,seq=slot==='burger'?s.seq:s.cafe.drafts[slot]?.seq;
+ const slot=s.setMeal.active,kind=setLineKind(slot),seq=kind==='burger'?s.seq:s.cafe.drafts[kind]?.seq;
  if(!seq?.length)return;
  setFoodDrag={pointer:e.pointerId,x:e.clientX,y:e.clientY,started:false,ghost:null,slot};
 },{passive:true});
 document.addEventListener('pointermove',e=>{
  const d=setFoodDrag;if(!d||d.pointer!==e.pointerId)return;
  if(!d.started){if(Math.hypot(e.clientX-d.x,e.clientY-d.y)<9)return;d.started=true;
-  const ghost=document.createElement('div');ghost.className='set-food-ghost';ghost.textContent=SET_EMOJI[d.slot];document.body.appendChild(ghost);d.ghost=ghost;}
+  const ghost=document.createElement('div');ghost.className='set-food-ghost';ghost.textContent=SET_EMOJI[setLineKind(d.slot)];document.body.appendChild(ghost);d.ghost=ghost;}
  e.preventDefault();d.ghost.style.left=e.clientX+'px';d.ghost.style.top=e.clientY+'px';
  document.querySelectorAll('.set-tray-cell').forEach(el=>el.classList.remove('drop-ready'));
  const target=document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-set-tray-target]');
